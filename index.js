@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
+const connection = require("./database/database")
 
 
 // ejs
@@ -16,12 +17,23 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 
+// database connection
+connection 
+    .authenticate()
+        .then(() =>{
+            console.log('Conexão estabelecida com sucesso')
+        })
+        .catch((error) =>{
+            console.log(error)
+        })
+
+
 //rota padrão
 app.get("/", (req, res) => {
-    res.send("Bom dia")
+    res.render("index")
 })
 
 
 app.listen(4000, () => {
-    console.log("SERVIDOR RODANDO")
+    console.log("Servidor rodando")
 })
