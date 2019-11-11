@@ -1,0 +1,552 @@
+/* GERAL */
+
+body {
+    color: white;
+}
+
+section {
+    padding: 82px 82px;
+}
+
+button {
+    color: white;
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 45px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-right: 5px solid white;
+    margin: 0px 0px 60px;
+}
+
+/* PRINCIPAL */
+
+.principal {
+    background: url("../img/principal.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 554.9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.principal-title {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
+    font-size: 82px;
+    text-align: center;
+}
+
+/* MISSÃO */
+
+.missao {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 60px 0px;
+    background-color: #F27623;
+}
+
+h2.subtitle {
+    margin: 0px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.subtitle-container {
+    border-right: 5px solid white;
+    width: 35%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.missao-text {
+    font-weight: 400;
+    width: 400px;
+    line-height: 25px;
+}
+
+/* MÉTRICAS */
+
+.metricas {
+    background: url("../img/metricas/metricas.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.metricas .section-title {
+    width: 36%;
+}
+
+
+.metricas-icon {
+    width: 160px;
+    height: 160px;
+}
+
+.metricas-text {
+    line-height: 60px;
+    font-size: 45px;
+    text-align: center;
+}
+
+.metricas-number {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.metricas-subtitle {
+    font-size: 25px;
+    line-height: 0;
+    margin-top: 13px;
+}
+
+.metricas-container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+/* PARCERIAS */
+
+.partners {
+    background-color: #4EB4BF;
+}
+
+.partners .section-title {
+    width: 22%;
+}
+
+.partners-img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logo-empresa {
+    width: 150px;
+}
+
+/* HISTÓRIA */
+
+.history {
+    background: url("../img/historia/historia-background.png");
+}
+
+.carroussel-layout{
+    display: flex;
+    align-items: center;
+}
+
+.history .section-title {
+    width: 20%;
+}
+
+.carroussel-container {
+    text-align: center;
+    width: 1000px;
+    overflow: hidden;
+    height: 350px;
+}
+
+.slide {
+    position: relative;
+    width: 10000px;
+    transition: margin 0.5s ease-in-out;
+    overflow: auto;
+}
+
+.information-container {
+    float: left;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: auto;
+}
+
+.pagination-item {
+    border-bottom: 1px solid white;
+    width: 40px;
+    border-radius: 15px;
+}
+
+.active-pagination {
+    border-bottom: 3px solid white;
+}
+
+.history-date {
+    font-weight: 600;
+    font-size: 63px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.history-article {
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 170%;
+    padding: 0% 2px;
+}
+
+/* PROJETOS */
+
+.projects {
+    background: linear-gradient(180deg, #004D40 0%, rgba(215, 76, 17, 0.5) 0%), url("../img/projects/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.projects h2 {
+    width: 22%;
+}
+
+.container-projects {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    height: 240px;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.course-container-hidden {
+    width: 400px;
+    overflow: hidden;
+}
+
+.course-container{
+    width: 2250px;
+    float: left;
+    left: 0px;
+    position: relative;
+    transition: left 0.5s ease-in-out;
+}
+
+.course{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    float: left;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: ' ';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both
+}
+
+.course-container img {
+    width: 100%;
+}
+
+.course-container dd {
+    padding: 30px 0px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.course-container div button {
+    text-align: center;
+}
+
+.img-course {
+    background-image: url(../img/projects/curso-yes-nas-escolas.png);
+    background-size: contain;
+    height: 200px;
+    width: 380px;
+    display: flex;
+}
+
+.img-course dt {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    background-color: #4EB4BF;
+    align-self: flex-end;
+    width: 100%;
+    font-weight: bold;
+}
+
+/* SEJA MEMBRO */
+
+.be-a-member {
+    background: #FFC24F;
+}
+
+.be-a-member .section-title {
+    width: 30%;
+}
+
+.be-a-member .beamember-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carousel-container-hidden{
+    overflow: hidden;
+}
+
+.carousel-container{
+    width: 4000px;
+    transition: left 0.5s ease-in-out;
+    left: 0px;
+    position: relative;
+}
+
+.member{
+    display: flex;
+    width: 900px;
+    float: left;
+}
+
+
+
+.carrousel-img-container {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrousel-img {
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.be-a-member h3 {
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0px;
+}
+
+.carrousel-text-container {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrousel-text-container p {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.carrousel-img-container .btn-container {
+    display: flex;
+    width: 30px;
+}
+
+.carrousel-img-container .carousel-icon-orientation {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* QUEM SOMOS */
+
+.who-are {
+    background-color: #4EB4BF;
+    text-align: center;
+}
+
+.who-are .section-title {
+    width: 30%;
+}
+
+.who-are p {
+    margin-top: 50px;
+    text-align: initial;
+    font-size: 16px;
+}
+
+.who-are .primary {
+    margin-top: 5%;
+}
+
+/* FIQUE POR DENTRO */
+
+.page-news {
+    background-image: url(../img/page-news-index/background1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.page-news .section-title {
+    width: 36%;
+}
+
+.page-news .description {
+    width: 29%;
+}
+
+.container-inside {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-news {
+    width: 55%;
+    height: 510px;
+    text-align: center;
+}
+
+.container-news .bt-news {
+    margin-top: 5%;
+    width: 0;
+}
+
+.container-news button {
+    margin-top: 5%;
+}
+
+.specific-news {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    float: right;
+    margin-left: 8%;
+    margin-bottom: 5%;
+}
+
+.container-news .row {
+    display: flex;
+    padding-top: 5%;
+    justify-content: space-around;
+}
+
+.specific-news img {
+    height: 155px;
+}
+
+.specific-news a {
+    text-decoration: none;
+}
+
+/* NEWS LETTER */
+
+.news-letter {
+    background: #F27623;
+    display: flex;
+    padding: 60px 82px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.news-letter img {
+    width: 150px;
+}
+
+.title-newsLetter {
+    font-size: 25px;
+    font-weight: 600;
+    border-right: white 5px solid;
+    width: 45%;
+    padding-right: 10px;
+}
+
+.news-letter form {
+    display: flex;
+    flex-direction: column;
+    text-align: -webkit-center;
+
+}
+
+.news-letter form input {
+    border-radius: 8px;
+    margin-bottom: 10%;
+    width: 300px;
+    height: 25px;
+    padding-left: 3%;
+    border: none
+}
+
+.news-letter button {
+    background: #4EB4BF;
+    width: 200px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.news-letter button:hover{
+    background-color: rgb(65, 147, 156);
+}
+
+.pop-up{
+    background-color: rgba(0, 0, 0, 0.5) ;
+    position: fixed;
+    height: 100%;
+    width: -webkit-fill-available;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.pop-up div{
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    padding: 3%;
+    border-radius: 8px;
+}
+
+.pop-up p:nth-child(1){
+    color: #4EB4BF;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 125%;
+    margin-bottom: 5%;
+}
+
+.pop-up p:nth-child(2){
+    color: #C74C11;
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
+.pop-up button {
+    background: #4EB4BF;
+    width: 400px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.pop-up button:hover{
+    background-color: rgb(65, 147, 156);
+}
+
+.overflow-hidden{
+    overflow: hidden;
+}
