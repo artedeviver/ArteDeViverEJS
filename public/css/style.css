@@ -1,4 +1,17 @@
 @import url("titlePage.css");
+@import url("button.css");
+@import url("cadastro.cs");
+@import url("cadastro-form.css");
+@import url("cursos.css");
+@import url("footer.css");
+@import url("index.css");
+@import url("nav-bar.css");
+@import url("news-general.css");
+@import url("quem-somos.css");
+@import url("style-news.css");
+@import url("style-reset.css");
+
+
 body {
     font-family: 'Roboto', sans-serif;
     font-family: 'Raleway', sans-serif;
@@ -7,6 +20,12 @@ body {
 
 p {
     line-height: 30px;
+    margin: 0;
+}
+
+.background-img-config{
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .section-title {

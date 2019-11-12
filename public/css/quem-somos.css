@@ -2,26 +2,8 @@ body .main-quem-somos {
     color: white;
 }
 
-.main-quem-somos button {
-    color: white;
-}
-
-.main-quem-somos p {
-    margin: 0;
-}
-
-.main-quem-somos h3 {
-    margin: 0px
-}
-
 .main-quem-somos .section-title {
     width: 30%;
-}
-
-.main-quem-somos .img-top {
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .main-quem-somos .institutional h1 {
@@ -35,7 +17,7 @@ body .main-quem-somos {
 .main-quem-somos .institutional .one {
     margin-top: 0%;
     background-image: url(../img/quem-somos/quem-somos-principal.png);
-    height: 493px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
