@@ -1,20 +1,20 @@
-body {
+body .main-quem-somos {
     color: white;
 }
 
-button {
+.main-quem-somos button {
     color: white;
 }
 
-p {
+.main-quem-somos p {
     margin: 0;
 }
 
-h3 {
+.main-quem-somos h3 {
     margin: 0px
 }
 
-.section-title {
+.main-quem-somos .section-title {
     font-weight: 600;
     font-size: 45px;
     height: 75px;
@@ -26,13 +26,13 @@ h3 {
     width: 30%;
 }
 
-.img-top {
+.main-quem-somos .img-top {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.institutional h1 {
+.main-quem-somos .institutional h1 {
     margin: 0;
     font-weight: 300;
     font-size: 45px;
@@ -40,7 +40,7 @@ h3 {
     text-align: center;
 }
 
-.institutional .one {
+.main-quem-somos .institutional .one {
     margin-top: 0%;
     background-image: url(../img/quem-somos/quem-somos-principal.png);
     height: 493px;
@@ -50,65 +50,65 @@ h3 {
     justify-content: center;
 }
 
-.institutional .two {
+.main-quem-somos .institutional .two {
     background-color: #4EB4BF;
 }
 
-.container {
+.main-quem-somos .container {
     padding: 82px;
     margin: 0;
 }
 
-.container p {
+.main-quem-somos .container p {
     text-align: justify;
     font-size: 16px;
     line-height: 45px;
     font-weight: 300;
 }
 
-.three {
+.main-quem-somos .three {
     background: #F29F05;
 }
 
-.subtitle {
+.main-quem-somos .subtitle {
     font-size: 30px;
     padding: 0;
     margin-bottom: 50px;
 }
 
-.three .subtitle {
+.main-quem-somos .three .subtitle {
     text-align: end;
 }
 
-.four {
+.main-quem-somos .four {
     background: #C74C11;
 }
 
-.newspaper {
+.main-quem-somos .newspaper {
     padding: 82px;
 }
 
-.newspaper h2{
+.main-quem-somos .newspaper h2{
     color: #D74C11;
     border-right: #D74C11 solid 5px;
     width: 20%;
 }
 
-.newspaper img {
+.main-quem-somos .newspaper img {
     width: 10%;
 }
 
-.newspaper img:nth-child(3){
+.main-quem-somos .newspaper img:nth-child(3){
     width: 25%
 }
 
-.img-newspaper{
+.main-quem-somos .img-newspaper{
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.bubble {
+.main-quem-somos .bubble {
     align-items: center;
     display: flex;
     position: relative;
@@ -125,7 +125,7 @@ h3 {
     font-size: 16px;
     color: black;
 }
-.bubble:after {
+.main-quem-somos .bubble:after {
     content: '';
     position: absolute;
     display: block;
