@@ -1,0 +1,140 @@
+body {
+    color: white;
+}
+
+button {
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+h3 {
+    margin: 0px
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 45px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-right: 5px solid white;
+    margin: 0px 0px 60px;
+    width: 30%;
+}
+
+.img-top {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.institutional h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 45px;
+    width: 57%;
+    text-align: center;
+}
+
+.institutional .one {
+    margin-top: 0%;
+    background-image: url(../img/quem-somos/quem-somos-principal.png);
+    height: 493px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.institutional .two {
+    background-color: #4EB4BF;
+}
+
+.container {
+    padding: 82px;
+    margin: 0;
+}
+
+.container p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 45px;
+    font-weight: 300;
+}
+
+.three {
+    background: #F29F05;
+}
+
+.subtitle {
+    font-size: 30px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.three .subtitle {
+    text-align: end;
+}
+
+.four {
+    background: #C74C11;
+}
+
+.newspaper {
+    padding: 82px;
+}
+
+.newspaper h2{
+    color: #D74C11;
+    border-right: #D74C11 solid 5px;
+    width: 20%;
+}
+
+.newspaper img {
+    width: 10%;
+}
+
+.newspaper img:nth-child(3){
+    width: 25%
+}
+
+.img-newspaper{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.bubble {
+    align-items: center;
+    display: flex;
+    position: relative;
+    background: white;
+    border: solid black;
+    color: white;
+    text-align: center;
+    width: 45%;
+    height: 120px;
+    border-radius: 8px;
+    margin-left: 20%;
+    margin-top: 3%;
+    line-height: 25px;
+    font-size: 16px;
+    color: black;
+}
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-width: 24px 0 0 23px;
+    border-color: transparent transparent transparent rgb(0, 0, 0);
+    top: -24px;
+    left: 33%;
+    margin-left: -11.5px;
+}

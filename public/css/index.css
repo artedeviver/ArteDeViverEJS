@@ -4,7 +4,7 @@ body {
     color: white;
 }
 
-section {
+.padding {
     padding: 82px 82px;
 }
 
@@ -52,7 +52,7 @@ button {
     background-color: #F27623;
 }
 
-h2.subtitle {
+h2 .subtitle {
     margin: 0px;
     font-size: 45px;
     font-weight: 600;
