@@ -21,14 +21,13 @@ header .search-container{
     border-radius: 10px;
     height: 40px;
     width: 30px;
-    cursor: pointer;
     transition: width 0.5s, height 0.5s;
     overflow: hidden;
 }
 
 header .search-container input{
     border: none;
-    background-color: #F29f05;
+    background-color: transparent;
     width: 305px;
     color: white;
     margin-left: 15px;
@@ -38,16 +37,16 @@ header .search-container input{
     border-radius: 10px;
     margin-right: 20px;
     height: 40px;
-    cursor: pointer;
+    cursor: text;
 }
 
 header .search-container input{
     border: none;
-    background-color: #F29f05;
+    background-color: transparent;
     width: 250px;
     color: white;
-    display: none;
 }
+
 header .search-container input:focus{
     outline: 0;
 }
