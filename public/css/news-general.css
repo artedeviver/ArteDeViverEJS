@@ -1,0 +1,100 @@
+h1 span , h2 span, h3 span {
+    display: block;
+    line-height: 57px;
+}
+
+h1 a, h2 a, h3 a{
+    text-decoration: none;
+}
+
+.news-plus:hover{
+color: #D74C11;
+}
+
+.manchete{
+    background: url("../img/news-general/hands-information-magazine-6053.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manchete h1 a{
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-size: 65px;
+    text-decoration: none;
+}
+
+.title-container h2{
+    font-size: 62px;
+    text-align: right;
+    color: #D74C11;
+}
+
+.news-container{
+    display: flex;
+    height: 500px;
+}
+
+.news-img-container{
+    width: 50%;
+}
+
+.news-text-container{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0px 82px;
+
+}
+
+.news-text-container p{
+    text-align: justify;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.news-img-container img{
+    width: 100%;
+    height: 500px;
+}
+
+.news-container h3{
+    font-size: 45px;
+    color: #FFC24F;
+}
+
+.news-container h3 div{
+    margin-top: 15px;
+}
+
+.news-text-container a{
+    color: #FFC24F;
+}
+
+.align-right{
+    text-align: right;
+}
+
+
+.pagination{
+    margin: 60px;
+}
+
+.pagination ul{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pagination ul li a{
+    color: #D74C11;
+    padding: 10px;
+    margin-right: 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #D74C11;
+}
+
+
