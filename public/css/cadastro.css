@@ -42,20 +42,6 @@
     margin-bottom: 10%;
 }
 
-.body-cadastro .pop-up button {
-    background: #4EB4BF;
-    width: 400px;
-    height: 40px;
-    font-weight: 500;
-    font-size: 15px;
-    border-radius: 8px;
-    color: white;
-}
-
-.body-cadastro .pop-up button:hover{
-    background-color: rgb(65, 147, 156);
-}
-
 .body-cadastro .overflow-hidden{
     overflow: hidden;
 }

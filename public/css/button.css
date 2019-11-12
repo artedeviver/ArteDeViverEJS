@@ -1,4 +1,3 @@
-
 button {
     border: none;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -33,4 +32,18 @@ button:focus, input:focus  {
 .tertiary:hover{
     color: #F27623;
     cursor: pointer;
+}
+
+.body-cadastro .pop-up button {
+    background: #4EB4BF;
+    width: 400px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.body-cadastro .pop-up button:hover{
+    background-color: rgb(65, 147, 156);
 }
