@@ -9,23 +9,23 @@ app.set('view engine', 'ejs')
 
 
 //arquivos staticos - css, javascrip, img
-app.use(express.static('public')) 
+app.use(express.static('public'))
 
 
 // body parser
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
 // database connection
-connection 
+connection
     .authenticate()
-        .then(() =>{
-            console.log('Conexão estabelecida com sucesso')
-        })
-        .catch((error) =>{
-            console.log(error)
-        })
+    .then(() => {
+        console.log('Conexão estabelecida com sucesso')
+    })
+    .catch((error) => {
+        console.log(error)
+    })
 
 
 //rota padrão
@@ -33,23 +33,23 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-app.get("/cursos", (req,res) => {
+app.get("/cursos", (req, res) => {
     res.render("homepage/cursos")
 })
 
-app.get("/news", (req, res) =>{
+app.get("/news", (req, res) => {
     res.render("homepage/newsGeneral")
 })
 
-app.get("/news-specific", (req, res) =>{
+app.get("/news-specific", (req, res) => {
     res.render("homepage/news")
 })
 
-app.get("/quemSomos", (res,req) => {
+app.get("/quem-somos", (req, res) => {
     res.render("homepage/quemSomos")
 })
 
-app.get("/sejaMembro", (res,render) => {
+app.get("/seja-membro", (req, res) => {
     res.render("homepage/sejaMembro")
 })
 
