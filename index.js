@@ -2,6 +2,8 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const connection = require("./database/database")
+const User = require("./user/User")
+const userController = require("./user/UserController")
 
 
 // ejs
@@ -26,6 +28,8 @@ connection
     .catch((error) => {
         console.log(error)
     })
+
+
 
 
 //rota padrão
@@ -53,6 +57,20 @@ app.get("/seja-membro", (req, res) => {
     res.render("homepage/sejaMembro")
 })
 
+
+
+
+
+//rotas auxiliares
+// app.use("/", userController)
+app.get("/dash", (req,res) =>{
+    res.render("dashboard/login")
+})
+
+
+
+
+// server
 app.listen(4000, () => {
     console.log("Servidor rodando")
 })
