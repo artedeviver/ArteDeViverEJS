@@ -45,14 +45,6 @@
     width: 30%;
 }
 
-.main-news-specific .principal-title-container{
-    width: 600px;
-    border-right: 5px solid #D74C11;
-    box-sizing: border-box;
-    padding-right: 50px;
-}
-
-
 .main-news-specific article{
     padding: 0px 82px 82px;
     line-height: 30px;

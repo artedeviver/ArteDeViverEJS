@@ -1,13 +1,13 @@
-.title-container p{
+.body-cadastro .title-container p{
     width: 400px;
 }
 
-.principal-title-container{
+.body-cadastro .principal-title-container{
     width: 500px;
 }
 
 
-.pop-up{
+.body-cadastro .pop-up{
     background-color: rgba(0, 0, 0, 0.5) ;
     position: fixed;
     height: 100%;
@@ -19,7 +19,7 @@
     display: none;
 }
 
-.pop-up div{
+.body-cadastro .pop-up div{
     background-color: white;
     text-align: center;
     width: 50%;
@@ -28,7 +28,7 @@
     border-radius: 8px;
 }
 
-.pop-up p:nth-child(1){
+.body-cadastro .pop-up p:nth-child(1){
     color: #4EB4BF;
     font-weight: 600;
     font-size: 30px;
@@ -36,13 +36,13 @@
     margin-bottom: 5%;
 }
 
-.pop-up p:nth-child(2){
+.body-cadastro .pop-up p:nth-child(2){
     color: #C74C11;
     font-size: 20px;
     margin-bottom: 10%;
 }
 
-.pop-up button {
+.body-cadastro .pop-up button {
     background: #4EB4BF;
     width: 400px;
     height: 40px;
@@ -52,10 +52,10 @@
     color: white;
 }
 
-.pop-up button:hover{
+.body-cadastro .pop-up button:hover{
     background-color: rgb(65, 147, 156);
 }
 
-.overflow-hidden{
+.body-cadastro .overflow-hidden{
     overflow: hidden;
 }
