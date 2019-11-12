@@ -84,11 +84,3 @@
     height: 500px;
 }
 
-.main-course .description-title{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 500px;
-    box-sizing: border-box;
-    padding-left: 50px;
-}
