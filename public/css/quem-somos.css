@@ -15,14 +15,6 @@ body .main-quem-somos {
 }
 
 .main-quem-somos .section-title {
-    font-weight: 600;
-    font-size: 45px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    color: white;
-    border-right: 5px solid white;
-    margin: 0px 0px 60px;
     width: 30%;
 }
 

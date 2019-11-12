@@ -1,15 +1,4 @@
-.main-course article{
-    padding: 0px 82px 82px;
-    line-height: 30px;
-}
-
-.main-course article p{
-    margin-bottom: 20px;
-    text-align: justify;
-    color: black;
-}
-
-.main-course .testimonial{
+.main-course .testimonial {
     background-image: url(../img/projects/background-sessao-impactos.png);
     height: 400px;
     background-size: cover;
@@ -19,7 +8,7 @@
     padding-right: 82px;
 }
 
-.main-course .report{
+.main-course .report {
     color: white;
     width: 50%;
     text-align: center;
@@ -42,45 +31,40 @@
     margin: 0px 0px 60px;
 }
 
-.main-course .section-title{
+.main-course .section-title {
     width: 20%;
     color: #d74c11;
     border-right: #d74c11 solid 5px;
 }
 
-.main-course .impact{
+.main-course .impact {
     padding: 30px 82px;
-    padding-bottom: 70px ;
+    padding-bottom: 70px;
 }
 
-.main-course .impact p{
+.main-course .impact p {
     color: #d74c11;
 }
 
-.main-course .impact-container{
+.main-course .impact-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.main-course .impact-container div{
+.main-course .impact-container div {
     width: 300px;
     text-align: center;
 }
 
-.main-course .impact img{
+.main-course .impact img {
     margin-top: 50px;
     width: 300px;
     margin-bottom: 25px;
 }
 
-.main-course .impact-container p{
+.main-course .impact-container p {
     line-height: 30px;
-    text-align: left;;
+    text-align: left;
+    ;
 }
-
-.main-course .news-img{
-    width: 100%;
-    height: 500px;
-}
-

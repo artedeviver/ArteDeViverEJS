@@ -47,3 +47,12 @@ button:focus, input:focus  {
 .body-cadastro .pop-up button:hover{
     background-color: rgb(65, 147, 156);
 }
+
+.btn-carousel {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: none;
+}

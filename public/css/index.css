@@ -3,23 +3,7 @@
     color: white;
 }
 
-.main-index .padding {
-    padding: 82px 82px;
-}
-
-.main-index .section-title {
-    font-weight: 600;
-    font-size: 45px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    color: white;
-    border-right: 5px solid white;
-    margin: 0px 0px 60px;
-}
-
 /* PRINCIPAL */
-
 .main-index .principal {
     background: url("../img/principal.jpg");
     background-repeat: no-repeat;
@@ -47,10 +31,9 @@
     background-color: #F27623;
 }
 
-.main-index h2 .subtitle {
+.missao .subtitle {
     margin: 0px;
     font-size: 45px;
-    font-weight: 600;
 }
 
 .main-index .subtitle-container {
@@ -205,7 +188,7 @@
     background-size: cover;
 }
 
-.main-index .projects h2 {
+.main-index .projects .section-title{
     width: 22%;
 }
 
@@ -243,16 +226,6 @@
     align-items: center;
     justify-items: center;
     float: left;
-}
-
-.main-index .clearfix::before,
-.main-index .clearfix::after {
-    content: ' ';
-    display: table;
-}
-
-.main-index .clearfix::after {
-    clear: both
 }
 
 .main-index .course-container img {
@@ -301,10 +274,6 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
-}
-
-.main-index .carousel-container-hidden{
-    overflow: hidden;
 }
 
 .main-index .carousel-container{
@@ -492,6 +461,8 @@
     background-color: rgb(65, 147, 156);
 }
 
+/* popUp */
+
 .body-index .pop-up{
     background-color: rgba(0, 0, 0, 0.5) ;
     position: fixed;
@@ -538,8 +509,4 @@
 
 .body-index .pop-up button:hover{
     background-color: rgb(65, 147, 156);
-}
-
-.body-index .overflow-hidden{
-    overflow: hidden;
 }
