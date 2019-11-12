@@ -33,6 +33,25 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
+app.get("/cursos", (req,res) => {
+    res.render("homepage/cursos")
+})
+
+app.get("/news", (req, res) =>{
+    res.render("homepage/newsGeneral")
+})
+
+app.get("/news-specific", (req, res) =>{
+    res.render("homepage/news")
+})
+
+app.get("/quemSomos", (res,req) => {
+    res.render("homepage/quemSomos")
+})
+
+app.get("/sejaMembro", (res,render) => {
+    res.render("homepage/sejaMembro")
+})
 
 app.listen(4000, () => {
     console.log("Servidor rodando")
