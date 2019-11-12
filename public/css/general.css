@@ -1,0 +1,33 @@
+
+input{
+    width: 100%;
+    padding: 3%;
+    margin: 2% 0% 7% 0%;
+    border: 0.5px solid #F27623;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button{
+    width: 100%;
+    padding: 3%;
+    margin-top: 5%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white
+   
+}
+
+.primary{
+    background-color: #F27623;
+}
+
+.primary:hover{
+    background-color: #D74C11;
+}
+
+
+input, button:focus{
+    outline: 0;
+}
