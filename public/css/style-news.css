@@ -1,22 +1,22 @@
-.news-img{
+.main-news-specific .news-img{
     width: 100%;
     height: 500px;
 }
 
-.title-container{
+.main-news-specific .title-container{
     margin: 50px 82px;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
 }
 
-.title-container h1{
+.main-news-specific .title-container h1{
     font-size: 62px;
     text-align: right;
     color: #D74C11;
 }
 
-.title-container p{
+.main-news-specific .title-container p{
     color: #F27623;
     width: 200px;
     text-align: left;
@@ -24,7 +24,7 @@
     line-height: 30px;
 }
 
-.description-title{
+.main-news-specific .description-title{
     display: flex;
     justify-content: left;
     align-items: center;
@@ -33,7 +33,7 @@
     padding-left: 50px;
 }
 
-.section-title {
+.main-news-specific .section-title {
     font-weight: 600;
     font-size: 45px;
     height: 75px;
@@ -45,7 +45,7 @@
     width: 30%;
 }
 
-.principal-title-container{
+.main-news-specific .principal-title-container{
     width: 600px;
     border-right: 5px solid #D74C11;
     box-sizing: border-box;
@@ -53,17 +53,17 @@
 }
 
 
-article{
+.main-news-specific article{
     padding: 0px 82px 82px;
     line-height: 30px;
 }
 
-article p{
+.main-news-specific article p{
     margin-bottom: 20px;
     text-align: justify;
 }
 
-.relacionados{
+.main-news-specific .relacionados{
     padding: 30px 82px;
     padding-bottom: 70px ;
     background-color: #4EB4BF;
@@ -71,24 +71,24 @@ article p{
 }
 
 
-.relacionados-container{
+.main-news-specific .relacionados-container{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.relacionados-container div{
+.main-news-specific .relacionados-container div{
     width: 300px;
     text-align: center;
 }
 
-.relacionados img{
+.main-news-specific .relacionados img{
     margin-top: 50px;
     width: 300px;
     margin-bottom: 25px;
 }
 
-.relacionados-container p{
+.main-news-specific .relacionados-container p{
     line-height: 30px;
     text-align: left;;
 }
