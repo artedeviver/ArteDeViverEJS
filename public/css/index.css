@@ -462,17 +462,6 @@
 
 /* popUp */
 
-.body-index .pop-up{
-    background-color: rgba(0, 0, 0, 0.5) ;
-    position: fixed;
-    width: 100%;
-    transform: translatey(25%);
-    z-index: 20;
-    display: flex;
-    justify-content: center;
-    display: none;
-}
-
 .body-index .pop-up div{
     background-color: white;
     text-align: center;
