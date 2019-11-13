@@ -1,21 +1,21 @@
-.main-seja-membro main{
+.main-seja-membro main {
     margin: 0px 82px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.main-seja-membro .form-title{
+.main-seja-membro .form-title {
     color: #4EB4BF;
     margin: 40px 82px;
-    padding-bottom: 40px ;
+    padding-bottom: 40px;
     text-align: center;
     font-size: 65px;
     line-height: 70px;
     border-bottom: 1px solid #FFC24F;
 }
 
-.cadastro-container form{
+.cadastro-container form {
     width: 500px;
     display: flex;
     flex-direction: column;
@@ -24,81 +24,87 @@
     margin: auto;
 }
 
-.main-seja-membro .question{
+.main-seja-membro .question {
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.main-seja-membro .input-container{
+.main-seja-membro .input-container {
     width: 320px;
     margin-bottom: 60px;
 }
 
-.main-seja-membro .input-text, .section-text{
-    background-color: #4EB4BF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    width: 300px;
-    padding: 10px;
-    font-family: 'Raleway', sans-serif;
+.main-seja-membro .input-text, .input-text-area, .section-text {
+    padding: 2%;
+    margin: 2% 0% 5% 0%;
+    border: 0.5px solid #F27623;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.main-seja-membro .section-text{
+.input-text-area {
+    width: 65%;
+}
+
+.input-text {
+    width: 100%;
+}
+
+.main-seja-membro .section-text {
     width: 320px;
 }
 
-.main-seja-membro .input-container .input-radio{
+.main-seja-membro .input-container .input-radio {
     text-align: center;
 }
 
-.main-seja-membro  .space{
+.main-seja-membro .space {
     margin-bottom: 15px;
 }
 
-.main-seja-membro .text-area{
+.main-seja-membro .text-area {
     height: 300px;
 }
 
-.main-seja-membro ::placeholder{
-    color:white;
+.main-seja-membro ::placeholder {
+    color: white;
     font-family: 'Raleway', sans-serif;
 }
 
-.main-seja-membro form .primary{
+.main-seja-membro form .primary {
     width: 320px;
     margin-bottom: 60px;
 }
 
-.main-seja-membro .space-button{
+.main-seja-membro .space-button {
     margin-top: 60px;
 }
 
-.main-seja-membro .cadastro-container{
+.main-seja-membro .cadastro-container {
     display: flex;
     width: 85%;
     box-sizing: border-box;
 }
 
-.main-seja-membro .container-button{
+.main-seja-membro .container-button {
     color: black;
     width: 210px;
     display: flex;
-    align-items:flex-end;
-    padding-bottom: 60px ;
+    align-items: flex-end;
+    padding-bottom: 60px;
     cursor: auto;
 }
 
-.main-seja-membro .container-button a{
+.main-seja-membro .container-button a {
     color: #FFC24F;
     margin-left: auto;
 }
 
-.main-seja-membro .container-button a:hover{
+.main-seja-membro .container-button a:hover {
     color: #D74C11;
 }
 
-.main-seja-membro .legal, .natural{
+.main-seja-membro .legal, .natural {
     display: none;
 }
