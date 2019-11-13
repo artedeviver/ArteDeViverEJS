@@ -15,7 +15,7 @@
     border-bottom: 1px solid #FFC24F;
 }
 
-.main-seja-membro form{
+.cadastro-container form{
     width: 500px;
     display: flex;
     flex-direction: column;

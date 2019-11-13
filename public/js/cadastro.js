@@ -1,12 +1,12 @@
-let body = document.querySelector('.body')
+let bodyCadastro = document.querySelector('.body')
 
-let popUp = document.querySelector(".pop-up")
+let popUpCadastro = document.querySelector(".pop-up")
 
 let btnCadastro = document.querySelector(".action-cadastro")
 btnCadastro.addEventListener('click', concluirCadastro)
 
-let btnVoltar = document.querySelector(".btn-back-cadastro")
-btnVoltar.addEventListener('click', voltar)
+let btnVoltarCadastro = document.querySelector(".btn-back-cadastro")
+btnVoltarCadastro.addEventListener('click', voltar)
 
 let combo = document.querySelector(".section-text")
 combo.addEventListener("click", verification)
@@ -16,13 +16,13 @@ let legal = document.querySelector(".legal")
 let natural = document.querySelector(".natural")
 
 function concluirCadastro() {
-    body.classList.add("overflow-hidden")
-    popUp.style.display = "flex"
+    bodyCadastro.classList.add("overflow-hidden")
+    popUpCadastro.style.display = "flex"
 
 }
 
 function voltar() {
-    window.location.replace("../index.html")
+    window.location.replace("/")
 }
 
 function verification() {
