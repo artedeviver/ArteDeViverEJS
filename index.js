@@ -64,7 +64,7 @@ app.get("/seja-membro", (req, res) => {
 //rotas auxiliares
 // app.use("/", userController)
 app.get("/dash", (req,res) =>{
-    res.render("dashboard/login")
+    res.render("dashboard/index.ejs")
 })
 
 
