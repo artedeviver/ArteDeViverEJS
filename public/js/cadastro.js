@@ -16,7 +16,7 @@ let legal = document.querySelector(".legal")
 let natural = document.querySelector(".natural")
 
 function concluirCadastro() {
-    bodyCadastro.classList.add("overflow-hidden")
+    bodyCadastro.classList.add("hidden")
     popUpCadastro.style.display = "flex"
 
 }

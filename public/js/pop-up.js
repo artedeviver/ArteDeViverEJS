@@ -11,7 +11,6 @@ btnVoltar.addEventListener('click', voltar)
 function concluir(){
     bodyIndex.classList.add("hidden")
     popUpIndex.style.display = "flex"
-    console.log('OI')
 }
 
 function voltar(){
