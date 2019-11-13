@@ -31,3 +31,32 @@ button{
 input, button:focus{
     outline: 0;
 }
+
+h1{
+    margin: 0% 0% 5% 0%;
+    color: #F27623
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 30%;
+    margin: 0% 3.3% 3% 0%;
+    background-color: #4EB4BF;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5%;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.card:hover{
+    background-color: rgb(19, 78, 85)
+}

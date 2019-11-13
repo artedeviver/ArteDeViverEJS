@@ -60,3 +60,9 @@ body{
 .dash-body{
     padding: 3%
 }
+
+
+main{
+    width: 79%;
+    box-sizing: border-box;
+}
