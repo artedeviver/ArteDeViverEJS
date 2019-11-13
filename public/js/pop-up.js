@@ -15,5 +15,5 @@ function concluir(){
 }
 
 function voltar(){
-    window.location.replace("index.html")
+    window.location.replace("/")
 }
