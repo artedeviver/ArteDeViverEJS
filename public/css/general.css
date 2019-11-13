@@ -24,7 +24,6 @@ button{
     border-radius: 5px;
     cursor: pointer;
     color: white;
-    font-size: 12px;
 }
 
 .btn-container{
@@ -111,7 +110,6 @@ h1{
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    /* border: 2px solid red */
 }
 
 .card-link{
@@ -169,3 +167,16 @@ h1{
 .img-selected{
     width: 50%;
 }
+
+/* 
+.pop-up{
+    background-color: rgba(0, 0, 0, 0.5) ;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+} */
