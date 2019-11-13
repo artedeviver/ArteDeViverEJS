@@ -1,14 +1,4 @@
-article{
-    padding: 0px 82px 82px;
-    line-height: 30px;
-}
-
-article p{
-    margin-bottom: 20px;
-    text-align: justify;
-}
-
-.testimonial{
+.main-course .testimonial {
     background-image: url(../img/projects/background-sessao-impactos.png);
     height: 400px;
     background-size: cover;
@@ -18,7 +8,7 @@ article p{
     padding-right: 82px;
 }
 
-.report{
+.main-course .report {
     color: white;
     width: 50%;
     text-align: center;
@@ -26,11 +16,11 @@ article p{
     margin-left: 50%;
 }
 
-.testimonial div {
+.main-course .testimonial div {
     padding: 5%;
 }
 
-.section-title {
+.main-course .section-title {
     font-weight: 600;
     font-size: 45px;
     height: 75px;
@@ -41,81 +31,40 @@ article p{
     margin: 0px 0px 60px;
 }
 
-.section-title{
+.main-course .section-title {
     width: 20%;
     color: #d74c11;
     border-right: #d74c11 solid 5px;
 }
 
-.impact{
+.main-course .impact {
     padding: 30px 82px;
-    padding-bottom: 70px ;
+    padding-bottom: 70px;
 }
 
-.impact p{
+.main-course .impact p {
     color: #d74c11;
 }
 
-.impact-container{
+.main-course .impact-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.impact-container div{
+.main-course .impact-container div {
     width: 300px;
     text-align: center;
 }
 
-.impact img{
+.main-course .impact img {
     margin-top: 50px;
     width: 300px;
     margin-bottom: 25px;
 }
 
-.impact-container p{
+.main-course .impact-container p {
     line-height: 30px;
-    text-align: left;;
-}
-
-.news-img{
-    width: 100%;
-    height: 500px;
-}
-
-.title-container{
-    margin: 50px 82px;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-.title-container h1{
-    font-size: 62px;
-    text-align: right;
-    color: #D74C11;
-}
-
-.title-container p{
-    color: #F27623;
-    width: 200px;
     text-align: left;
-    font-size: 20px;
-    line-height: 30px;
-}
-
-.description-title{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 500px;
-    box-sizing: border-box;
-    padding-left: 50px;
-}
-
-.principal-title-container{
-    width: 600px;
-    border-right: 5px solid #D74C11;
-    box-sizing: border-box;
-    padding-right: 50px;
+    ;
 }

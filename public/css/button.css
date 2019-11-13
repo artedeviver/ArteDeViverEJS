@@ -1,3 +1,14 @@
+button {
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    color: white;
+}
+
+button:focus, input:focus  {
+    outline: 0;
+}
+
 .primary{
     height: 42px;
     width: 190px;
@@ -21,4 +32,27 @@
 .tertiary:hover{
     color: #F27623;
     cursor: pointer;
+}
+
+.body-cadastro .pop-up button {
+    background: #4EB4BF;
+    width: 400px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+    color: white;
+}
+
+.body-cadastro .pop-up button:hover{
+    background-color: rgb(65, 147, 156);
+}
+
+.btn-carousel {
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: none;
 }

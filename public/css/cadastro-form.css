@@ -1,11 +1,11 @@
-main{
+.main-seja-membro main{
     margin: 0px 82px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.form-title{
+.main-seja-membro .form-title{
     color: #4EB4BF;
     margin: 40px 82px;
     padding-bottom: 40px ;
@@ -15,26 +15,27 @@ main{
     border-bottom: 1px solid #FFC24F;
 }
 
-form{
+.cadastro-container form{
     width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
+    margin: auto;
 }
 
-.question{
+.main-seja-membro .question{
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.input-container{
+.main-seja-membro .input-container{
     width: 320px;
     margin-bottom: 60px;
 }
 
-.input-text, .section-text{
+.main-seja-membro .input-text, .section-text{
     background-color: #4EB4BF;
     color: white;
     border: none;
@@ -44,43 +45,43 @@ form{
     font-family: 'Raleway', sans-serif;
 }
 
-.section-text{
+.main-seja-membro .section-text{
     width: 320px;
 }
 
-.input-container .input-radio{
+.main-seja-membro .input-container .input-radio{
     text-align: center;
 }
 
-.space{
+.main-seja-membro  .space{
     margin-bottom: 15px;
 }
 
-.text-area{
+.main-seja-membro .text-area{
     height: 300px;
 }
 
-::placeholder{
+.main-seja-membro ::placeholder{
     color:white;
     font-family: 'Raleway', sans-serif;
 }
 
-form .primary{
+.main-seja-membro form .primary{
     width: 320px;
     margin-bottom: 60px;
 }
 
-.space-button{
+.main-seja-membro .space-button{
     margin-top: 60px;
 }
 
-.cadastro-container{
+.main-seja-membro .cadastro-container{
     display: flex;
     width: 85%;
     box-sizing: border-box;
 }
 
-.container-button{
+.main-seja-membro .container-button{
     color: black;
     width: 210px;
     display: flex;
@@ -89,14 +90,15 @@ form .primary{
     cursor: auto;
 }
 
-.container-button a{
+.main-seja-membro .container-button a{
     color: #FFC24F;
+    margin-left: auto;
 }
 
-.container-button a:hover{
+.main-seja-membro .container-button a:hover{
     color: #D74C11;
 }
 
-.legal, .natural{
+.main-seja-membro .legal, .natural{
     display: none;
 }

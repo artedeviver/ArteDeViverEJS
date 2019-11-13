@@ -1,42 +1,20 @@
 /* GERAL */
-
-body {
+.main-index {
     color: white;
-}
-
-.padding {
-    padding: 82px 82px;
-}
-
-button {
-    color: white;
-}
-
-.section-title {
-    font-weight: 600;
-    font-size: 45px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    color: white;
-    border-right: 5px solid white;
-    margin: 0px 0px 60px;
 }
 
 /* PRINCIPAL */
-
-.principal {
+.main-index .principal {
     background: url("../img/principal.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 554.9px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
-.principal-title {
+.main-index .principal-title {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
     font-size: 82px;
     text-align: center;
@@ -44,7 +22,7 @@ button {
 
 /* MISSÃO */
 
-.missao {
+.main-index .missao {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -52,13 +30,12 @@ button {
     background-color: #F27623;
 }
 
-h2 .subtitle {
+.missao .subtitle {
     margin: 0px;
     font-size: 45px;
-    font-weight: 600;
 }
 
-.subtitle-container {
+.main-index .subtitle-container {
     border-right: 5px solid white;
     width: 35%;
     height: 200px;
@@ -67,7 +44,7 @@ h2 .subtitle {
     justify-content: center;
 }
 
-.missao-text {
+.main-index .missao-text {
     font-weight: 400;
     width: 400px;
     line-height: 25px;
@@ -75,39 +52,39 @@ h2 .subtitle {
 
 /* MÉTRICAS */
 
-.metricas {
+.main-index .metricas {
     background: url("../img/metricas/metricas.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.metricas .section-title {
+.main-index .metricas .section-title {
     width: 36%;
 }
 
 
-.metricas-icon {
+.main-index .metricas-icon {
     width: 160px;
     height: 160px;
 }
 
-.metricas-text {
+.main-index .metricas-text {
     line-height: 60px;
     font-size: 45px;
     text-align: center;
 }
 
-.metricas-number {
+.main-index .metricas-number {
     font-family: 'Montserrat', sans-serif;
 }
 
-.metricas-subtitle {
+.main-index .metricas-subtitle {
     font-size: 25px;
     line-height: 0;
     margin-top: 13px;
 }
 
-.metricas-container {
+.main-index .metricas-container {
     display: flex;
     justify-content: space-between;
     width: 900px;
@@ -115,78 +92,78 @@ h2 .subtitle {
 
 /* PARCERIAS */
 
-.partners {
+.main-index .partners {
     background-color: #4EB4BF;
 }
 
-.partners .section-title {
+.main-index .partners .section-title {
     width: 22%;
 }
 
-.partners-img-container {
+.main-index .partners-img-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
 }
 
-.logo-empresa {
+.main-index .logo-empresa {
     width: 150px;
 }
 
 /* HISTÓRIA */
 
-.history {
+.main-index .history {
     background: url("../img/historia/historia-background.png");
 }
 
-.carroussel-layout{
+.main-index .carroussel-layout{
     display: flex;
     align-items: center;
 }
 
-.history .section-title {
+.main-index .history .section-title {
     width: 20%;
 }
 
-.carroussel-container {
+.main-index .carroussel-container {
     text-align: center;
     width: 1000px;
     overflow: hidden;
     height: 350px;
 }
 
-.slide {
+.main-index .slide {
     position: relative;
     width: 10000px;
     transition: margin 0.5s ease-in-out;
     overflow: auto;
 }
 
-.information-container {
+.main-index .information-container {
     float: left;
     width: 1000px;
     box-sizing: border-box;
 }
 
-.pagination {
+.main-index .pagination {
     display: flex;
     justify-content: space-between;
     width: 400px;
     margin: auto;
 }
 
-.pagination-item {
+.main-index .pagination-item {
     border-bottom: 1px solid white;
     width: 40px;
     border-radius: 15px;
 }
 
-.active-pagination {
+.main-index .active-pagination {
     border-bottom: 3px solid white;
 }
 
-.history-date {
+.main-index .history-date {
     font-weight: 600;
     font-size: 63px;
     text-align: center;
@@ -194,7 +171,7 @@ h2 .subtitle {
     font-family: 'Montserrat', sans-serif;
 }
 
-.history-article {
+.main-index .history-article {
     text-align: center;
     margin-bottom: 50px;
     line-height: 170%;
@@ -203,24 +180,24 @@ h2 .subtitle {
 
 /* PROJETOS */
 
-.projects {
+.main-index .projects {
     background: linear-gradient(180deg, #004D40 0%, rgba(215, 76, 17, 0.5) 0%), url("../img/projects/background.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.projects h2 {
+.main-index .projects .section-title{
     width: 22%;
 }
 
-.container-projects {
+.main-index .container-projects {
     width: 55%;
     display: flex;
     justify-content: space-between;
 }
 
-.btn-container {
+.main-index .btn-container {
     display: flex;
     align-items: center;
     height: 240px;
@@ -228,12 +205,12 @@ h2 .subtitle {
     margin-left: 3%;
 }
 
-.course-container-hidden {
+.main-index .course-container-hidden {
     width: 400px;
     overflow: hidden;
 }
 
-.course-container{
+.main-index .course-container{
     width: 2250px;
     float: left;
     left: 0px;
@@ -241,7 +218,7 @@ h2 .subtitle {
     transition: left 0.5s ease-in-out;
 }
 
-.course{
+.main-index .course{
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -250,31 +227,21 @@ h2 .subtitle {
     float: left;
 }
 
-.clearfix::before,
-.clearfix::after {
-    content: ' ';
-    display: table;
-}
-
-.clearfix::after {
-    clear: both
-}
-
-.course-container img {
+.main-index .course-container img {
     width: 100%;
 }
 
-.course-container dd {
+.main-index .course-container dd {
     padding: 30px 0px;
     text-align: center;
     line-height: 150%;
 }
 
-.course-container div button {
+.main-index .course-container div button {
     text-align: center;
 }
 
-.img-course {
+.main-index .img-course {
     background-image: url(../img/projects/curso-yes-nas-escolas.png);
     background-size: contain;
     height: 200px;
@@ -282,7 +249,7 @@ h2 .subtitle {
     display: flex;
 }
 
-.img-course dt {
+.main-index .img-course dt {
     padding: 10px;
     margin: 0;
     text-align: center;
@@ -294,57 +261,51 @@ h2 .subtitle {
 
 /* SEJA MEMBRO */
 
-.be-a-member {
+.main-index .be-a-member {
     background: #FFC24F;
 }
 
-.be-a-member .section-title {
+.main-index .be-a-member .section-title {
     width: 30%;
 }
 
-.be-a-member .beamember-container {
+.main-index .be-a-member .beamember-container {
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.carousel-container-hidden{
-    overflow: hidden;
-}
-
-.carousel-container{
+.main-index .carousel-container{
     width: 4000px;
     transition: left 0.5s ease-in-out;
     left: 0px;
     position: relative;
 }
 
-.member{
+.main-index .member{
     display: flex;
     width: 900px;
     float: left;
 }
 
-
-
-.carrousel-img-container {
+.main-index .carrousel-img-container {
     width: 48%;
     display: flex;
     justify-content: space-between;
 }
 
-.carrousel-img {
-    width: 1000px;
+.main-index .carrousel-img {
+    width: 300px;
     border-radius: 10px;
 }
 
-.be-a-member h3 {
+.main-index .be-a-member h3 {
     text-align: center;
     font-weight: 400;
     margin: 20px 0px;
 }
 
-.carrousel-text-container {
+.main-index .carrousel-text-container {
     width: 48%;
     display: flex;
     flex-direction: column;
@@ -352,80 +313,80 @@ h2 .subtitle {
     justify-content: center;
 }
 
-.carrousel-text-container p {
+.main-index .carrousel-text-container p {
     text-align: center;
     margin-bottom: 55px;
 }
 
-.carrousel-img-container .btn-container {
+.main-index .carrousel-img-container .btn-container {
     display: flex;
     width: 30px;
 }
 
-.carrousel-img-container .carousel-icon-orientation {
+.main-index .carrousel-img-container .carousel-icon-orientation {
     margin: 0px;
     padding: 0px;
 }
 
 /* QUEM SOMOS */
 
-.who-are {
+.main-index .who-are {
     background-color: #4EB4BF;
     text-align: center;
 }
 
-.who-are .section-title {
+.main-index .who-are .section-title {
     width: 30%;
 }
 
-.who-are p {
+.main-index .who-are p {
     margin-top: 50px;
     text-align: initial;
     font-size: 16px;
 }
 
-.who-are .primary {
+.main-index .who-are .primary {
     margin-top: 5%;
 }
 
 /* FIQUE POR DENTRO */
 
-.page-news {
+.main-index .page-news {
     background-image: url(../img/page-news-index/background1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
-.page-news .section-title {
+.main-index .page-news .section-title {
     width: 36%;
 }
 
-.page-news .description {
+.main-index .page-news .description {
     width: 29%;
 }
 
-.container-inside {
+.main-index .container-inside {
     display: flex;
     justify-content: space-between;
 }
 
-.container-news {
+.main-index .container-news {
     width: 55%;
     height: 510px;
     text-align: center;
 }
 
-.container-news .bt-news {
+.main-index .container-news .bt-news {
     margin-top: 5%;
     width: 0;
 }
 
-.container-news button {
+.main-index .container-news button {
     margin-top: 5%;
 }
 
-.specific-news {
+.main-index .specific-news {
     display: flex;
     flex-direction: column;
     width: 250px;
@@ -434,23 +395,23 @@ h2 .subtitle {
     margin-bottom: 5%;
 }
 
-.container-news .row {
+.main-index .container-news .row {
     display: flex;
     padding-top: 5%;
     justify-content: space-around;
 }
 
-.specific-news img {
+.main-index .specific-news img {
     height: 155px;
 }
 
-.specific-news a {
+.main-index .specific-news a {
     text-decoration: none;
 }
 
 /* NEWS LETTER */
 
-.news-letter {
+.main-index .news-letter {
     background: #F27623;
     display: flex;
     padding: 60px 82px;
@@ -458,11 +419,11 @@ h2 .subtitle {
     align-items: center;
 }
 
-.news-letter img {
+.main-index .news-letter img {
     width: 150px;
 }
 
-.title-newsLetter {
+.main-index .title-newsLetter {
     font-size: 25px;
     font-weight: 600;
     border-right: white 5px solid;
@@ -470,14 +431,14 @@ h2 .subtitle {
     padding-right: 10px;
 }
 
-.news-letter form {
+.main-index .news-letter form {
     display: flex;
     flex-direction: column;
     text-align: -webkit-center;
 
 }
 
-.news-letter form input {
+.main-index .news-letter form input {
     border-radius: 8px;
     margin-bottom: 10%;
     width: 300px;
@@ -486,7 +447,7 @@ h2 .subtitle {
     border: none
 }
 
-.news-letter button {
+.main-index .news-letter button {
     background: #4EB4BF;
     width: 200px;
     height: 40px;
@@ -495,22 +456,13 @@ h2 .subtitle {
     border-radius: 8px;
 }
 
-.news-letter button:hover{
+.main-index .news-letter button:hover{
     background-color: rgb(65, 147, 156);
 }
 
-.pop-up{
-    background-color: rgba(0, 0, 0, 0.5) ;
-    position: fixed;
-    height: 100%;
-    width: -webkit-fill-available;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    display: none;
-}
+/* popUp */
 
-.pop-up div{
+.body-index .pop-up div{
     background-color: white;
     text-align: center;
     width: 50%;
@@ -519,7 +471,7 @@ h2 .subtitle {
     border-radius: 8px;
 }
 
-.pop-up p:nth-child(1){
+.body-index .pop-up p:nth-child(1){
     color: #4EB4BF;
     font-weight: 600;
     font-size: 30px;
@@ -527,13 +479,13 @@ h2 .subtitle {
     margin-bottom: 5%;
 }
 
-.pop-up p:nth-child(2){
+.body-index .pop-up p:nth-child(2){
     color: #C74C11;
     font-size: 20px;
     margin-bottom: 10%;
 }
 
-.pop-up button {
+.body-index .pop-up button {
     background: #4EB4BF;
     width: 400px;
     height: 40px;
@@ -543,10 +495,6 @@ h2 .subtitle {
     color: white;
 }
 
-.pop-up button:hover{
+.body-index .pop-up button:hover{
     background-color: rgb(65, 147, 156);
-}
-
-.overflow-hidden{
-    overflow: hidden;
 }
