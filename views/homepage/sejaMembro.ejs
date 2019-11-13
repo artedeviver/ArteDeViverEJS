@@ -1,0 +1,77 @@
+<%- include ../partials/header.ejs %>
+
+<body class="body body-cadastro">
+
+    <section class="pop-up">
+        <div>
+            <p>
+                Ficamos felizes pelo seu interesse em fazer parte da nossa família!
+            </p>
+
+            <p>
+                Em alguns instantes você irá receber um e-mail explicando os próximos passos!
+            </p>
+            <button class="btn-back-cadastro">OK! Voltar para a tela inicial</button>
+        </div>
+
+    </section>
+
+    <!-- nav-bar -->
+    <%- include ../partials/navbar.ejs %>
+
+    <main class="main-seja-membro">
+        <div class="title-container">
+            <div class="principal-title-container">
+                <h1>
+                    venha para o <div>nosso time!</div>
+                </h1>
+            </div>
+
+            <div class="description-title">
+                <p>Nós estamos muito felizes em saber que você está interessado em fazer a diferença no mundo!</p>
+            </div>
+        </div>
+
+        <div class="cadastro-container">
+            <div class="container-button"><a href="../index.html">voltar</a></div>
+
+            <form>
+                <p class="question">Primeiro me conte um pouco sobre você:</p>
+                <div class="input-container">
+                    <p>Nome completo</p><input type="text" class="input-text space">
+
+                    <p>Você tem interesse em ser:</p>
+                    <select name="" id="" class="section-text space">
+                        <option value="0">Selecione</option>
+                        <option value="1">Voluntário</option>
+                        <option value="2">Parceiro</option>
+                    </select>
+
+                    <div class="legal">
+                        <p>Sou colaborador na empresa:</p><input type="text" class="input-text space">
+                    </div>
+
+                    <div class="natural">
+                        <p>Idade</p><input type="number" min="18" class="input-text">
+                    </div>
+
+                </div>
+
+                <p class="question">Agora precisamos de alguns dados:</p>
+                <div class="input-container">
+                    <p>Email</p>
+                    <input type="email" class="input-text input-text space">
+
+                    <p>Telefone</p>
+                    <input type="tel" class="input-text">
+                </div>
+
+                <p class="question">Por qual motivo você deseja se juntar a nós?</p>
+                <textarea rows="10" class="input-text" placeholder="Digite aqui"></textarea>
+                <button type="button" class="primary space-button action-cadastro">concluir cadastro</button>
+            </form>
+        </div>
+
+    </main>
+    
+    <%- include ../partials/footer.ejs %>

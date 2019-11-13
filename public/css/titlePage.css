@@ -1,0 +1,36 @@
+.title-container{
+    margin: 50px 82px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.principal-title-container{
+    width: 600px;
+    border-right: 5px solid #D74C11;
+    box-sizing: border-box;
+    padding-right: 50px;
+}
+
+.title-container h1{
+    font-size: 62px;
+    text-align: right;
+    color: #D74C11;
+}
+
+.description-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 500px;
+    box-sizing: border-box;
+    padding-left: 50px;
+}
+
+.title-container p{
+    color: #F27623;
+    width: 200px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 30px;
+}
