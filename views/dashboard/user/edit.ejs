@@ -1,0 +1,37 @@
+<%- include ../../partials/dashHeader.ejs %>
+<%- include ../../partials/dashPage.ejs %>
+
+
+<h1>editar usuário</h1>
+
+<div class="card-container">
+    <form class="form-container">
+
+        <label for="">nome completo</label>
+        <input type="text" class="input-general">
+
+        <label for="">cargo</label>
+        <input type="text" class="input-general">
+
+        <label for="">e-mail</label>
+        <input type="text" class="input-general">
+
+        <input type="checkbox" value="true" class="input-select"> Administrador
+
+        <div class="img-container">
+            <img src="../../../img/principal.jpg" alt="" class="img-selected">
+            
+            <div>
+                <p>back-blue-community-service-1498963.jpg</p>
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <button class="primary btn-change">adicionar usuário</button>
+    </form>
+    
+    <a href="" class="tertiary">cancelar</a>
+</div>
+
+
+<%- include ../../partials/dashFooter.ejs %>
