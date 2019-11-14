@@ -3,22 +3,34 @@
 
 
 <div class="title-container">
-        <h1>visão geral - todos os usuários</h1>
-        <button class="primary btn-principal">
-            <a href="/dashboard/users/new">adicionar novo usuário</a>
-        </button>
+    <h1>visão geral - todos os usuários</h1>
+    <button class="primary btn-principal">
+        <a href="/dashboard/users/new">adicionar novo usuário</a>
+    </button>
 </div>
 
 <div class="card-container">
-   <div class="card card-user">
-       <h2 class="subtitle">Nome do usuário</h2>
-       <p>cargo</p>
 
-      <div class="btn-container">
-            <button class="btn primary btn-card">editar</button>
+    <% user.forEach((user) => { %>
+    <div class="card card-user">
+        <h2 class="subtitle"><%= user.name %></h2>
+        <p><%= user.responsibility %></p>
+
+        <div class="btn-container">
+            <button class="btn primary btn-card">
+                <a href="/dashboard/users/edit/<%= user.id %>">editar</a>
+            </button>
+
+
+            <form onsumit=""action=""></form>
+
+
             <button class="btn primary btn-card">excluir</button>
-      </div>
-   </div>
+        </div>
+    </div>
+
+    <%})%>
+
 </div>
 
 
