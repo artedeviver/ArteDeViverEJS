@@ -12,7 +12,7 @@ const User = connection.define('users', {
     },
     password:{
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
     },
     responsibility:{
         type: Sequelize.STRING,
