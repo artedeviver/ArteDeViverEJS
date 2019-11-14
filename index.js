@@ -31,6 +31,8 @@ connection
 
 
 
+app.use("/", userController)
+
 
 //rota padrão
 app.get("/", (req, res) => {
@@ -63,8 +65,12 @@ app.get("/seja-membro", (req, res) => {
 
 //rotas auxiliares
 // app.use("/", userController)
-app.get("/dash", (req,res) =>{
-    res.render("dashboard/user/edit.ejs")
+app.get("/login", (req,res) =>{
+    res.render("dashboard/login")
+})
+
+app.get("/dashboard", (req, res) => {
+    res.render("./dashboard/index")
 })
 
 
