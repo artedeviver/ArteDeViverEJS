@@ -3,14 +3,18 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
+
+.header-dash {
+    position: sticky;
+    top: 0px;
+}
+
 .nav-dash{
     background-color: #F29F05;
     padding: 0.3%  5.2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
     z-index: 10;
 }
 
@@ -32,7 +36,8 @@ body {
     width: 21%;
     text-align: center;
     position: sticky;
-    height: 431px;
+    height: 1000px;
+    top: 70px;
 }
 
 .auxiliar-nav ul li a{
