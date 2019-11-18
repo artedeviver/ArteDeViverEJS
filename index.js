@@ -62,10 +62,6 @@ app.get("/seja-membro", (req, res) => {
     res.render("homepage/sejaMembro")
 })
 
-
-
-
-
 //rotas auxiliares
 // app.use("/", userController)
 app.get("/login", (req,res) =>{
@@ -74,14 +70,6 @@ app.get("/login", (req,res) =>{
 
 app.get("/dashboard", (req, res) => {
     res.render("./dashboard/index")
-})
-
-app.get("/dashboard-noticias", (req,res) => {
-    res.render("./dashboard/news/index")
-})
-
-app.get ("/dashboard/news/new", (req,res) =>{
-    res.render("./dashboard/news/new")
 })
 
 // server
