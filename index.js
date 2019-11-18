@@ -73,8 +73,13 @@ app.get("/dashboard", (req, res) => {
     res.render("./dashboard/index")
 })
 
+app.get("/dashboard-noticias", (req,res) => {
+    res.render("./dashboard/news/index")
+})
 
-
+app.get ("/dashboard/news/new", (req,res) =>{
+    res.render("./dashboard/news/new")
+})
 
 // server
 app.listen(4000, () => {

@@ -1,10 +1,9 @@
-
- main{
+main {
     grid-column-start: 2;
     height: 100vh;
 }
 
-input{
+input {
     padding: 2%;
     margin: 2% 0% 5% 0%;
     border: 0.5px solid #F27623;
@@ -12,45 +11,44 @@ input{
     box-sizing: border-box;
 }
 
-.input-general{
+.input-general {
     width: 100%;
 }
 
-a{
-   color: white;
-   text-decoration: none; 
+a {
+    color: white;
+    text-decoration: none;
 }
 
-button{
+button {
     width: 100%;
     padding: 3%;
-    margin-top: 5%;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-card{
+.btn-card {
     width: 40%;
 }
 
-.btn-principal{
+.btn-principal {
     width: 200px;
     margin-top: 0px;
 }
 
-.btn-change{
+.btn-change {
     padding: 2%;
     margin: 2% 0% 8% 0%;
 }
-
 .btn-delete{
     width: 100%;
     padding: 7.5%;
@@ -60,76 +58,74 @@ button{
     background-color: #F27623;
 }
 
-.primary:hover{
+.primary:hover {
     background-color: #D74C11;
 }
 
-.secondary{
+.secondary {
     background-color: #4EB4BF;
 }
 
-.secondary:hover{
+.secondary:hover {
     background-color: #134e55
 }
 
-.tertiary{
+.tertiary {
     color: #F29F05;
     text-decoration: #F29F05 underline;
     margin-bottom: 4%;
 }
 
-.tertiary:hover{
+.tertiary:hover {
     color: #D74C11;
     text-decoration: #D74C11 underline;
 }
 
-
-input, button:focus{
+input, button:focus {
     outline: 0;
 }
 
-
-.title-container{
+.title-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 5%;
 }
 
-.title-container h1{
+.title-container h1 {
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
 
-.title-container button{
+.title-container button {
     padding: 1.5%;
 }
 
-h1{
+h1 {
     margin: 0% 0% 5% 0%;
     color: #F27623
 }
 
-.subtitle{
+.subtitle {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 2%;
 }
 
-.card-container{
+.card-container {
     display: flex;
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
 }
 
-.card-link{
+.card-link {
     text-decoration: none;
     text-align: center;
     font-size: 20px;
     padding: 5%;
 }
 
-.card{
+.card {
     width: 30%;
     margin: 0% 3.3% 3% 0%;
     background-color: #4EB4BF;
@@ -137,21 +133,21 @@ h1{
     border-radius: 5px;
     box-sizing: border-box;
     padding: 2%;
-} 
+}
 
-.card-link:hover{
+.card-link:hover {
     background-color: #134e55
 }
 
-.card-user{
+.card-user {
     text-align: center;
 }
 
-.card-user p{
+.card-user p {
     font-weight: 100;
 }
 
-.form-container{
+.form-container {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
@@ -167,7 +163,7 @@ h1{
     justify-content: space-between;
 }
 
-.img-container div{
+.img-container div {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -175,11 +171,11 @@ h1{
     flex-direction: column;
 }
 
-.img-container div button{
+.img-container div button {
     width: 50%;
 }
 
-.img-selected{
+.img-selected {
     width: 50%;
 }
 
@@ -195,3 +191,46 @@ h1{
     align-items: center;
     display: none;
 } */
+
+.container-cards-dashboard {
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.container-cards-dashboard h3 {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.long-container {
+    width: 100%;
+    height: 50px;
+    background-color: #4EB4BF;
+    border-radius: 8px;
+    padding: 2%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.long-container h4 {
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.btn-container-long {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-container-long button {
+    width: 40%;
+    height: 40px;
+}
+
+.card-container .tertiary {
+    margin-bottom: 5%;
+}
