@@ -1,0 +1,29 @@
+<%- include ../../partials/dashHeader.ejs %>
+<%- include ../../partials/dashPage.ejs %>
+
+<h1>adicionar nova notícia</h1>
+
+<div class="card-container">
+    <form class="form-container" method="POST" action="/dashboard/users/save">
+
+        <label for="">título</label>
+        <input type="text" class="input-general" name="name">
+
+        <label for="">corpo da notícia</label>
+        <input type="text" class="input-general" name="responsibility">
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <p>back-blue-community-service-1498963.jpg</p>
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <button class="primary btn-change">adicionar notícia</button>
+    </form>
+
+    <a href="" class="tertiary">cancelar</a>
+</div>
+
+<%- include ../../partials/dashFooter.ejs %>
