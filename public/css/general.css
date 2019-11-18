@@ -24,11 +24,11 @@ a{
 button{
     width: 100%;
     padding: 3%;
-    margin-top: 5%;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .btn-container{
@@ -184,3 +184,43 @@ h1{
     align-items: center;
     display: none;
 } */
+
+.container-cards-dashboard {
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.container-cards-dashboard h3 {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.long-container {
+    width: 100%;
+    height: 50px;
+    background-color: #4EB4BF;
+    border-radius: 8px;
+    padding: 2%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.long-container h4{
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.btn-container-long {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-container-long button {
+    width: 40%;
+    background-color: #F27623;
+    height: 40px;
+}

@@ -73,8 +73,9 @@ app.get("/dashboard", (req, res) => {
     res.render("./dashboard/index")
 })
 
-
-
+app.get("/dashboard-noticias", (req,res) => {
+    res.render("./dashboard/news/index")
+})
 
 // server
 app.listen(4000, () => {
