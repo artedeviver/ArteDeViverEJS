@@ -49,8 +49,12 @@ button {
     padding: 2%;
     margin: 2% 0% 8% 0%;
 }
+.btn-delete{
+    width: 100%;
+    padding: 7.5%;
+}
 
-.primary {
+.primary{
     background-color: #F27623;
 }
 
@@ -69,6 +73,7 @@ button {
 .tertiary {
     color: #F29F05;
     text-decoration: #F29F05 underline;
+    margin-bottom: 4%;
 }
 
 .tertiary:hover {
@@ -148,7 +153,12 @@ h1 {
     margin-right: 10%;
 }
 
-.img-container {
+.form-delete{
+    width: 40%; 
+    align-self: flex-end
+}
+
+.img-container{
     display: flex;
     justify-content: space-between;
 }
