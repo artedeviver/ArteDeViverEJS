@@ -16,7 +16,7 @@ const News = connection.define('news', {
     },
 })
 
-News.sync().then(() =>{
+News.sync({force:false}).then(() =>{
     console.log('Tabela de notícias criada')
 })
 
