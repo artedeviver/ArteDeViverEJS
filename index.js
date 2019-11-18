@@ -4,6 +4,8 @@ const bodyParser = require("body-parser")
 const connection = require("./database/database")
 const User = require("./user/User")
 const userController = require("./user/UserController")
+const News = require("./news/News")
+const NewsController = require("./news/NewsController")
 
 
 // ejs
@@ -33,6 +35,7 @@ connection
 
 app.use("/", userController)
 
+app.use("/", NewsController)
 
 //rota padrão
 app.get("/", (req, res) => {
