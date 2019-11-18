@@ -220,3 +220,7 @@ h1 {
     width: 40%;
     height: 40px;
 }
+
+.card-container .tertiary {
+    margin-bottom: 5%;
+}
