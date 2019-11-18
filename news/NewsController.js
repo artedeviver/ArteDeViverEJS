@@ -5,7 +5,7 @@ const News = require("./News")
 
 router.post("/dashboard/news/save", (req, res) => {
 
-    let title = req.body.name
+    let title = req.body.title
     let body = req.body.body
     let image = req.body.image
 
@@ -19,3 +19,5 @@ router.post("/dashboard/news/save", (req, res) => {
         res.send(error)
     })
 })
+
+module.exports = router
