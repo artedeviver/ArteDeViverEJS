@@ -21,16 +21,13 @@
                 <a href="/dashboard/users/edit/<%= user.id %>">editar</a>
             </button>
 
-
-            <form onsumit=""action=""></form>
-
-
-            <button class="btn primary btn-card">excluir</button>
+            <form class="form-delete" method="POST" action="/dashboard/users/delete">
+                <input type="hidden" name="id" value="<%= user.id %>">
+                <button class="btn primary btn-card btn-delete">excluir</button>
+            </form>
         </div>
     </div>
-
     <%})%>
-
 </div>
 
 

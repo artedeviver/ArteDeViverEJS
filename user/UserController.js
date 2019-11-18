@@ -70,26 +70,46 @@ router.get("/dashboard/users/edit/:id", (req, res) => {
 
 
 //SALVAR DADOS DO FORMULÁRIO - UPDATE 
-// router.post("/dashboard/users/update", (req, res) => {
-//     let id = req.params.id
-//     let name = req.body.name
-//     let responsibility = req.body.responsibility
-//     let email = req.body.email
-//     let password = req.body.password
-//     let administrator = req.body.administrator
+router.post("/dashboard/users/update", (req, res) => {
+    let id = req.body.id
+    let name = req.body.name
+    let responsibility = req.body.responsibility
+    let email = req.body.email
+    let password = req.body.password
+    let administrator = req.body.administrator
 
-//     User.update({
-//         name: name,
-//         responsibility: responsibility,
-//         email: email,
-//         password: password,
-//         administrator: administrator
-//     }, {
-//         where: { id: id }
-//     }).then(() => {
-//         res.redirect("/dashboard/user")
-//     })
-// })
+    User.update({
+        name: name,
+        responsibility: responsibility,
+        email: email,
+        password: password,
+        administrator: administrator
+    }, {
+        where: { id: id }
+    }).then(() => {
+        res.redirect("/dashboard/users")
+    })
+})
+
+
+//DELETAR USUÁRIO
+router.post("/dashboard/users/delete", (req, res) => {
+    let id = req.body.id
+
+    if(id != undefined){
+        if(!isNaN(id)){
+            User.destroy({
+                where: {id:id}
+            }).then(() => {
+                res.redirect("/dashboard/users")
+            })
+        }else{ //não é número
+            res.redirect("/dashboard/users")
+        }
+    }else{ //null
+        res.redirect("/dashboard/users")
+    }
+})
 
 
 
