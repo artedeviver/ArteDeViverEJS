@@ -112,7 +112,23 @@ router.post("/dashboard/users/delete", (req, res) => {
 })
 
 
+// LOGIN
+router.post("/login", (req, res) => {
+    let email = req.body.email
+    let password = req.body.password
 
+
+    User.findOne({
+        where: {email:email, password:password}
+    }).then(user =>{
+
+        if(user && password == user.get('password') && email == user.get('email')){
+            res.render("./dashboard/index")
+        }else{
+            res.send(console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"))
+        }
+    })
+})
 
 
 
