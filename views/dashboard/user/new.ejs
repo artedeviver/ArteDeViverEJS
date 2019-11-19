@@ -1,5 +1,14 @@
 <%- include ../../partials/dashHeader.ejs %>
+
+<section class="pop-up">
+    <div>
+        <p class="title">Usuário adicionado com sucesso!</p>
+       <a href="/dashboard/users" class="tertiary">voltar</a>
+    </div>
+</section>
+
 <%- include ../../partials/dashPage.ejs %>
+
 
 
 <h1>adicionar novo usuário</h1>
@@ -26,6 +35,17 @@
     
     <a href="/dashboard/users" class="tertiary">cancelar</a>
 </div>
+
+
+<script>
+    let popUp = document.querySelector('.pop-up')
+    let botao = document.querySelector('.btn-change')
+    botao.addEventListener('click', concluir)
+
+    function concluir(){
+        popUp.classList.add("show")
+    }
+</script>
 
 
 <%- include ../../partials/dashFooter.ejs %>
