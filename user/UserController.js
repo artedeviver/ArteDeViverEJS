@@ -5,11 +5,12 @@ const User = require("./User")
 
 //MOSTRAR TODOS OS USUÁRIOS CADASTRADOS
 router.get("/dashboard/users", (req, res) => {
-    User.findAll().then(user => {
+    User.findAll({
+        raw: true, order: [['id', 'DESC']]
+    }).then(user => {
         res.render("dashboard/user/index", { user: user })
     })
 })
-
 
 
 //ROTA PARA PÁGINA DE ADD NOVO USUÁRIO
