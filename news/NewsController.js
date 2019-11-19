@@ -56,28 +56,41 @@ router.post("/dashboard/news/delete", (req, res) => {
     }
 })
 
-// ROTA PARA PÁGINA DE EDIÇÃO DE USUÁRIO
-// router.get("/dashboard/news/edit/:id", (req, res) => {
-//     let id = req.params.id
+// ROTA PARA PÁGINA DE EDIÇÃO DE NOTÍCIA
+router.get("/dashboard/news/edit/:id", (req, res) => {
+    let id = req.params.id
 
-//     if (isNaN(id)) {
-//         res.redirect("./dashboard/news")
-//     }
+    if (isNaN(id)) {
+        res.redirect("./dashboard/news")
+    }
 
-//     News.findByPk(id).then(news => {
-//         if (news != undefined) {
-//             res.render("./dashboard/news/edit", { news: news })
-//         } else {
-//             res.redirect("./dashboard/news")
-//         }
-//     }).catch(error => {
-//         res.redirect("./dashboard/news")
-//     })
-// })
+    News.findByPk(id).then(news => {
+        if (news != undefined) {
+            res.render("./dashboard/news/edit", { news: news })
+        } else {
+            res.redirect("./dashboard/news")
+        }
+    }).catch(error => {
+        res.redirect("./dashboard/news")
+    })
+})
 
+//SALVAR DADOS DO FORMULÁRIO - UPDATE 
+router.post("/dashboard/news/update", (req, res) => {
+    let id = req.body.id
+    let title = req.body.title
+    let bodyNews = req.body.bodyNews
+    let titleImage = req.body.titleImage
 
-
-
-
+    News.update({
+        title: title,
+        bodyNews: bodyNews,
+        titleImage: titleImage
+    }, {
+        where: { id: id }
+    }).then(() => {
+        res.redirect("/dashboard/news")
+    })
+})
 
 module.exports = router

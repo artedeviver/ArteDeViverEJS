@@ -1,0 +1,30 @@
+<%- include ../../partials/dashHeader.ejs %>
+<%- include ../../partials/dashPage.ejs %>
+
+<h1>editar notícia</h1>
+
+<div class="card-container">
+    <form class="form-container" method="POST" action="/dashboard/news/update" >
+        <label for="">título</label>
+        <input type="text" class="input-general" name="title" value="<%= news.title%>">
+
+        <label for="">corpo da notícia</label>
+        <input type="text" class="input-general" name="bodyNews" value="<%= news.bodyNews%>">
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="titleImage">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <input type="hidden" name="id" value="<%= news.id %>">
+        <button class="primary btn-change">editar notícia</button>
+    </form>
+
+    <a href="/dashboard/news" class="tertiary">cancelar</a>
+</div>
+
+
+<%- include ../../partials/dashFooter.ejs %>
