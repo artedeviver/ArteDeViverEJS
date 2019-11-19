@@ -17,7 +17,7 @@ input {
 
 a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 button {
@@ -27,7 +27,7 @@ button {
     cursor: pointer;
     color: white;
     border: none;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(32, 32, 32, 0.19);
 }
 
 .btn-container {
@@ -37,14 +37,18 @@ button {
 }
 
 .btn-card {
-    width: 40%;
+    width: 100%;
+    padding: 2.5%;
     margin-top: 5%;
+    border-radius: 5px
 }
 
 .btn-principal {
     width: 200px;
     margin-top: 0px;
     text-align: center;
+    border-radius: 5px;
+    padding: 1.5%;
 }
 
 .btn-change {
