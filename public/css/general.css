@@ -38,6 +38,7 @@ button {
 
 .btn-card {
     width: 40%;
+    margin-top: 5%;
 }
 
 .btn-principal {
@@ -132,7 +133,6 @@ h1 {
     color: white;
     border-radius: 5px;
     box-sizing: border-box;
-    padding: 2%;
 }
 
 .card-link:hover {
@@ -141,6 +141,7 @@ h1 {
 
 .card-user {
     text-align: center;
+    padding: 3%;
 }
 
 .card-user p {
@@ -179,18 +180,40 @@ h1 {
     width: 50%;
 }
 
-/* 
+
 .pop-up{
     background-color: rgba(0, 0, 0, 0.5) ;
     position: fixed;
     height: 100%;
+    box-sizing: border-box;
     width: 100%;
-    z-index: 20;
+    z-index: 40;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
-} */
+}
+
+.show{
+    display: block;
+}
+
+.pop-up div{
+    background-color: white;
+    width: 40%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.pop-up p{
+    font-size: 30px;
+    color: #4EB4BF;
+    margin-bottom: 10%;
+}
+
+
+
 
 .container-cards-dashboard {
     height: 100%;

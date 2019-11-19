@@ -47,7 +47,6 @@ router.post("/dashboard/users/save", (req, res) => {
 })
 
 
-
 // ROTA PARA PÁGINA DE EDIÇÃO DE USUÁRIO
 router.get("/dashboard/users/edit/:id", (req, res) => {
     let id = req.params.id
