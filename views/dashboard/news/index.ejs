@@ -16,10 +16,17 @@
 
     <div class="long-container">
         <h4><%= news.title %></h4>
+
         <div class="btn-container-long">
             <button class="primary">Editar</button>
-            <button class="primary">Excluir</button>
+
+            <form class="form-delete" method="POST" action="/dashboard/news/delete">
+                <input type="hidden" name="id" value="<%= news.id %>">
+                <button class="primary">Excluir</button>
+            </form>
+
         </div>
+
     </div>
 
     <%})%>
