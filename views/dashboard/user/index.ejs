@@ -24,29 +24,23 @@
 
 <div class="title-container">
     <h1>visão geral - todos os usuários</h1>
-
-    <button class="primary btn-principal">
-        <a href="/dashboard/users/new">adicionar novo usuário</a>
-    </button>
+        <a class="primary btn-principal" href="/dashboard/users/new">adicionar novo usuário</a>
 </div>
 
 <div class="card-container">
-
     <% user.forEach((user) => { %>
     <div class="card card-user">
         <h2 class="subtitle"><%= user.name %></h2>
         <p><%= user.responsibility %></p>
 
         <div class="btn-container">
-
-
-            <button class="btn primary btn-card">
-                <a href="/dashboard/users/edit/<%= user.id %>">editar</a>
-            </button>
+            <!-- <button class="btn primary btn-card"> -->
+                <a class="primary btn-card" href="/dashboard/users/edit/<%= user.id %>">editar</a>
+            <!-- </button> -->
 
             <form class="form-delete" method="POST" action="/dashboard/users/delete">
                 <input type="hidden" name="id" value="<%= user.id %>">
-                <button class="btn primary btn-card btn-delete">excluir</button>
+                <button class="btn primary btn-delete">excluir</button>
             </form>
         </div>
     </div>
