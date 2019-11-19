@@ -12,13 +12,24 @@
 <div class="container-cards-dashboard">
     <h3>Já cadastradas</h3>
 
+    <% news.forEach((news) => { %>
+
     <div class="long-container">
-        <h4>Título da notícia aqui</h4>
+        <h4><%= news.title %></h4>
+
         <div class="btn-container-long">
-            <button class="primary">Editar</button>
-            <button class="primary">Excluir</button>
+           <a href="/dashboard/news/edit/<%= news.id %>"> <button class="primary">Editar</button> </a>
+
+            <form class="form-delete" method="POST" action="/dashboard/news/delete">
+                <a href="/dashboard/news/edit/<%= news.id %>"><input type="hidden" name="id" value="<%= news.id %>"></a>
+                <button class="primary">Excluir</button>
+            </form>
+
         </div>
+
     </div>
+
+    <%})%>
 
 </div>
 
