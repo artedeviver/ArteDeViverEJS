@@ -3,18 +3,16 @@
 <section class="pop-up">
     <div>
         <p class="title">Usuário adicionado com sucesso!</p>
-       <a href="/dashboard/users" class="tertiary">voltar</a>
+        <a href="/dashboard/users" class="tertiary">voltar</a>
     </div>
 </section>
 
 <%- include ../../partials/dashPage.ejs %>
 
-
-
 <h1>adicionar novo usuário</h1>
 
 <div class="card-container">
-    <form class="form-container" method="POST" action="/dashboard/users/save" >
+    <form class="form-container" method="POST" action="/dashboard/users/save">
 
         <label for="">nome completo</label>
         <input type="text" class="input-general" name="name">
@@ -32,20 +30,9 @@
 
         <button class="primary btn-change">adicionar usuário</button>
     </form>
-    
+
     <a href="/dashboard/users" class="tertiary">cancelar</a>
+
 </div>
-
-
-<script>
-    let popUp = document.querySelector('.pop-up')
-    let botao = document.querySelector('.btn-change')
-    botao.addEventListener('click', concluir)
-
-    function concluir(){
-        popUp.classList.add("show")
-    }
-</script>
-
 
 <%- include ../../partials/dashFooter.ejs %>

@@ -204,6 +204,10 @@ h1 {
     display: none;
 }
 
+.success{
+    display: none;
+}
+
 .show{
     display: block;
 }

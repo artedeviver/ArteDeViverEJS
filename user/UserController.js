@@ -8,7 +8,7 @@ router.get("/dashboard/users", (req, res) => {
     User.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(user => {
-        res.render("dashboard/user/index", { user: user })
+        res.render("dashboard/user/index", { user: user, success: req.query.success })
     })
 })
 
@@ -16,6 +16,10 @@ router.get("/dashboard/users", (req, res) => {
 //ROTA PARA PÁGINA DE ADD NOVO USUÁRIO
 router.get("/dashboard/users/new", (req, res) => {
     res.render("./dashboard/user/new")
+})
+
+router.get("/dashboard/users?success=true", (req, res) => {
+    res.send("BOM DIA")
 })
 
 
@@ -40,8 +44,8 @@ router.post("/dashboard/users/save", (req, res) => {
         email: email,
         password: password,
         administrator: administrator
-    }).then(() => {
-        res.redirect("/dashboard/users")
+    }).then((user) => {
+        res.redirect("/dashboard/users?success=true")
     }).catch((error) => {
         res.send(error)
     })
@@ -58,7 +62,7 @@ router.get("/dashboard/users/edit/:id", (req, res) => {
 
     User.findByPk(id).then(user => {
         if (user != undefined) {
-            res.render("./dashboard/user/edit", { user: user })
+            res.render("./dashboard/user/edit", { user: user})
         } else {
             res.redirect("./dashboard/user")
         }

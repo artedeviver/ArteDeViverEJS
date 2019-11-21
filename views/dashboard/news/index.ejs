@@ -45,4 +45,16 @@
 
 </div>
 
+
+
+<script>
+    let btn = document.querySelector('.back')
+    let popUp = document.querySelector('.pop-up')
+    btn.addEventListener('click', close)
+
+    function close() {
+        popUp.style.display = 'none'
+    }
+</script>
+
 <%- include ../../partials/dashFooter.ejs %>
