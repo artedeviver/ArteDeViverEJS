@@ -29,19 +29,19 @@
 </div>
 
 <div class="container-cards-dashboard">
-    <h3>Já cadastradas</h3>
+    <h2>Já cadastradas</h2>
 
     <% courses.forEach((courses) => { %>
 
-    <div class="long-container">
-        <h4><%= courses.title %></h4>
+    <div class="card-container-long">
+        <h3><%= courses.title %></h3>
 
         <div class="btn-container-long">
-           <a href="/dashboard/courses/edit/<%= courses.id %>"> <button class="primary">Editar</button> </a>
+                <a class="primary btn-card" href="/dashboard/courses/edit/<%= courses.id %>">Editar</a>
 
             <form class="form-delete" method="POST" action="/dashboard/courses/delete">
                 <a href="/dashboard/courses/edit/<%= courses.id %>"><input type="hidden" name="id" value="<%= courses.id %>"></a>
-                <button class="primary">Excluir</button>
+                <button class="primary btn-delete">Excluir</button>
             </form>
 
         </div>
