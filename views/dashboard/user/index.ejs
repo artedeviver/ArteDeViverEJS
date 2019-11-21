@@ -5,16 +5,14 @@
         <p class="title">Deseja mesmo excluir o usuário selecionado?</p>
 
         <div class="btn-container">
-            <button class="btn primary btn-card">
-                <a href="/dashboard/users/edit/<%= user.id %>">editar</a>
-            </button>
+            <button class="primary btn-card">cancelar</button>
 
             <form class="form-delete" method="POST" action="/dashboard/users/delete">
                 <input type="hidden" name="id" value="<%= user.id %>">
                 <button class="btn primary btn-card btn-delete">excluir</button>
             </form>
         </div>
-
+        
     </div>
 </section>
 
@@ -34,13 +32,12 @@
         <p><%= user.responsibility %></p>
 
         <div class="btn-container">
-            <!-- <button class="btn primary btn-card"> -->
+
                 <a class="primary btn-card" href="/dashboard/users/edit/<%= user.id %>">editar</a>
-            <!-- </button> -->
 
             <form class="form-delete" method="POST" action="/dashboard/users/delete">
                 <input type="hidden" name="id" value="<%= user.id %>">
-                <button class="btn primary btn-delete">excluir</button>
+                <button class="primary btn-delete">excluir</button>
             </form>
         </div>
     </div>

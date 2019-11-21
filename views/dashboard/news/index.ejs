@@ -1,4 +1,21 @@
 <%- include ../../partials/dashHeader.ejs %>
+
+<section class="pop-up">
+    <div class="pop-up-body">
+        <p class="title">Deseja mesmo excluir a notícia selecionada?</p>
+
+        <div class="btn-container">
+            <button class="btn primary btn-card">cancelar</button>
+
+            <form class="form-delete" method="POST" action="/dashboard/users/delete">
+                <input type="hidden" name="id" value="<%= news.id %>">
+                <button class="btn primary btn-card btn-delete">excluir</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
 <%- include ../../partials/dashPage.ejs %>
 
 
@@ -8,25 +25,22 @@
 </div>
 
 <div class="container-cards-dashboard">
-    <h3>Já cadastradas</h3>
+    <h2>Já cadastradas</h2>
 
     <% news.forEach((news) => { %>
 
-    <div class="long-container">
-        <h4><%= news.title %></h4>
+    <div class="card-container-long">
+        <h3><%= news.title %></h3>
 
         <div class="btn-container-long">
-            <a href="/dashboard/news/edit/<%= news.id %>"> <button class="primary">Editar</button> </a>
+            <a class="primary btn-card" href="/dashboard/news/edit/<%= news.id %>">Editar</a>
 
             <form class="form-delete" method="POST" action="/dashboard/news/delete">
                 <input type="hidden" name="id" value="<%= news.id %>">
-                <button class="primary">Excluir</button>
+                <button class="primary btn-delete">Excluir</button>
             </form>
-
         </div>
-
     </div>
-
     <%})%>
 
 </div>
