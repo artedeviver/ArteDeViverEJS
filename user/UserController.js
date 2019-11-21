@@ -2,7 +2,6 @@ const express = require("express")
 const router = express.Router()
 const User = require("./User")
 
-
 //MOSTRAR TODOS OS USUÁRIOS CADASTRADOS
 router.get("/dashboard/users", (req, res) => {
     User.findAll({
@@ -12,13 +11,10 @@ router.get("/dashboard/users", (req, res) => {
     })
 })
 
-
 //ROTA PARA PÁGINA DE ADD NOVO USUÁRIO
 router.get("/dashboard/users/new", (req, res) => {
     res.render("./dashboard/user/new")
 })
-
-
 
 //SALVAR DADOS DO FORMULÁRIO - ADD USER
 router.post("/dashboard/users/save", (req, res) => {
@@ -28,7 +24,6 @@ router.post("/dashboard/users/save", (req, res) => {
     let email = req.body.email
     let password = req.body.password
     let administrator = req.body.administrator
-
 
     if (administrator == undefined) {
         administrator = false
@@ -46,7 +41,6 @@ router.post("/dashboard/users/save", (req, res) => {
         res.send(error)
     })
 })
-
 
 // ROTA PARA PÁGINA DE EDIÇÃO DE USUÁRIO
 router.get("/dashboard/users/edit/:id", (req, res) => {
@@ -66,8 +60,6 @@ router.get("/dashboard/users/edit/:id", (req, res) => {
         res.redirect("./dashboard/user")
     })
 })
-
-
 
 //SALVAR DADOS DO FORMULÁRIO - UPDATE 
 router.post("/dashboard/users/update", (req, res) => {
@@ -91,7 +83,6 @@ router.post("/dashboard/users/update", (req, res) => {
     })
 })
 
-
 //DELETAR USUÁRIO
 router.post("/dashboard/users/delete", (req, res) => {
     let id = req.body.id
@@ -111,7 +102,6 @@ router.post("/dashboard/users/delete", (req, res) => {
     }
 })
 
-
 // LOGIN
 router.post("/login", (req, res) => {
     let email = req.body.email
@@ -129,8 +119,5 @@ router.post("/login", (req, res) => {
         }
     })
 })
-
-
-
 
 module.exports = router

@@ -2,24 +2,25 @@ const express = require("express")
 const app = express()
 const bodyParser = require("body-parser")
 const connection = require("./database/database")
+
 const User = require("./user/User")
 const userController = require("./user/UserController")
+
 const News = require("./news/News")
 const NewsController = require("./news/NewsController")
 
+const Courses = require("./courses/Courses")
+const CoursesController = require("./courses/CoursesController")
 
 // ejs
 app.set('view engine', 'ejs')
 
-
 //arquivos staticos - css, javascrip, img
 app.use(express.static('public'))
-
 
 // body parser
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
 
 // database connection
 connection
@@ -31,11 +32,11 @@ connection
         console.log(error)
     })
 
-
-
 app.use("/", userController)
 
 app.use("/", NewsController)
+
+app.use("/", CoursesController)
 
 //rota padrão
 app.get("/", (req, res) => {

@@ -1,0 +1,55 @@
+<%- include ../../partials/dashHeader.ejs %>
+
+<section class="pop-up">
+    <div class="pop-up-body">
+        <p class="title">Deseja mesmo excluir o curso selecionado?</p>
+
+        <div class="btn-container">
+            <button class="btn primary btn-card">
+                <a href="/dashboard/course/edit/<%= courses.id %>">editar</a>
+            </button>
+
+            <form class="form-delete" method="POST" action="/dashboard/course/delete">
+                <input type="hidden" name="id" value="<%= courses.id %>">
+                <button class="btn primary btn-card btn-delete">excluir</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<%- include ../../partials/dashPage.ejs %>
+
+<div class="title-container">
+    <h1>visão geral - todos os cursos</h1>
+
+    <button class="primary btn-principal">
+        <a href="/dashboard/courses/new">adicionar novo curso</a>
+    </button>
+</div>
+
+<div class="container-cards-dashboard">
+    <h3>Já cadastradas</h3>
+
+    <% courses.forEach((courses) => { %>
+
+    <div class="long-container">
+        <h4><%= courses.title %></h4>
+
+        <div class="btn-container-long">
+           <a href="/dashboard/courses/edit/<%= courses.id %>"> <button class="primary">Editar</button> </a>
+
+            <form class="form-delete" method="POST" action="/dashboard/courses/delete">
+                <a href="/dashboard/courses/edit/<%= courses.id %>"><input type="hidden" name="id" value="<%= courses.id %>"></a>
+                <button class="primary">Excluir</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <%})%>
+
+</div>
+
+<%- include ../../partials/dashFooter.ejs %>

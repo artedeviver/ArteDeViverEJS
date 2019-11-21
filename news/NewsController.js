@@ -37,7 +37,7 @@ router.get("/dashboard/news", (req, res) => {
     })
 })
 
-//DELETAR USUÁRIO
+//DELETAR NOTICIA
 router.post("/dashboard/news/delete", (req, res) => {
     let id = req.body.id
 
