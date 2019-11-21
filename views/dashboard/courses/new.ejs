@@ -1,0 +1,68 @@
+<%- include ../../partials/dashHeader.ejs %>
+<%- include ../../partials/dashPage.ejs %>
+
+<h1>adicionar novo curso</h1>
+
+<div class="card-container">
+    <form class="form-container" method="POST" action="/dashboard/courses/save">
+
+        <label for="">nome do curso</label>
+        <input type="text" class="input-general" name="title">
+
+        <label for="">descrição do curso</label>
+        <input type="text" class="input-general" name="bodyCourse">
+
+        <label for="">imagem (capa do curso)</label>
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="imgCourse">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <label for="">descrição do destaque</label>
+        <input type="text" class="input-general" name="featured">
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="imgFeatured">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <label for="">descrição dos impactos</label>
+        <input type="text" class="input-general" name="impactDesc">
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="impactImg1">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="impactImg2">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="impactImg3">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <button class="primary btn-change">adicionar curso</button>
+    </form>
+
+    <a href="" class="tertiary">cancelar</a>
+</div>
+
+<%- include ../../partials/dashFooter.ejs %>

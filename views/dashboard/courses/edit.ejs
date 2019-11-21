@@ -1,0 +1,70 @@
+<%- include ../../partials/dashHeader.ejs %>
+<%- include ../../partials/dashPage.ejs %>
+
+<h1>editar curso</h1>
+
+<div class="card-container">
+    <form class="form-container" method="POST" action="/dashboard/courses/update" >
+
+        <label for="">nome do curso</label>
+        <input type="text" class="input-general" name="title" value="<%= courses.title%>">
+
+        <label for="">descrição do curso</label>
+        <input type="text" class="input-general" name="bodyCourse" value="<%= courses.bodyCourse%>">
+
+        <label for="">imagem (capa do curso)</label>
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="imgCourse" value="<%= courses.imgCourse%>">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <label for="">descrição do destaque</label>
+        <input type="text" class="input-general" name="featured" value="<%= courses.featured%>">
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="imgFeatured" value="<%= courses.imgFeatured%>">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <label for="">descrição dos impactos</label>
+        <input type="text" class="input-general" name="impactDesc" value="<%= courses.impactDesc%>">
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="impactImg1" value="<%= courses.impactImg1%>">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="impactImg2" value="<%= courses.impactImg2%>">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <div class="img-container">
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+            <div>
+                <input type="text" class="input-general" name="impactImg3" value="<%= courses.impactImg3%>">
+                <button class="secondary">selecionar</button>
+            </div>
+        </div>
+
+        <input type="hidden" name="id" value="<%= courses.id %>">
+        <button class="primary btn-change">editar curso</button>
+    </form>
+
+    <a href="/dashboard/courses" class="tertiary">cancelar</a>
+</div>
+
+
+<%- include ../../partials/dashFooter.ejs %>

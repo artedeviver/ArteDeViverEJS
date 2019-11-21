@@ -36,6 +36,8 @@ app.use("/", userController)
 
 app.use("/", NewsController)
 
+app.use("/", CoursesController)
+
 //rota padrão
 app.get("/", (req, res) => {
     res.render("index")
