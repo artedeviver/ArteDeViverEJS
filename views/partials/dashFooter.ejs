@@ -12,7 +12,7 @@ function mudar(input) {
     reader.onload = function (e) {
         const imgUrl = e.target.result
 
-        const imgTag = document.querySelector(".img-selected")
+        const imgTag = input.parentNode.querySelector(".img-selected")
         imgTag.setAttribute("src", imgUrl)
     }
     reader.readAsDataURL(img)

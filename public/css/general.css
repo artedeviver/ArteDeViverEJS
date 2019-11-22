@@ -173,8 +173,16 @@ h1 {
     width: 40%; 
 }
 
-.file{
-    
+fieldset{
+    border: none;
+    border-bottom: solid #4EB4BF 1px ;
+    margin-bottom: 5%;
+}
+
+fieldset h2{
+    margin: 0;
+    margin-bottom: 2%;
+    font-size: 20px;
 }
 
 .img-container-select img{
@@ -183,7 +191,7 @@ border-radius: 8px;
 }
 
 .img-selected {
-    width: 50%;
+    width: 15%;
 }
 
 .pop-up{

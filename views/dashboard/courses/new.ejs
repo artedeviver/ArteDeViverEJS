@@ -6,58 +6,66 @@
 <div class="card-container">
     <form class="form-container" method="POST" action="/dashboard/courses/save" enctype="multipart/form-data">
 
-        <label for="">nome do curso</label>
-        <input type="text" class="input-general" name="title">
+        <fieldset>
+            <h2>informações gerais</h2>
+            <label for="">nome do curso</label>
+            <input type="text" class="input-general" name="title">
 
-        <label for="">descrição do curso</label>
-        <input type="text" class="input-general" name="bodyCourse">
+            <label for="">descrição do curso</label>
+            <input type="text" class="input-general" name="bodyCourse">
 
-
-        <div class="img-container-select">
-            <label for="">imagem (capa do curso)</label>
-            <div>
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-                <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse">
-        </div>
-        </div>
-
-        <!-- <label for="">descrição do destaque</label>
-        <input type="text" class="input-general" name="featured">
-
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="imgFeatured">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">capa do curso</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse">
+                </div>
             </div>
-        </div>
+        </fieldset>
 
-        <label for="">descrição dos impactos</label>
-        <input type="text" class="input-general" name="impactDesc">
+        <fieldset>
+            <h2>destaque</h2>
+            <label for="">descrição do destaque</label>
+            <input type="text" class="input-general" name="featured">
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="impactImg1">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">imagem de fundo destaque</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgFeatured">
+                </div>
             </div>
-        </div>
+        </fieldset>
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="impactImg2">
-                <button class="secondary">selecionar</button>
-            </div>
-        </div>
+        <fieldset>
+            <h2>impactos</h2>
+            <label for="">descrição dos impactos</label>
+            <input type="text" class="input-general" name="impactDesc">
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="impactImg3">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">imagem 1</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg1">
+                </div>
             </div>
-        </div> -->
+
+            <div class="img-container-select">
+                <label for="">imagem 2</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg2">
+                </div>
+            </div>
+
+            <div class="img-container-select">
+                <label for="">imagem 3</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg3">
+                </div>
+            </div>
+        </fieldset>
 
         <button class="primary btn-change">adicionar curso</button>
     </form>
