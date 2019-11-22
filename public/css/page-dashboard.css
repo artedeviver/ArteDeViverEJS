@@ -1,7 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
     display: grid;
     grid-template-columns: 21%;
     grid-template-rows: 70px;
