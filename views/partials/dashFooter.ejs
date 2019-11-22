@@ -1,5 +1,24 @@
 </main>
 </div>
+
+<script>
+function mudar(input) {
+    console.log("mudar:", input.files)
+
+    const img = input.files[0]
+
+    const reader = new FileReader()
+
+    reader.onload = function (e) {
+        const imgUrl = e.target.result
+
+        const imgTag = document.querySelector(".img-selected")
+        imgTag.setAttribute("src", imgUrl)
+    }
+    reader.readAsDataURL(img)
+}
+</script>
+
 </body>
 
 </html>

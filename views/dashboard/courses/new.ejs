@@ -4,7 +4,7 @@
 <h1>adicionar novo curso</h1>
 
 <div class="card-container">
-    <form class="form-container" method="POST" action="/dashboard/courses/save">
+    <form class="form-container" method="POST" action="/dashboard/courses/save" enctype="multipart/form-data">
 
         <label for="">nome do curso</label>
         <input type="text" class="input-general" name="title">
@@ -12,16 +12,16 @@
         <label for="">descrição do curso</label>
         <input type="text" class="input-general" name="bodyCourse">
 
-        <label for="">imagem (capa do curso)</label>
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
+
+        <div class="img-container-select">
+            <label for="">imagem (capa do curso)</label>
             <div>
-                <input type="text" class="input-general" name="imgCourse">
-                <button class="secondary">selecionar</button>
-            </div>
+            <img src="/img/principal.jpg" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse">
+        </div>
         </div>
 
-        <label for="">descrição do destaque</label>
+        <!-- <label for="">descrição do destaque</label>
         <input type="text" class="input-general" name="featured">
 
         <div class="img-container">
@@ -57,7 +57,7 @@
                 <input type="text" class="input-general" name="impactImg3">
                 <button class="secondary">selecionar</button>
             </div>
-        </div>
+        </div> -->
 
         <button class="primary btn-change">adicionar curso</button>
     </form>
