@@ -1,11 +1,11 @@
 <%- include ../../partials/dashHeader.ejs %>
 
-<section class="pop-up">
+<!-- <section class="pop-up">
     <div class="pop-up-body">
         <p class="title">Deseja mesmo excluir o usuário selecionado?</p>
 
         <div class="btn-container">
-            <button class="primary btn-card">cancelar</button>
+            <button class="primary btn-card back">cancelar</button>
 
             <form class="form-delete" method="POST" action="/dashboard/users/delete">
                 <input type="hidden" name="id" value="<%= user.id %>">
@@ -14,7 +14,15 @@
         </div>
         
     </div>
+</section> -->
+
+<section class="pop-up ok">
+        <div>
+            <p class="title">Usuário adicionado com sucesso!</p>
+            <a href="/dashboard/users" class="tertiary">voltar</a>
+        </div>
 </section>
+    
 
 
 <%- include ../../partials/dashPage.ejs %>
@@ -24,6 +32,10 @@
     <h1>visão geral - todos os usuários</h1>
         <a class="primary btn-principal" href="/dashboard/users/new">adicionar novo usuário</a>
 </div>
+
+
+
+ <p class="success"><%=success %></p>
 
 <div class="card-container">
     <% user.forEach((user) => { %>
@@ -45,4 +57,16 @@
 </div>
 
 
+<script>
+    let success = document.querySelector('.success').innerText
+    let popUp = document.querySelector('.pop-up')
+
+    if(success == 'true'){
+      popUp.style.display = "block"
+    }
+</script>
+
+
 <%- include ../../partials/dashFooter.ejs %>
+
+

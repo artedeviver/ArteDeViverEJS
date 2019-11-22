@@ -3,49 +3,76 @@
 <section class="pop-up">
     <div>
         <p class="title">Usuário adicionado com sucesso!</p>
-       <a href="/dashboard/users" class="tertiary">voltar</a>
+        <a href="/dashboard/users" class="tertiary">voltar</a>
+    </div>
+</section>
+
+<section class="pop-up verification">
+    <div>
+        <p class="title">Todos os campos devem ser preenchidos!</p>
+        <a href="/dashboard/users/new" class="tertiary">voltar</a>
     </div>
 </section>
 
 <%- include ../../partials/dashPage.ejs %>
 
-
-
 <h1>adicionar novo usuário</h1>
 
 <div class="card-container">
-    <form class="form-container" method="POST" action="/dashboard/users/save" >
+    <form class="form-container" method="POST" action="/dashboard/users/save">
+        <!-- <form class="form-container"> -->
 
         <label for="">nome completo</label>
         <input type="text" class="input-general" name="name">
+        <span class="alert-error">Preencha o campo!</span>
 
         <label for="">cargo</label>
         <input type="text" class="input-general" name="responsibility">
+        <span class="alert-error">Preencha o campo!</span>
 
         <label for="">e-mail</label>
         <input type="text" class="input-general" name="email">
+        <span class="alert-error">Preencha o campo!</span>
 
         <label for="">senha</label>
         <input type="text" class="input-general" name="password">
+        <span class="alert-error">Preencha o campo!</span>
 
         <input type="checkbox" value="true" class="input-select" name="administrator"> Administrador
 
-        <button class="primary btn-change">adicionar usuário</button>
+        <button class="btn-change btn-verification btn-disabled" disabled>adicionar usuário</button>
     </form>
-    
+
     <a href="/dashboard/users" class="tertiary">cancelar</a>
 </div>
 
 
-<script>
-    let popUp = document.querySelector('.pop-up')
-    let botao = document.querySelector('.btn-change')
-    botao.addEventListener('click', concluir)
 
-    function concluir(){
-        popUp.classList.add("show")
+<script>
+    let form = document.querySelector('.form-container')
+    let btn = document.querySelector('.btn-verification')
+    let name = document.getElementsByName('name')
+    let responsibility = document.getElementsByName('responsibility')
+    let email = document.getElementsByName('email')
+    let password = document.getElementsByName('password')
+
+    form.addEventListener("blur", function (event) {
+        if (event.target.value == '') {
+            event.target.classList.add('error')
+            verify()
+        } else {
+            event.target.classList.remove('error')
+            verify()
+        }
+    }, true);
+
+    function verify() {
+        if (name[0].value != '' && responsibility[0].value != '' && email[0].value != '' && password[0].value != '') {
+            btn.disabled = false
+            btn.classList.remove("btn-disabled")
+            btn.classList.add("primary")
+        }
     }
 </script>
-
 
 <%- include ../../partials/dashFooter.ejs %>
