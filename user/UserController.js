@@ -18,10 +18,6 @@ router.get("/dashboard/users/new", (req, res) => {
     res.render("./dashboard/user/new")
 })
 
-router.get("/dashboard/users?success=true", (req, res) => {
-    res.send("BOM DIA")
-})
-
 
 
 //SALVAR DADOS DO FORMULÁRIO - ADD USER
@@ -38,17 +34,19 @@ router.post("/dashboard/users/save", (req, res) => {
         administrator = false
     }
 
-    User.create({
-        name: name,
-        responsibility: responsibility,
-        email: email,
-        password: password,
-        administrator: administrator
-    }).then((user) => {
-        res.redirect("/dashboard/users?success=true")
-    }).catch((error) => {
-        res.send(error)
-    })
+    if (name != undefined && responsibility != undefined && email != undefined && password != undefined && administrator != undefined) {
+        User.create({
+            name: name,
+            responsibility: responsibility,
+            email: email,
+            password: password,
+            administrator: administrator
+        }).then((user) => {
+            res.redirect("/dashboard/users?success=true")
+        }).catch((error) => {
+            res.send(error)
+        })
+    }
 })
 
 
@@ -62,7 +60,7 @@ router.get("/dashboard/users/edit/:id", (req, res) => {
 
     User.findByPk(id).then(user => {
         if (user != undefined) {
-            res.render("./dashboard/user/edit", { user: user})
+            res.render("./dashboard/user/edit", { user: user })
         } else {
             res.redirect("./dashboard/user")
         }
@@ -100,17 +98,17 @@ router.post("/dashboard/users/update", (req, res) => {
 router.post("/dashboard/users/delete", (req, res) => {
     let id = req.body.id
 
-    if(id != undefined){
-        if(!isNaN(id)){
+    if (id != undefined) {
+        if (!isNaN(id)) {
             User.destroy({
-                where: {id:id}
+                where: { id: id }
             }).then(() => {
                 res.redirect("/dashboard/users")
             })
-        }else{ //não é número
+        } else { //não é número
             res.redirect("/dashboard/users")
         }
-    }else{ //null
+    } else { //null
         res.redirect("/dashboard/users")
     }
 })
@@ -123,12 +121,12 @@ router.post("/login", (req, res) => {
 
 
     User.findOne({
-        where: {email:email, password:password}
-    }).then(user =>{
+        where: { email: email, password: password }
+    }).then(user => {
 
-        if(user && password == user.get('password') && email == user.get('email')){
+        if (user && password == user.get('password') && email == user.get('email')) {
             res.render("./dashboard/index")
-        }else{
+        } else {
             res.send(console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"))
         }
     })
