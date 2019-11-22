@@ -39,6 +39,7 @@ aside {
 .nav-dash a {
     color: white;
     text-decoration: none;
+    font-weight: 100;
 }
 
 .nav-dash a:hover {
