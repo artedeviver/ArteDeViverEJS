@@ -11,7 +11,7 @@ const Courses = connection.define('courses', {
         allowNull:false
     },
     imgCourse:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     featured:{
@@ -19,7 +19,7 @@ const Courses = connection.define('courses', {
         allowNull:false
     },
     imgFeatured:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false
     },
     impactDesc:{
@@ -27,15 +27,15 @@ const Courses = connection.define('courses', {
         allowNull:false
     },
     impactImg1:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false
     },
     impactImg2:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false
     },
     impactImg3:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull:false
     }
 })

@@ -11,6 +11,10 @@ input {
     box-sizing: border-box;
 }
 
+label{
+    font-weight: 400;
+}
+
 .input-general {
     width: 100%;
 }
@@ -47,7 +51,7 @@ button {
 }
 
 .btn-principal {
-    width: 200px;
+    width: 155px;
     margin-top: 0px;
     text-align: center;
     border-radius: 5px;
@@ -169,27 +173,26 @@ h1 {
     width: 40%; 
 }
 
-.img-container{
-    display: flex;
-    justify-content: space-between;
+fieldset{
+    border: none;
+    border-bottom: solid #4EB4BF 1px ;
+    margin-bottom: 5%;
 }
 
-.img-container div {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+fieldset h2{
+    margin: 0;
+    margin-bottom: 2%;
+    font-size: 20px;
 }
 
-.img-container div button {
-    width: 50%;
+.img-container-select img{
+margin-top: 2%;
+border-radius: 8px;
 }
 
 .img-selected {
-    width: 50%;
+    width: 15%;
 }
-
 
 .pop-up{
     background-color: rgba(0, 0, 0, 0.5) ;
@@ -231,7 +234,7 @@ h1 {
 }
 
 .container-cards-dashboard h2 {
-    font-weight: 100;
+    font-weight: 400;
     font-size: 20px;
 }
 
@@ -250,7 +253,7 @@ h1 {
 }
 
 .card-container-long h3 {
-    font-weight: lighter;
+    font-weight: 400;
     font-size: 15px;
 }
 
