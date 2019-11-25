@@ -1,28 +1,35 @@
 <%- include ../../partials/dashHeader.ejs %>
 
-<!-- <section class="pop-up">
+<section class="pop-up delete">
     <div class="pop-up-body">
         <p class="title">Deseja mesmo excluir o usuário selecionado?</p>
 
         <div class="btn-container">
-            <button class="primary btn-card back">cancelar</button>
+            <a class="primary btn-card" href="/dashboard/users">cancelar</a>
 
             <form class="form-delete" method="POST" action="/dashboard/users/delete">
-                <input type="hidden" name="id" value="<%= user.id %>">
+                <input type="hidden" name="id" class="userId">
                 <button class="btn primary btn-card btn-delete">excluir</button>
             </form>
         </div>
-        
     </div>
-</section> -->
-
-<section class="pop-up ok">
-        <div>
-            <p class="title">Usuário adicionado com sucesso!</p>
-            <a href="/dashboard/users" class="tertiary">voltar</a>
-        </div>
 </section>
-    
+
+<section class="pop-up user">
+    <div>
+        <p class="title">Usuário adicionado com sucesso!</p>
+        <a href="/dashboard/users" class="tertiary">voltar</a>
+    </div>
+</section>
+
+<section class="pop-up edit">
+    <div>
+        <p class="title">Usuário editado com sucesso!</p>
+        <a href="/dashboard/users" class="tertiary">voltar</a>
+    </div>
+</section>
+
+
 
 
 <%- include ../../partials/dashPage.ejs %>
@@ -30,27 +37,23 @@
 
 <div class="title-container">
     <h1>visão geral - todos os usuários</h1>
-        <a class="primary btn-principal" href="/dashboard/users/new">adicionar novo usuário</a>
+    <a class="primary btn-principal" href="/dashboard/users/new">adicionar novo usuário</a>
 </div>
 
 
 
- <p class="success"><%=success %></p>
+<p class="success"><%= success %></p>
+<p class="successEdit"><%= successEdit %></p>
 
 <div class="card-container">
     <% user.forEach((user) => { %>
     <div class="card card-user">
         <h2 class="subtitle"><%= user.name %></h2>
         <p><%= user.responsibility %></p>
-
         <div class="btn-container">
-
-                <a class="primary btn-card" href="/dashboard/users/edit/<%= user.id %>">editar</a>
-
-            <form class="form-delete" method="POST" action="/dashboard/users/delete">
-                <input type="hidden" name="id" value="<%= user.id %>">
-                <button class="primary btn-delete">excluir</button>
-            </form>
+            <a class="primary btn-card" href="/dashboard/users/edit/<%= user.id %>">editar</a>
+            <button onclick="show(user.id)" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+            <input type="hidden" name="id" class="userIdCard" value="<%= user.id %>">
         </div>
     </div>
     <%})%>
@@ -59,14 +62,27 @@
 
 <script>
     let success = document.querySelector('.success').innerText
-    let popUp = document.querySelector('.pop-up')
+    let successEdit = document.querySelector('.successEdit').innerText
+    let popUp = document.querySelector('.user')
+    let popUp2 = document.querySelector('.edit')
+    let btn = document.querySelector('.btn-confirm-delete')
+    let popUp3 = document.querySelector('.delete')
+    let userId = document.querySelector('.userId')
+    let user = document.querySelector('.userIdCard').value
 
-    if(success == 'true'){
-      popUp.style.display = "block"
+    if (success == 'true') {
+        popUp.style.display = "block"
+    }
+
+    if (successEdit == 'true') {
+        popUp2.style.display = "block"
+    }
+
+    function show(id){
+        userId.value = user
+        popUp3.style.display = 'block'
     }
 </script>
 
 
 <%- include ../../partials/dashFooter.ejs %>
-
-

@@ -7,7 +7,7 @@ router.get("/dashboard/users", (req, res) => {
     User.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(user => {
-        res.render("dashboard/user/index", { user: user, success: req.query.success })
+        res.render("dashboard/user/index", { user: user, success: req.query.success, successEdit: req.query.successEdit })
     })
 })
 
@@ -81,7 +81,7 @@ router.post("/dashboard/users/update", (req, res) => {
     }, {
         where: { id: id }
     }).then(() => {
-        res.redirect("/dashboard/users")
+        res.redirect("/dashboard/users?successEdit=true")
     })
 })
 
