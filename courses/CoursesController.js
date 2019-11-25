@@ -2,6 +2,11 @@ const express = require("express")
 const router = express.Router()
 const Courses = require("./Courses")
 
+//MOSTRAR CURSO ESPECIFICO
+router.get("/courseName", (req, res) => {
+    res.render("./homepage/courseSpecific")
+})
+
 //MOSTRAR TODOS OS CURSOS CADASTRADOS
 router.get("/dashboard/courses", (req, res) => {
     Courses.findAll({
