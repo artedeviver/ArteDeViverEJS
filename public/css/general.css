@@ -235,6 +235,10 @@ border-radius: 8px;
     display: none;
 }
 
+.successEdit{
+    display: none;
+}
+
 .show{
     display: block;
 }
