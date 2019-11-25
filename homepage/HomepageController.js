@@ -2,8 +2,8 @@ const express = require("express")
 const router = express.Router()
 
 //ROTAS PARA PROTEJOS
-router.get("/courses", (req, res) => {
-    res.render("./homepage/cursos")
+router.get("/coursesName", (req, res) => {
+    res.render("./homepage/courseSpecific")
 })
 
 //ROTA PARA QUEM SOMOS 
