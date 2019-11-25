@@ -2,6 +2,11 @@ const express = require("express")
 const router = express.Router()
 const News = require("./News")
 
+//ROTA NOTÍCIA ESPECIFICA 
+router.get("/newsEspecific", (req, res) => {
+    res.render("./homepage/news")
+})
+
 //ROTA PARA PÁGINA DE ADD NOVA NOTÍCIA
 router.get("/dashboard/news/new", (req, res) => {
     res.render("./dashboard/news/new")

@@ -13,7 +13,7 @@ router.get("/WhoWeAre", (req, res) => {
 
 //ROTA PARA NOTÍCIAS
 router.get("/news", (req, res) => {
-    res.render("./homepage/news")
+    res.render("./homepage/newsGeneral")
 })
 
 //ROTA PARA SEJA MEMBRO
