@@ -6,58 +6,66 @@
 <div class="card-container">
     <form class="form-container" method="POST" action="/dashboard/courses/update" >
 
-        <label for="">nome do curso</label>
-        <input type="text" class="input-general" name="title" value="<%= courses.title%>">
+        <fieldset>
+            <h2>informações gerais</h2>
+            <label for="">nome do curso</label>
+            <input type="text" class="input-general" name="title" value="<%= courses.title%>">
 
-        <label for="">descrição do curso</label>
-        <input type="text" class="input-general" name="bodyCourse" value="<%= courses.bodyCourse%>">
+            <label for="">descrição do curso</label>
+            <input type="text" class="input-general" name="bodyCourse" value="<%= courses.bodyCourse%>">
 
-        <label for="">imagem (capa do curso)</label>
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="imgCourse" value="<%= courses.imgCourse%>">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">capa do curso</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse" value="<%= courses.imgCourse%>">
+                </div>
             </div>
-        </div>
+        </fieldset>
 
-        <label for="">descrição do destaque</label>
-        <input type="text" class="input-general" name="featured" value="<%= courses.featured%>">
+        <fieldset>
+            <h2>destaque</h2>
+            <label for="">descrição do destaque</label>
+            <input type="text" class="input-general" name="featured" value="<%= courses.featured%>">
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="imgFeatured" value="<%= courses.imgFeatured%>">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">imagem de fundo destaque</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgFeatured" value="<%= courses.imgFeatured%>">
+                </div>
             </div>
-        </div>
+        </fieldset>
 
-        <label for="">descrição dos impactos</label>
-        <input type="text" class="input-general" name="impactDesc" value="<%= courses.impactDesc%>">
+        <fieldset>
+            <h2>impactos</h2>
+            <label for="">descrição dos impactos</label>
+            <input type="text" class="input-general" name="impactDesc" value="<%= courses.impactDesc%>">
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="impactImg1" value="<%= courses.impactImg1%>">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">imagem 1</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg1" value="<%= courses.impactImg1%>">
+                </div>
             </div>
-        </div>
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="impactImg2" value="<%= courses.impactImg2%>">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">imagem 2</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg2" value="<%= courses.impactImg2%>">
+                </div>
             </div>
-        </div>
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
-            <div>
-                <input type="text" class="input-general" name="impactImg3" value="<%= courses.impactImg3%>">
-                <button class="secondary">selecionar</button>
+            <div class="img-container-select">
+                <label for="">imagem 3</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg3" value="<%= courses.impactImg3%>">
+                </div>
             </div>
-        </div>
+        </fieldset>
 
         <input type="hidden" name="id" value="<%= courses.id %>">
         <button class="primary btn-change">editar curso</button>
