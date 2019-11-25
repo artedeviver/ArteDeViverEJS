@@ -11,12 +11,12 @@ const News = connection.define('news', {
         allowNull:false
     },
     titleImage:{
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     }
 })
 
-News.sync().then(() =>{
+News.sync({force:false}).then(() =>{
     console.log('Tabela de notícias criada')
 })
 

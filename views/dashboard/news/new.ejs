@@ -20,11 +20,11 @@
         <label for="">corpo da notícia</label>
         <input type="text" class="input-general" name="bodyNews">
 
-        <div class="img-container">
-            <img src="/img/principal.jpg" alt="" class="img-selected">
+        <div class="img-container-select">
+            <label for="">capa da notícia</label>
             <div>
-                <input type="text" class="input-general" name="titleImage">
-                <button class="secondary">selecionar</button>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="titleImage">
             </div>
         </div>
 
