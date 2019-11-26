@@ -7,7 +7,7 @@ router.get("/dashboard/users", (req, res) => {
     User.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(user => {
-        res.render("dashboard/user/index", { user: user, success: req.query.success, successEdit: req.query.successEdit })
+        res.render("dashboard/user/index", { user: user, success: req.query.success, successEdit: req.query.successEdit})
     })
 })
 

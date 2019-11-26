@@ -2,7 +2,7 @@
 
 <section class="pop-up delete">
     <div class="pop-up-body">
-        <p class="title">Deseja mesmo excluir o usuário selecionado?</p>
+        <p class="title">Deseja mesmo excluir a notícia selecionada?</p>
 
         <div class="btn-container">
             <a class="primary btn-card" href="/dashboard/news">cancelar</a>
@@ -55,11 +55,6 @@
             <a class="primary btn-card" href="/dashboard/news/edit/<%= news.id %>">Editar</a>
             <button onclick="show(news.id)" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
             <input type="hidden" name="id" class="newsIdCard" value="<%= news.id %>">
-
-            <!-- <form class="form-delete" method="POST" action="/dashboard/news/delete">
-                <input type="hidden" name="id" value="<%= news.id %>">
-                <button class="primary btn-delete">Excluir</button>
-            </form> -->
         </div>
     </div>
     <%})%>

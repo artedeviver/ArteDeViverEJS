@@ -7,7 +7,7 @@ router.get("/dashboard/courses", (req, res) => {
     Courses.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(courses => {
-        res.render("dashboard/courses/index", { courses: courses })
+        res.render("dashboard/courses/index", { courses: courses, success: req.query.success, successEdit: req.query.successEdit })
     })
 })
 
@@ -41,7 +41,7 @@ router.post("/dashboard/courses/save", (req, res) => {
         impactImg3: impactImg3
 
     }).then(() => {
-        res.redirect("/dashboard/courses")
+        res.redirect("/dashboard/courses?success=true")
     }).catch((error) => {
         res.send(error)
     })
@@ -111,7 +111,7 @@ router.post("/dashboard/courses/update", (req, res) => {
     }, {
         where: { id: id }
     }).then(() => {
-        res.redirect("/dashboard/courses")
+        res.redirect("/dashboard/courses?successEdit=true")
     })
 })
 
