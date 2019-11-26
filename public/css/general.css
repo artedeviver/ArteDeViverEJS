@@ -73,16 +73,12 @@ button {
 }
 
 .btn-principal {
-    width: 155px;
+    width: 18%;
     margin-top: 0px;
     text-align: center;
     border-radius: 5px;
     padding: 1.5%;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(32, 32, 32, 0.19);
-}
-
-.btn-add-news{
-    width: 18%;
 }
 
 .btn-change {

@@ -1,28 +1,47 @@
 <%- include ../../partials/dashHeader.ejs %>
 
-<section class="pop-up">
+<section class="pop-up delete">
     <div class="pop-up-body">
-        <p class="title">Deseja mesmo excluir a notícia selecionada?</p>
+        <p class="title">Deseja mesmo excluir o usuário selecionado?</p>
 
         <div class="btn-container">
-            <button class="btn primary btn-card">cancelar</button>
+            <a class="primary btn-card" href="/dashboard/news">cancelar</a>
 
-            <form class="form-delete" method="POST" action="/dashboard/users/delete">
-                <input type="hidden" name="id" value="<%= news.id %>">
+            <form class="form-delete" method="POST" action="/dashboard/news/delete">
+                <input type="hidden" name="id" class="newsId">
                 <button class="btn primary btn-card btn-delete">excluir</button>
             </form>
         </div>
-
     </div>
 </section>
 
-<%- include ../../partials/dashPage.ejs %>
+<section class="pop-up user">
+    <div>
+        <p class="title">Notícia adicionada com sucesso!</p>
+        <a href="/dashboard/news" class="tertiary">voltar</a>
+    </div>
+</section>
 
+<section class="pop-up edit">
+    <div>
+        <p class="title">Notícia editada com sucesso!</p>
+        <a href="/dashboard/news" class="tertiary">voltar</a>
+    </div>
+</section>
+
+
+
+<%- include ../../partials/dashPage.ejs %>
 
 <div class="title-container">
     <h1>visão geral - todas as notícias </h1>
-    <a class="primary btn-principal btn-add-news" href="/dashboard/news/new">adicionar nova notícia</a>
+    <a class="primary btn-principal" href="/dashboard/news/new">adicionar nova notícia</a>
 </div>
+
+
+<p class="success"><%= success %></p>
+<p class="successEdit"><%= successEdit %></p>
+
 
 <div class="container-cards-dashboard">
     <h2>Já cadastradas</h2>
@@ -34,11 +53,13 @@
 
         <div class="btn-container-long">
             <a class="primary btn-card" href="/dashboard/news/edit/<%= news.id %>">Editar</a>
+            <button onclick="show(news.id)" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+            <input type="hidden" name="id" class="newsIdCard" value="<%= news.id %>">
 
-            <form class="form-delete" method="POST" action="/dashboard/news/delete">
+            <!-- <form class="form-delete" method="POST" action="/dashboard/news/delete">
                 <input type="hidden" name="id" value="<%= news.id %>">
                 <button class="primary btn-delete">Excluir</button>
-            </form>
+            </form> -->
         </div>
     </div>
     <%})%>
@@ -48,13 +69,28 @@
 
 
 <script>
-    let btn = document.querySelector('.back')
-    let popUp = document.querySelector('.pop-up')
-    btn.addEventListener('click', close)
+    let success = document.querySelector('.success').innerText
+    let successEdit = document.querySelector('.successEdit').innerText
+    let popUp = document.querySelector('.user')
+    let popUp2 = document.querySelector('.edit')
+    let popUp3 = document.querySelector('.delete') 
+    let newsId = document.querySelector('.newsId')
+    let news = document.querySelector('.newsIdCard').value
 
-    function close() {
-        popUp.style.display = 'none'
+
+    if (success == 'true') {
+        popUp.style.display = "block"
     }
+
+    if (successEdit == 'true') {
+        popUp2.style.display = "block"
+    }
+
+    function show(id){
+        newsId.value = news
+        popUp3.style.display = 'block'
+    }
+
 </script>
 
 <%- include ../../partials/dashFooter.ejs %>
