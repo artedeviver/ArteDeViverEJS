@@ -12,6 +12,15 @@ router.get("/courses", (req, res) => {
     })
 })
 
+//MOSTRAR TODOS OS CURSOS CADASTRADOS CARROUSSEL
+router.get("/", (req, res) => {
+    Courses.findAll({
+        raw: true, order: [['id', 'DESC']]
+    }).then(courses => {
+        res.render("index", { courses: courses })
+    })
+})
+
 //ROTA PARA QUEM SOMOS 
 router.get("/WhoWeAre", (req, res) => {
     res.render("./homepage/quemSomos")
