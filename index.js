@@ -58,6 +58,10 @@ app.get("/dashboard", (req, res) => {
     res.render("./dashboard/index")
 })
 
+app.get("/dashboard/home", (req,res) => {
+    res.render("./dashboard/home/index")
+})
+
 // server
 app.listen(4000, () => {
     console.log("Servidor rodando")
