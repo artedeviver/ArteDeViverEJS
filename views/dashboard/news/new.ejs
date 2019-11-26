@@ -32,49 +32,7 @@
 </div>
 
 
-<script>
-    let form = document.querySelector('.form-container')
-    let btn = document.querySelector('.btn-change')
-    let title = document.getElementsByName('title')
-    let bodyNews = document.getElementsByName('bodyNews')
-    let titleImage = document.getElementsByName('titleImage')
-    let img = document.querySelector('.img-selected')
-
-
-    form.addEventListener("blur", function (event) {
-        if (event.target.value == '') {
-            event.target.classList.add('error')
-            verify()
-        } else {
-            event.target.classList.remove('error')
-            verify()
-        }
-    }, true);
-
-    function verify() {
-        if (title[0].value != '' && bodyNews[0].value != '' && titleImage[0].value != '') {
-            btn.disabled = false
-            btn.classList.remove("btn-disabled")
-            btn.classList.add("primary")
-        }
-    }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="/js/newsValidation.js"></script>
 
 
 <%- include ../../partials/dashFooter.ejs %>

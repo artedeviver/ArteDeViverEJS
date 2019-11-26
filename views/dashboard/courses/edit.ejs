@@ -10,15 +10,19 @@
             <h2>informações gerais</h2>
             <label for="">nome do curso</label>
             <input type="text" class="input-general" name="title" value="<%= courses.title%>">
+            <span class="alert-error">Você precisa preencher o nome</span>
+
 
             <label for="">descrição do curso</label>
             <input type="text" class="input-general" name="bodyCourse" value="<%= courses.bodyCourse%>">
+            <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
                 <label for="">capa do curso</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse" value="<%= courses.imgCourse%>">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
         </fieldset>
@@ -27,12 +31,14 @@
             <h2>destaque</h2>
             <label for="">descrição do destaque</label>
             <input type="text" class="input-general" name="featured" value="<%= courses.featured%>">
+            <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
                 <label for="">imagem de fundo destaque</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" onchange="mudar(this)" class="input-general file" name="imgFeatured" value="<%= courses.imgFeatured%>">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
         </fieldset>
@@ -41,12 +47,14 @@
             <h2>impactos</h2>
             <label for="">descrição dos impactos</label>
             <input type="text" class="input-general" name="impactDesc" value="<%= courses.impactDesc%>">
+            <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
                 <label for="">imagem 1</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg1" value="<%= courses.impactImg1%>">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
 
@@ -55,6 +63,7 @@
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg2" value="<%= courses.impactImg2%>">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
 
@@ -63,6 +72,7 @@
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg3" value="<%= courses.impactImg3%>">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
         </fieldset>
@@ -73,6 +83,8 @@
 
     <a href="/dashboard/courses" class="tertiary">cancelar</a>
 </div>
+
+<script src="/js/courseValidation.js"></script>
 
 
 <%- include ../../partials/dashFooter.ejs %>
