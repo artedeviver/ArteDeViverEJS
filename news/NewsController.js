@@ -19,7 +19,7 @@ router.post("/dashboard/news/save", (req, res) => {
         bodyNews: bodyNews,
         titleImage: titleImage
     }).then(() => {
-        res.redirect("/dashboard/news")
+        res.redirect("/dashboard/news?success=true")
     }).catch((error) => {
         res.send(error)
     })
@@ -33,7 +33,7 @@ router.get("/dashboard/news", (req, res) => {
             ['id', 'DESC']
         ]
     }).then(news => {
-        res.render("dashboard/news/index", { news: news })
+        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit })
     })
 })
 
@@ -89,7 +89,7 @@ router.post("/dashboard/news/update", (req, res) => {
     }, {
         where: { id: id }
     }).then(() => {
-        res.redirect("/dashboard/news")
+        res.redirect("/dashboard/news?successEdit=true")
     })
 })
 

@@ -1,37 +1,79 @@
 <%- include ../../partials/dashHeader.ejs %>
-
-<section class="pop-up">
-    <div>
-        <p class="title">Notícia adicionada com sucesso!</p>
-       <a href="/dashboard/users" class="tertiary">voltar</a>
-    </div>
-</section>
-
 <%- include ../../partials/dashPage.ejs %>
 
 <h1>adicionar nova notícia</h1>
 
+
+<!-- FORMULÁRIO -->
 <div class="card-container">
     <form class="form-container" method="POST" action="/dashboard/news/save">
-
-        <label for="">título</label>
+        <label>título</label>
         <input type="text" class="input-general" name="title">
+        <span class="alert-error">Você precisa preencher o título</span>
 
         <label for="">corpo da notícia</label>
         <input type="text" class="input-general" name="bodyNews">
+        <span class="alert-error">Você precisa preencher o corpo da notícia</span>
 
         <div class="img-container-select">
             <label for="">capa da notícia</label>
             <div>
                 <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                <input type="file" onchange="mudar(this)" class="input-general file" name="titleImage">
+                <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="titleImage">
+                <span class="alert-error">Você precisa selecionar um arquivo</span>
             </div>
         </div>
 
-        <button class="primary btn-change">adicionar notícia</button>
+        <button class="btn-change btn-disabled" disabled>adicionar notícia</button>
     </form>
 
     <a href="" class="tertiary">cancelar</a>
 </div>
+
+
+<script>
+    let form = document.querySelector('.form-container')
+    let btn = document.querySelector('.btn-change')
+    let title = document.getElementsByName('title')
+    let bodyNews = document.getElementsByName('bodyNews')
+    let titleImage = document.getElementsByName('titleImage')
+    let img = document.querySelector('.img-selected')
+
+
+    form.addEventListener("blur", function (event) {
+        if (event.target.value == '') {
+            event.target.classList.add('error')
+            verify()
+        } else {
+            event.target.classList.remove('error')
+            verify()
+        }
+    }, true);
+
+    function verify() {
+        if (title[0].value != '' && bodyNews[0].value != '' && titleImage[0].value != '') {
+            btn.disabled = false
+            btn.classList.remove("btn-disabled")
+            btn.classList.add("primary")
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <%- include ../../partials/dashFooter.ejs %>
