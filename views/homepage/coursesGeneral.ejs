@@ -6,51 +6,44 @@
     <%- include ../partials/navbar.ejs %>
 
     <main class="main-news-general">
-        <section>
-            <div class="manchete">
-                <h1> <a href="/newsSpecific"> insira uma manchete </a></h1>
-
-            </div>
-        </section>
 
         <!-- noticias -->
         <section>
             <div class="title-container">
                 <div class="principal-title-container">
                     <h1>
-                        fique <span>informado!</span>
+                        nossos <span>projetos!</span>
                     </h1>
                 </div>
 
                 <div class="description-title">
-                    <p>Aqui você fica por dentro do que está acontecendo na Arte de Viver!</p>
+                    <p>Aqui é possível conhecer todos os projetos da Arte de Viver!</p>
                 </div>
             </div>
 
             <!-- container noticias -->
             <!-- noticia 1 -->
+            <% courses.forEach((courses) => { %>
             <div class="news-container">
                 <div class="news-img-container">
                     <img src="../img/news-general/noticia-1.png" alt="">
                 </div>
 
                 <div class="news-text-container">
-                    <h3> <a href="/newsSpecific">insira uma <span>manchete aqui</span></a>
+                    <h3> <a href="/courseName"><%= courses.title %></a>
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis, et
-                        imperdiet enim posuere quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum
-                        dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis, et
-                        imperdiet enim posuere quis.
+                        <%= courses.bodyCourse %>
                     </p>
-                    <a class="news-plus" href="/newsSpecific">saiba mais</a>
+                    <a class="news-plus" href="/courseName">saiba mais</a>
                 </div>
             </div>
+            <%})%>
 
             <!-- noticia 2 -->
-            <div class="news-container">
+            <!-- <div class="news-container">
                 <div class="news-text-container">
-                    <h3 class="align-right"><a href="/newsSpecific">insira uma <span>manchete aqui</span></a>
+                    <h3 class="align-right"><a href="/courseName">insira uma <span>manchete aqui</span></a>
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis, et
@@ -58,22 +51,22 @@
                         dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis, et
                         imperdiet enim posuere quis.
                     </p>
-                    <div class="align-right"><a class="news-plus" href="/newsSpecific"">saiba mais</a></div>
+                    <div class="align-right"><a class="news-plus" href="/courseName"">saiba mais</a></div>
                 </div>
                 <div class=" news-img-container">
                             <img src="../img/news-general/noticia-2.png" alt="">
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- noticia 3 -->
-                <div class="news-container">
+                <!-- <div class="news-container">
                     <div class="news-img-container">
                         <img src="../img/news-general/noticia-3.png" alt="">
                     </div>
 
                     <div class="news-text-container">
-                        <h3><a href="/newsSpecific">insira uma <span>manchete aqui</span></a>
+                        <h3><a href="/courseName">insira uma <span>manchete aqui</span></a>
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis,
@@ -83,15 +76,15 @@
                             dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis, et
                             imperdiet enim posuere quis.
                         </p>
-                        <a class="news-plus" href="/newsSpecific">saiba mais</a>
+                        <a class="news-plus" href="/courseName">saiba mais</a>
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- noticia 4 -->
-                <div class=" news-container">
+                <!-- <div class=" news-container">
                     <div class="news-text-container">
-                        <h3 class="align-right"><a href="/newsSpecific">insira uma <span>manchete aqui</span></a>
+                        <h3 class="align-right"><a href="/courseName">insira uma <span>manchete aqui</span></a>
                         </h3>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque
@@ -101,12 +94,12 @@
                             dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque mauris felis, et
                             imperdiet enim posuere quis.
                         </p>
-                        <div class="align-right"><a class="news-plus" href="/newsSpecific"">saiba mais</a></div>
+                        <div class="align-right"><a class="news-plus" href="/courseName"">saiba mais</a></div>
                 </div>
                 <div class=" news-img-container">
                                 <img src="../img/news-general/noticia-4.png" alt="">
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="pagination">
                         <ul>

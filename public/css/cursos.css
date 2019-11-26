@@ -16,6 +16,10 @@
     margin-left: 50%;
 }
 
+.news-container:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
 .main-course .testimonial div {
     padding: 5%;
 }

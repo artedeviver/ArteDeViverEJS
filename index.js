@@ -3,6 +3,9 @@ const app = express()
 const bodyParser = require("body-parser")
 const connection = require("./database/database")
 
+const Homepage = require("./homepage/Homepage")
+const HomepageController = require("./homepage/HomepageController")
+
 const User = require("./user/User")
 const userController = require("./user/UserController")
 
@@ -38,29 +41,11 @@ app.use("/", NewsController)
 
 app.use("/", CoursesController)
 
+app.use("/", HomepageController)
+
 //rota padrão
 app.get("/", (req, res) => {
     res.render("index")
-})
-
-app.get("/cursos", (req, res) => {
-    res.render("homepage/cursos")
-})
-
-app.get("/news", (req, res) => {
-    res.render("homepage/newsGeneral")
-})
-
-app.get("/news-specific", (req, res) => {
-    res.render("homepage/news")
-})
-
-app.get("/quem-somos", (req, res) => {
-    res.render("homepage/quemSomos")
-})
-
-app.get("/seja-membro", (req, res) => {
-    res.render("homepage/sejaMembro")
 })
 
 //rotas auxiliares
