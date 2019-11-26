@@ -1,31 +1,49 @@
 <%- include ../../partials/dashHeader.ejs %>
 
-<section class="pop-up">
+<section class="pop-up delete">
     <div class="pop-up-body">
         <p class="title">Deseja mesmo excluir o curso selecionado?</p>
 
         <div class="btn-container">
-            <button class="btn primary btn-card">
-                <a href="/dashboard/course/edit/<%= courses.id %>">editar</a>
-            </button>
+            <a class="primary btn-card" href="/dashboard/courses">cancelar</a>
 
-            <form class="form-delete" method="POST" action="/dashboard/course/delete">
-                <input type="hidden" name="id" value="<%= courses.id %>">
+            <form class="form-delete" method="POST" action="/dashboard/courses/delete">
+                <input type="hidden" name="id" class="courseId">
                 <button class="btn primary btn-card btn-delete">excluir</button>
             </form>
         </div>
-
     </div>
 </section>
+
+
+<section class="pop-up user">
+    <div>
+        <p class="title">Curso adicionado com sucesso!</p>
+        <a href="/dashboard/courses" class="tertiary">voltar</a>
+    </div>
+</section>
+
+
+<section class="pop-up edit">
+    <div>
+        <p class="title">Curso editado com sucesso!</p>
+        <a href="/dashboard/courses" class="tertiary">voltar</a>
+    </div>
+</section>
+
+
 
 <%- include ../../partials/dashPage.ejs %>
 
 <div class="title-container">
     <h1>visão geral - todos os cursos</h1>
-
-        <a class="primary btn-principal" href="/dashboard/courses/new">adicionar novo curso</a>
-        
+    <a class="primary btn-principal" href="/dashboard/courses/new">adicionar novo curso</a>
 </div>
+
+
+<p class="success"><%= success %></p>
+<p class="successEdit"><%= successEdit %></p>
+
 
 <div class="container-cards-dashboard">
     <h2>Já cadastrados</h2>
@@ -36,13 +54,9 @@
         <h3><%= courses.title %></h3>
 
         <div class="btn-container-long">
-                <a class="primary btn-card" href="/dashboard/courses/edit/<%= courses.id %>">editar</a>
-
-            <form class="form-delete" method="POST" action="/dashboard/courses/delete">
-                <a href="/dashboard/courses/edit/<%= courses.id %>"><input type="hidden" name="id" value="<%= courses.id %>"></a>
-                <button class="primary btn-delete">excluir</button>
-            </form>
-
+            <a class="primary btn-card" href="/dashboard/courses/edit/<%= courses.id %>">editar</a>
+            <button onclick="show(course.id)" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+            <input type="hidden" name="id" class="courseIdCard" value="<%= courses.id %>">
         </div>
 
     </div>
@@ -50,5 +64,33 @@
     <%})%>
 
 </div>
+
+
+
+
+
+<script>
+    let success = document.querySelector('.success').innerText
+    let successEdit = document.querySelector('.successEdit').innerText
+    let popUp = document.querySelector('.user')
+    let popUp2 = document.querySelector('.edit')
+    let popUp3 = document.querySelector('.delete')
+    let courseId = document.querySelector('.courseId')
+    let course = document.querySelector('.courseIdCard').value
+
+
+    if (success == 'true') {
+        popUp.style.display = "block"
+    }
+
+    if (successEdit == 'true') {
+        popUp2.style.display = "block"
+    }
+
+    function show(id) {
+        courseId.value = course
+        popUp3.style.display = 'block'
+    }
+</script>
 
 <%- include ../../partials/dashFooter.ejs %>
