@@ -1,11 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const Courses = require("../courses/Courses")
-
-// //ROTAS PARA PROTEJOS
-// router.get("/courses", (req, res) => {
-//     res.render("./homepage/coursesGeneral")
-// })
+const NewsLetter = require("../homepage/Homepage")
 
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
@@ -29,6 +25,23 @@ router.get("/news", (req, res) => {
 //ROTA PARA SEJA MEMBRO
 router.get("/beaMember", (req, res) => {
     res.render("./homepage/sejaMembro")
+})
+
+//SALVAR DADOS DO FORMULÁRIO - NEWSLETTER
+router.post("/homepage/newsletter/save", (req, res) => {
+
+    let name = req.body.name
+    let email = req.body.email
+
+    NewsLetter.create({
+        name: name,
+        email: email
+
+    }).then(() => {
+        res.redirect("/")
+    }).catch((error) => {
+        res.send(error)
+    })
 })
 
 module.exports = router
