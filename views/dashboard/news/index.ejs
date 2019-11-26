@@ -8,7 +8,7 @@
             <a class="primary btn-card" href="/dashboard/news">cancelar</a>
 
             <form class="form-delete" method="POST" action="/dashboard/news/delete">
-                <input type="hidden" name="id" class="newsId">
+                <input type="hidden" name="id" class="id">
                 <button class="btn primary btn-card btn-delete">excluir</button>
             </form>
         </div>
@@ -53,39 +53,12 @@
 
         <div class="btn-container-long">
             <a class="primary btn-card" href="/dashboard/news/edit/<%= news.id %>">Editar</a>
-            <button onclick="show(news.id)" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
-            <input type="hidden" name="id" class="newsIdCard" value="<%= news.id %>">
+            <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+            <input type="hidden" name="id" class="idCard" value="<%= news.id %>">
         </div>
     </div>
     <%})%>
-
 </div>
 
-
-
-<script>
-    let success = document.querySelector('.success').innerText
-    let successEdit = document.querySelector('.successEdit').innerText
-    let popUp = document.querySelector('.user')
-    let popUp2 = document.querySelector('.edit')
-    let popUp3 = document.querySelector('.delete') 
-    let newsId = document.querySelector('.newsId')
-    let news = document.querySelector('.newsIdCard').value
-
-
-    if (success == 'true') {
-        popUp.style.display = "block"
-    }
-
-    if (successEdit == 'true') {
-        popUp2.style.display = "block"
-    }
-
-    function show(id){
-        newsId.value = news
-        popUp3.style.display = 'block'
-    }
-
-</script>
-
+<script src="/js/pop-up-dash.js"></script>
 <%- include ../../partials/dashFooter.ejs %>
