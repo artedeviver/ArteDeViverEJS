@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
     Courses.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(courses => {
-        res.render("index", { courses: courses })
+        res.render("index", { courses: courses, success: req.query.success})
     })
 })
 
@@ -47,7 +47,7 @@ router.post("/homepage/newsletter/save", (req, res) => {
         email: email
 
     }).then(() => {
-        res.redirect("/")
+        res.redirect("/?success=true")
     }).catch((error) => {
         res.send(error)
     })

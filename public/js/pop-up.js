@@ -1,18 +1,14 @@
-let bodyIndex = document.querySelector('.body')
+let body = document.querySelector('.body')
+let popUp = document.querySelector('.pop-up')
+let success = document.querySelector('.success').innerText
+let btn = document.querySelector('.btn-back')
+btn.addEventListener('click', close)
 
-let popUpIndex = document.querySelector(".pop-up")
-
-let btnConcluir = document.querySelector(".action-cadastro-news-letter")
-btnConcluir.addEventListener('click', concluir)
-
-let btnVoltar= document.querySelector(".btn-back")
-btnVoltar.addEventListener('click', voltar)
-
-function concluir(){
-    bodyIndex.classList.add("hidden")
-    popUpIndex.style.display = "flex"
+if(success == 'true'){
+    body.classList.add("hidden")
+    popUp.style.display = "flex"
 }
 
-function voltar(){
-    window.location.replace("/")
+function close() {
+    body.classList.remove("hidden")
 }
