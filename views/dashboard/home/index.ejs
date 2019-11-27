@@ -1,4 +1,12 @@
 <%- include ../../partials/dashHeader.ejs %>
+
+<section class="pop-up edit">
+    <div>
+        <p class="title">área principal editada com sucesso!</p>
+        <a href="/dashboard/home" class="tertiary">voltar</a>
+    </div>
+</section>
+
 <%- include ../../partials/dashPage.ejs %>
 
 <h1>home</h1>
@@ -9,4 +17,6 @@
     <a href="" class="card card-link">parcerias</a>
 </div>
 
+<p class="successEdit"><%= successEdit %></p>
+<script src="/js/popUpEdit.js"></script>
 <%- include ../../partials/dashFooter.ejs %>

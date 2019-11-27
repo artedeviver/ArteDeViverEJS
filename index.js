@@ -64,7 +64,7 @@ app.get("/dashboard", (req, res) => {
 })
 
 app.get("/dashboard/home", (req,res) => {
-    res.render("./dashboard/home/index")
+    res.render("./dashboard/home/index", {successEdit: req.query.successEdit})
 })
 
 // server
