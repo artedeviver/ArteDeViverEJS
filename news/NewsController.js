@@ -38,7 +38,7 @@ router.get("/dashboard/news", (req, res) => {
             ['id', 'DESC']
         ]
     }).then(news => {
-        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit })
+        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit})
     })
 })
 

@@ -457,7 +457,7 @@
 }
 
 .main-index .news-letter button:hover{
-    background-color: rgb(65, 147, 156);
+    background-color: rgb(65, 147, 156)
 }
 
 /* popUp */
@@ -466,9 +466,16 @@
     background-color: white;
     text-align: center;
     width: 50%;
-    height: 300px;
+    height: 260px;
     padding: 3%;
     border-radius: 8px;
+}
+
+.show{
+    display: block;
+}
+.success{
+    display: none;
 }
 
 .body-index .pop-up p:nth-child(1){
@@ -485,16 +492,19 @@
     margin-bottom: 10%;
 }
 
-.body-index .pop-up button {
+.body-index .pop-up a {
     background: #4EB4BF;
-    width: 400px;
-    height: 40px;
+    padding: 2% 10%;
+    height: 50px;
     font-weight: 500;
     font-size: 15px;
     border-radius: 8px;
     color: white;
+    text-decoration: none;
 }
 
 .body-index .pop-up button:hover{
     background-color: rgb(65, 147, 156);
 }
+
+
