@@ -35,43 +35,72 @@
         <div class="cadastro-container">
             <div class="container-button"><a href="../index.html">voltar</a></div>
 
-            <form>
+            <form class="form-container">
                 <p class="question">Primeiro me conte um pouco sobre você:</p>
                 <div class="input-container">
-                    <p>Nome completo</p><input type="text" class="input-text space">
+
+
+                    <p>Nome completo</p><input type="text" class="input-text space" name="name">
+                    <span class="alert-error">Você precisa informar seu nome</span>
+
+
 
                     <p>Você tem interesse em ser:</p>
-                    <select name="" id="" class="section-text space">
+                    <select class="section-text space" id="interest">
                         <option value="0">Selecione</option>
                         <option value="1">Voluntário</option>
                         <option value="2">Parceiro</option>
                     </select>
+                    <span class="alert-error">Você precisa escolher uma opção</span>
+
+
 
                     <div class="legal">
-                        <p>Sou colaborador na empresa:</p><input type="text" class="input-text space">
+                        <p>Sou colaborador na empresa:</p><input type="text" class="input-text space"
+                            name="collaborator">
                     </div>
+                    <span class="alert-error">Você precisa informar de qual empresa é colaborador</span>
+
+
 
                     <div class="natural">
-                        <p>Idade</p><input type="number" min="18" class="input-text">
+                        <p>Idade</p><input type="number" min="18" class="input-text" name="age">
+                        <span class="alert-error">Você precisa informar sua idade</span>
                     </div>
-
                 </div>
+
+
 
                 <p class="question">Agora precisamos de alguns dados:</p>
                 <div class="input-container">
                     <p>Email</p>
-                    <input type="email" class="input-text input-text space">
+                    <input type="email" class="input-text input-text space" name="email">
+                    <span class="alert-error">Você precisa informar seu email</span>
+
+
+
 
                     <p>Telefone</p>
-                    <input type="tel" class="input-text">
+                    <input type="tel" class="input-text" name="telephone">
+                    <span class="alert-error">Você precisa informar seu telefone</span>
                 </div>
 
+
+
+
+
                 <p class="question">Por qual motivo você deseja se juntar a nós?</p>
-                <textarea rows="10" class="input-text-area" placeholder="Digite aqui"></textarea>
-                <button type="button" class="primary space-button action-cadastro">concluir cadastro</button>
+                <div class="textarea-container">
+                    <textarea rows="10" class="input-text-area" placeholder="Digite aqui" name="reason"></textarea>
+                    <span class="alert-error space">Você precisa informar o motivo</span>
+                </div>
+                <button type="button" class=" primary space-button action-cadastro btn-disabled" disabled>concluir
+                    cadastro</button>
             </form>
         </div>
-
     </main>
-    
+
+
+    <script src="/js/membersValidation.js"></script>
+
     <%- include ../partials/footer.ejs %>

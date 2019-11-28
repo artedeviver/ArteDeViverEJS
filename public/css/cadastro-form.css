@@ -35,12 +35,21 @@
     margin-bottom: 60px;
 }
 
-.main-seja-membro .input-text, .input-text-area, .section-text {
+.main-seja-membro .input-text, .textarea-container .input-text-area, .section-text {
     padding: 2%;
     margin: 2% 0% 5% 0%;
     border: 0.5px solid #F27623;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.textarea-container{
+    width: 320px;
+    /* border: 2px solid red */
+}
+
+.textarea-container .input-text-area{
+    width: 100%;
 }
 
 .input-text-area {
@@ -108,3 +117,36 @@
 .main-seja-membro .legal, .natural {
     display: none;
 }
+
+.alert-error{
+    display: none;
+    font-size: 12px;
+    color: red;
+    margin-bottom: 5%;
+}
+
+.error{
+    margin-bottom: 0.5%;
+}
+
+.space{
+    margin-top: 2.5%
+}
+
+
+.error + .alert-error{
+    display: block
+}
+
+.btn-disabled{
+    background-color: #aaa;
+    color: grey;
+    cursor: not-allowed;
+}
+
+.btn-disabled:hover{
+    background-color: #aaa;
+    color: grey;
+}
+
+
