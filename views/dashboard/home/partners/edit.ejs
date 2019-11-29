@@ -1,0 +1,73 @@
+<%- include ../../../partials/dashHeader.ejs %>
+<%- include ../../../partials/dashPage.ejs %>
+
+<h1>editar parceiros | home </h1>
+
+<div class="card-container">
+
+    <form class="form-container" method="POST" action="/dashboard/home/partners/update">
+
+        <div class="img-container-select">
+            <label for="">logo parceiro um</label>
+            <div>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="img1"
+                    value="<%= partners.img1%>">
+            </div>
+        </div>
+
+        <div class="img-container-select">
+            <label for="">logo parceiro dois</label>
+            <div>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="img2"
+                    value="<%= partners.img1%>">
+            </div>
+        </div>
+
+        <div class="img-container-select">
+            <label for="">logo parceiro três</label>
+            <div>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="img3"
+                    value="<%= partners.img1%>">
+            </div>
+        </div>
+
+        <div class="img-container-select">
+            <label for="">logo parceiro quatro</label>
+            <div>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="img4"
+                    value="<%= partners.img1%>">
+            </div>
+        </div>
+
+        <div class="img-container-select">
+            <label for="">logo parceiro cinco</label>
+            <div>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="img5"
+                    value="<%= partners.img1%>">
+            </div>
+        </div>
+
+        <div class="img-container-select">
+            <label for="">logo parceiro seis</label>
+            <div>
+                <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                <input type="file" onchange="mudar(this)" class="input-general file" name="img6"
+                    value="<%= partners.img1%>">
+            </div>
+        </div>
+
+        <input type="hidden" name="id" value="<%= partners.id %>">
+        <button class="primary btn-change">editar parceiros</button>
+
+    </form>
+
+    <a href="/dashboard/home" class="tertiary">voltar</a>
+
+</div>
+
+<%- include ../../../partials/dashFooter.ejs %></div>

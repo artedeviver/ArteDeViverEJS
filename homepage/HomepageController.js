@@ -2,6 +2,7 @@ const express = require("express")
 const router = express.Router()
 const Courses = require("../courses/Courses")
 const NewsLetter = require("../homepage/Homepage")
+const PrincipalArea = require("../principalArea/PrincipalArea")
 
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
@@ -12,13 +13,25 @@ router.get("/courses", (req, res) => {
     })
 })
 
-//MOSTRAR TODOS OS CURSOS CADASTRADOS CARROUSSEL
+//MOSTRAR AREA PRINCIPAL ATUALIZADA
 router.get("/", (req, res) => {
-    Courses.findAll({
+
+    const courses = Courses.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(courses => {
         res.render("index", { courses: courses, success: req.query.success})
     })
+    const principal = PrincipalArea.findByPk(1)
+
+    Promise
+        .all([courses, principal])
+        .then(responses => {
+            res.render("index", { principalArea: responses[1], courses: responses[0] })
+        })
+        .catch(err => {
+            console.log('**********ERROR RESULT****************');
+            console.log(err);
+        })
 })
 
 //ROTA PARA QUEM SOMOS 
