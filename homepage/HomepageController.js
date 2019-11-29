@@ -3,6 +3,7 @@ const router = express.Router()
 const Courses = require("../courses/Courses")
 const NewsLetter = require("../homepage/Homepage")
 const PrincipalArea = require("../principalArea/PrincipalArea")
+const News = require("../news/News")
 
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
@@ -40,8 +41,16 @@ router.get("/WhoWeAre", (req, res) => {
 })
 
 //ROTA PARA NOTÍCIAS
+// router.get("/news", (req, res) => {
+//     res.render("./homepage/newsGeneral", { news: news })
+// })
+
 router.get("/news", (req, res) => {
-    res.render("./homepage/newsGeneral")
+    News.findAll({
+        raw: true, order: [['id', 'DESC']]
+    }).then(news => {
+        res.render("./homepage/newsGeneral", { news: news })
+    })
 })
 
 //ROTA PARA SEJA MEMBRO
