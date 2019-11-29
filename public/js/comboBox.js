@@ -1,29 +1,9 @@
-let bodyCadastro = document.querySelector('.body')
-
-let popUpCadastro = document.querySelector(".pop-up")
-
-let btnCadastro = document.querySelector(".action-cadastro")
-btnCadastro.addEventListener('click', concluirCadastro)
-
-let btnVoltarCadastro = document.querySelector(".btn-back-cadastro")
-btnVoltarCadastro.addEventListener('click', voltar)
-
 let combo = document.querySelector(".section-text")
 combo.addEventListener("click", verification)
 
 let legal = document.querySelector(".legal")
 
 let natural = document.querySelector(".natural")
-
-function concluirCadastro() {
-    bodyCadastro.classList.add("hidden")
-    popUpCadastro.style.display = "flex"
-
-}
-
-function voltar() {
-    window.location.replace("/")
-}
 
 function verification() {
     if (combo.value == 0) {
@@ -40,5 +20,4 @@ function verification() {
         console.log(combo.value)
     }
 }
-
 

@@ -2,7 +2,7 @@
 
 <body class="body body-cadastro">
 
-    <section class="pop-up">
+    <!-- <section class="pop-up">
         <div>
             <p>
                 Ficamos felizes pelo seu interesse em fazer parte da nossa família!
@@ -14,10 +14,11 @@
             <button class="btn-back-cadastro">OK! Voltar para a tela inicial</button>
         </div>
 
-    </section>
+    </section> -->
 
     <!-- nav-bar -->
     <%- include ../partials/navbar.ejs %>
+
 
     <main class="main-seja-membro">
         <div class="title-container">
@@ -35,7 +36,7 @@
         <div class="cadastro-container">
             <div class="container-button"><a href="../index.html">voltar</a></div>
 
-            <form class="form-container">
+            <form class="form-container" method="POST" action="/dashboard/members/save">
                 <p class="question">Primeiro me conte um pouco sobre você:</p>
                 <div class="input-container">
 
@@ -46,7 +47,7 @@
 
 
                     <p>Você tem interesse em ser:</p>
-                    <select class="section-text space" id="interest">
+                    <select class="section-text space" id="interest" name="interest">
                         <option value="0">Selecione</option>
                         <option value="1">Voluntário</option>
                         <option value="2">Parceiro</option>
@@ -94,13 +95,13 @@
                     <textarea rows="10" class="input-text-area" placeholder="Digite aqui" name="reason"></textarea>
                     <span class="alert-error space">Você precisa informar o motivo</span>
                 </div>
-                <button type="button" class=" primary space-button action-cadastro btn-disabled" disabled>concluir
-                    cadastro</button>
+                <button class=" primary space-button btn-disabled" disabled>concluir cadastro</button>
             </form>
         </div>
     </main>
 
 
-    <script src="/js/membersValidation.js"></script>
+    <script src="./js/membersValidation.js"></script>
+    <script src="./js/comboBox.js"></script>
 
     <%- include ../partials/footer.ejs %>
