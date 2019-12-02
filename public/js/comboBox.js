@@ -5,8 +5,6 @@ let legal = document.querySelector(".legal")
 
 let natural = document.querySelector(".natural")
 
-let ageForm = document.querySelector("#age")
-
 function verification() {
     if (combo.value == 0) {
         natural.style.display = 'none'
@@ -17,6 +15,5 @@ function verification() {
     } else {
         natural.style.display = 'none'
         legal.style.display = 'block'
-        ageForm.value = 0
     }
 }

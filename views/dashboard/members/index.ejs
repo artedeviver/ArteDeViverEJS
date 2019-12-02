@@ -22,25 +22,31 @@
 
 <div class="card-container">
 
-    <% members.forEach((member) => { %>
+    <% members.map(member => { %>
 
     <div class="card-members">
-        <h2><%= member.name%></h2>
-        <i><%= member.interest%></i>
+        <div class="card-members-text-container">
+            <h2><%= member.name%></h2>
+            <i><%= member.interest%></i>
 
-        <p class="margin">empresa: <span><%= member.company%></span></p>
-        <p>idade: <span><%= member.age%></span></p>
-        <p>email: <span><%= member.email%></span></p>
-        <p>telefone: <span><%= member.telephone%></span></p>
+            <%  if(member.interest == 'voluntário'){ %>
+            <p class="margin">idade: <span><%= member.age%></span></p>
 
-        <p>motivo:
-            <span class="members-text"><%= member.reason%></span>
-        </p>
+            <%  } else { %>
+            <p class="margin">empresa: <span><%= member.company%></span></p>
+            <%  } %>
+
+            <p>email: <span><%= member.email%></span></p>
+            <p>telefone: <span><%= member.telephone%></span></p>
+            <p>motivo:
+                <span class="members-text"><%= member.reason%></span>
+            </p>
+        </div>
 
         <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
         <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
     </div>
-    <%})%>
+    <% }) %>
 </div>
 
 
