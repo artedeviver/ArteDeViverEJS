@@ -398,10 +398,10 @@
             </div>
 
             <div>
-                <form method="POST" action="/homepage/newsletter/save">
+                <form method="POST" action="/homepage/newsletter/save" class="form">
                     <input type="text" placeholder="Nome" name="name">
                     <input type="text" placeholder="E-mail" name="email">
-                    <button class="btn-news action-cadastro-news-letter">quero ficar informado</button>
+                    <button class="btn-news action-cadastro-news-letter" disabled>quero ficar informado</button>
                 </form>
             </div>
         </section>
@@ -412,9 +412,24 @@
     <script>
         let body = document.querySelector('.body')
         let popUp = document.querySelector('.pop-up')
+        let name = document.getElementsByName('name')
+        let email = document.getElementsByName('email')
         let success = document.querySelector('.success').innerText
         let btn = document.querySelector('.btn-back')
+        let btnews = document.querySelector('.btn-news')
+        let form = document.querySelector('.form')
         btn.addEventListener('click', close)
+
+
+        form.addEventListener("blur", function (event) {
+            verify()
+        }, true);
+
+        function verify() {
+            if(name[0].value != '' && email[0].value != ''){
+            btnews.disabled = false
+            }
+        }
 
         if (success == 'true') {
             body.classList.add("hidden")

@@ -1,14 +1,14 @@
-let body = document.querySelector('.body')
-let popUp = document.querySelector('.pop-up')
-let success = document.querySelector('.success').innerText
-let btn = document.querySelector('.btn-back')
-btn.addEventListener('click', close)
+let bodyAll = document.querySelector('.body')
+let popup = document.querySelector('.pop-up')
+let sucess = document.querySelector('.success').innerText
+let btnBack = document.querySelector('.btn-back')
+btnBack.addEventListener('click', close)
 
-if(success == 'true'){
-    body.classList.add("hidden")
-    popUp.style.display = "flex"
+if(sucess == 'true'){
+    bodyAll.classList.add("hidden")
+    popup.style.display = "flex"
 }
 
 function close() {
-    body.classList.remove("hidden")
+    bodyAll.classList.remove("hidden")
 }
