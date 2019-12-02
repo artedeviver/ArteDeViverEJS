@@ -3,8 +3,27 @@ const router = express.Router()
 const Courses = require("./Courses")
 
 //MOSTRAR CURSO ESPECIFICO
-router.get("/courseName", (req, res) => {
-    res.render("./homepage/courseSpecific")
+// router.get("/courseName", (req, res) => {
+//     res.render("./homepage/courseSpecific")
+// })
+
+router.get("/courseName/:id", (req, res) => {
+
+    let id = req.params.id
+
+    if (isNaN(id)) {
+        res.redirect("./homepage/courses")
+    }
+
+    Courses.findByPk(id).then(courses => {
+        if (courses != undefined) {
+            res.render("./homepage/courseSpecific", { courses: courses })
+        } else {
+            res.redirect("./homepage/courses")
+        }
+    }).catch(error => {
+        res.redirect("./homepage/courses")
+    })
 })
 
 //MOSTRAR TODOS OS CURSOS CADASTRADOS

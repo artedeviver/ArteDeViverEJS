@@ -20,9 +20,6 @@ router.get("/newsSpecific/:id", (req, res) => {
     }).catch(error => {
         res.redirect("./homepage/news")
     })
-
-
-    //res.render("./homepage/newsSpecific")
 })
 
 //ROTA PARA PÁGINA DE ADD NOVA NOTÍCIA
