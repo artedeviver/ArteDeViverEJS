@@ -12,7 +12,7 @@ const Members = connection.define('members', {
     },
     age:{
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: true
     },
     company:{
         type: Sequelize.STRING,

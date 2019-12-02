@@ -1,30 +1,48 @@
 <%- include ../../partials/dashHeader.ejs %>
+
+<section class="pop-up delete">
+    <div class="pop-up-body">
+        <p class="title">Deseja mesmo excluir o interessado selecionado?</p>
+
+        <div class="btn-container">
+            <a class="primary btn-card" href="/dashboard/members">cancelar</a>
+
+            <form class="form-delete" method="POST" action="/dashboard/members/delete">
+                <input type="hidden" name="id" class="id">
+                <button class="btn primary btn-card btn-delete">excluir</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
 <%- include ../../partials/dashPage.ejs %>
 
 <h1>interessados</h1>
 
 <div class="card-container">
 
-    <div class="card-members">
-        <h2>Ana Beatriz de Sousa Costa</h2>
-        <i>voluntário</i>
+    <% members.forEach((member) => { %>
 
-        <p class="margin">empresa: <span>easynvest</span></p>
-        <p>idade: <span>18 anos</span></p>
-        <p>email: <span>anabeatrizdesousacosta@gmail.com</span></p>
-        <p>telefone: <span>(11) 948060747</span></p>
+    <div class="card-members">
+        <h2><%= member.name%></h2>
+        <i><%= member.interest%></i>
+
+        <p class="margin">empresa: <span><%= member.company%></span></p>
+        <p>idade: <span><%= member.age%></span></p>
+        <p>email: <span><%= member.email%></span></p>
+        <p>telefone: <span><%= member.telephone%></span></p>
 
         <p>motivo:
-            <span class="members-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum velit
-                et libero rutrum,
-                vehicula varius nibh aliquam. Nunc ultrices turpis a augue tempus, eu maximus turpis interdum.
-            </span>
+            <span class="members-text"><%= member.reason%></span>
         </p>
 
-        <button class="primary btn-card">excluir</button>
+        <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+        <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
     </div>
+    <%})%>
 </div>
 
 
-
+<script src="/js/pop-up-members.js"></script>
 <%- include ../../partials/dashFooter.ejs %>

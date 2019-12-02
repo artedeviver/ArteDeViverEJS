@@ -6,7 +6,7 @@ const Members = require("./Members")
 router.get("/dashboard/members", (req, res) => {
     Members.findAll({
         raw: true, order: [['id', 'DESC']]
-    }).then(user => {
+    }).then(members => {
         res.render("dashboard/members/index", { members:members, success: req.query.success})
     })
 })
@@ -14,7 +14,6 @@ router.get("/dashboard/members", (req, res) => {
 
 // SALVAR OS DADOS DO FORMULÁRIO
 router.post("/dashboard/members/save", (req, res) => {
-
     let name = req.body.name
     let interest
     let company = req.body.collaborator
@@ -44,6 +43,26 @@ router.post("/dashboard/members/save", (req, res) => {
     }).catch((error) =>{
         res.send(error)
     })
+})
+
+
+// DELETAR UM MEMBRO
+router.post("/dashboard/members/delete", (req, res) => {
+    let id = req.body.id
+
+    if (id != undefined) {
+        if (!isNaN(id)) {
+            Members.destroy({
+                where: { id: id }
+            }).then(() => {
+                res.redirect("/dashboard/members")
+            })
+        } else { //não é número
+            res.redirect("/dashboard/members")
+        }
+    } else { //null
+        res.redirect("/dashboard/members")
+    }
 })
 
 
