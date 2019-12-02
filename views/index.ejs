@@ -23,7 +23,7 @@
     <main class="main-index">
         <!-- area principal -->
         <section class="principal padding">
-
+            <h1 class="principal-title"><%= principalArea.title %></h1>
         </section>
 
         <!-- missão -->
@@ -363,24 +363,15 @@
                 </p>
 
                 <div class="container-news clearfix">
+
+                    <% latestNews.forEach((latestNews) => { %>
+
                     <div class="specific-news">
                         <img src="img/page-news-index/news1.jpg" alt="Capa da notícia">
                         <a href="/newsSpecific" class="bt-news tertiary">Notícia</a>
-                    </div>
 
-                    <div class="specific-news">
-                        <img src="img/page-news-index/news2.jpg" alt="Capa da notícia">
-                        <a href="/newsSpecific" class="bt-news tertiary">Notícia</a>
-                    </div>
+                        <%})%>
 
-                    <div class="specific-news">
-                        <img src="img/page-news-index/news3.jpg" alt="Capa da notícia">
-                        <a href="/newsSpecific" class="bt-news tertiary">Notícia</a>
-                    </div>
-
-                    <div class="specific-news">
-                        <img src="img/page-news-index/news2.jpg" alt="Capa da notícia">
-                        <a href="/newsSpecific" class="bt-news tertiary">Notícia</a>
                     </div>
 
                     <a href="/news"><button class="primary">saiba mais</button></a>
@@ -406,8 +397,6 @@
             </div>
         </section>
     </main>
-
-    <p class="success"><%= success %></p>
 
     <script>
         let body = document.querySelector('.body')

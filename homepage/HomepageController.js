@@ -16,25 +16,21 @@ router.get("/courses", (req, res) => {
 })
 
 //MOSTRAR AREA PRINCIPAL ATUALIZADA
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
 
-    const courses = Courses.findAll({
+    const courses = await Courses.findAll({
         raw: true, order: [['id', 'DESC']]
-    }).then(courses => {
-        res.render("index", { courses: courses, success: req.query.success})
     })
-    const principal = PrincipalArea.findByPk(1)
 
-    Promise
-        .all([courses, principal])
-        .then(responses => {
-            res.render("index", { principalArea: responses[1], courses: responses[0] })
-        })
-        .catch(err => {
-            console.log('**********ERROR RESULT****************');
-            console.log(err);
-          
-        })
+    const latestNews = await News.findAll({
+        raw: true, order: [['id', 'DESC']]
+    })
+
+    const principalArea = await PrincipalArea.findByPk(1)
+    res.render('index', { principalArea, courses, latestNews })
+
+    
+
 })
 
 //ROTA PARA QUEM SOMOS 
