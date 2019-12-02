@@ -36,7 +36,7 @@
         <div class="cadastro-container">
             <div class="container-button"><a href="../index.html">voltar</a></div>
 
-            <form class="form-container" method="POST" action="/dashboard/members/save">
+            <form class="form-container" method="POST" action="/dashboard/members/save" novalidate>
                 <p class="question">Primeiro me conte um pouco sobre você:</p>
                 <div class="input-container">
 
@@ -65,7 +65,7 @@
 
 
                     <div class="natural">
-                        <p>Idade</p><input type="number" min="18" class="input-text" name="age" value=0 id="age">
+                        <p>Idade</p><input type="number" min="18" class="input-text" name="age" value=0>
                         <span class="alert-error">Você precisa informar sua idade</span>
                     </div>
                 </div>

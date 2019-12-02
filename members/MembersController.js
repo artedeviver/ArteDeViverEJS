@@ -14,6 +14,7 @@ router.get("/dashboard/members", (req, res) => {
 
 // SALVAR OS DADOS DO FORMULÁRIO
 router.post("/dashboard/members/save", (req, res) => {
+
     let name = req.body.name
     let interest
     let company = req.body.collaborator
@@ -23,11 +24,10 @@ router.post("/dashboard/members/save", (req, res) => {
     let reason = req.body.reason
 
     if(company != " "){
-        interest = 'voluntário'
-        company = '---'
-    }else{
         interest = 'parceiro'
         age = 0
+    }else{
+        interest = 'voluntário'
     }
 
     Members.create({
