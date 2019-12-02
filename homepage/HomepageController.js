@@ -2,8 +2,9 @@ const express = require("express")
 const router = express.Router()
 const Courses = require("../courses/Courses")
 const NewsLetter = require("../homepage/Homepage")
-const PrincipalArea = require("../principalArea/PrincipalArea")
 const News = require("../news/News")
+const PrincipalArea = require("../principalArea/PrincipalArea")
+
 
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
@@ -32,6 +33,7 @@ router.get("/", (req, res) => {
         .catch(err => {
             console.log('**********ERROR RESULT****************');
             console.log(err);
+          
         })
 })
 
@@ -39,11 +41,6 @@ router.get("/", (req, res) => {
 router.get("/WhoWeAre", (req, res) => {
     res.render("./homepage/quemSomos")
 })
-
-//ROTA PARA NOTÍCIAS
-// router.get("/news", (req, res) => {
-//     res.render("./homepage/newsGeneral", { news: news })
-// })
 
 router.get("/news", (req, res) => {
     News.findAll({

@@ -36,10 +36,10 @@
                 </div>
 
                 <div class="news-text-container">
-                    <h3> <a href="/newsSpecific"><%= news.title %></span></a>
+                    <h3> <a href="/newsSpecific/<%= news.id %>"><%= news.title %></span></a>
                     </h3>
                     <p><%= news.bodyNews %></p>
-                    <a class="news-plus" href="/newsSpecific">saiba mais</a>
+                    <a class="news-plus" href="/newsSpecific/<%= news.id %>">saiba mais</a>
                 </div>
             </div>
             <%})%>

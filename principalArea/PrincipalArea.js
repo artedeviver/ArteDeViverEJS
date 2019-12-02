@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize")
 const connection = require("../database/database")
 
-const PrincipalArea = connection.define('principal_Area', {
+const PrincipalArea = connection.define('area_principal', {
     title:{
         type: Sequelize.STRING,
         allowNull:false

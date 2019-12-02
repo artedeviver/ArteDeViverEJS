@@ -3,8 +3,26 @@ const router = express.Router()
 const News = require("./News")
 
 //ROTA NOTÍCIA ESPECIFICA 
-router.get("/newsSpecific", (req, res) => {
-    res.render("./homepage/newsSpecific")
+router.get("/newsSpecific/:id", (req, res) => {
+
+    let id = req.params.id
+
+    if (isNaN(id)) {
+        res.redirect("./homepage/news")
+    }
+
+    News.findByPk(id).then(news => {
+        if (news != undefined) {
+            res.render("./homepage/newsSpecific", { news: news })
+        } else {
+            res.redirect("./homepage/news")
+        }
+    }).catch(error => {
+        res.redirect("./homepage/news")
+    })
+
+
+    //res.render("./homepage/newsSpecific")
 })
 
 //ROTA PARA PÁGINA DE ADD NOVA NOTÍCIA
