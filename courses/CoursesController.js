@@ -7,9 +7,10 @@ const Courses = require("./Courses")
 //     res.render("./homepage/courseSpecific")
 // })
 
-router.get("/courseName/:id", (req, res) => {
+router.get("/:title/:id", (req, res) => {
 
     let id = req.params.id
+    let name = req.params.title
 
     if (isNaN(id)) {
         res.redirect("./homepage/courses")
