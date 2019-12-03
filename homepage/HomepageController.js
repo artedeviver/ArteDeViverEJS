@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
     })
 
     const principalArea = await PrincipalArea.findByPk(1)
-    res.render('index', { principalArea, courses, latestNews })
+    res.render('index', { principalArea, courses, latestNews, success: req.query.success })
 
     
 

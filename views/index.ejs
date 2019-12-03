@@ -14,7 +14,6 @@
 
             <a href="/" class="btn-back">concluir</a>
         </div>
-
     </section>
 
     <!-- nav-bar -->
@@ -389,6 +388,7 @@
             </div>
 
             <div>
+                <p type="hidden" class="success"><%= success %></p>
                 <form method="POST" action="/homepage/newsletter/save" class="form">
                     <input type="text" placeholder="Nome" name="name">
                     <input type="text" placeholder="E-mail" name="email">
@@ -397,37 +397,4 @@
             </div>
         </section>
     </main>
-
-    <script>
-        let body = document.querySelector('.body')
-        let popUp = document.querySelector('.pop-up')
-        let name = document.getElementsByName('name')
-        let email = document.getElementsByName('email')
-        let success = document.querySelector('.success').innerText
-        let btn = document.querySelector('.btn-back')
-        let btnews = document.querySelector('.btn-news')
-        let form = document.querySelector('.form')
-        btn.addEventListener('click', close)
-
-
-        form.addEventListener("blur", function (event) {
-            verify()
-        }, true);
-
-        function verify() {
-            if(name[0].value != '' && email[0].value != ''){
-            btnews.disabled = false
-            }
-        }
-
-        if (success == 'true') {
-            body.classList.add("hidden")
-            popUp.style.display = "flex"
-        }
-
-        function close() {
-            body.classList.remove("hidden")
-        }
-    </script>
-
     <%- include partials/footer.ejs %>
