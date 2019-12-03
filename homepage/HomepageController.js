@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
     })
 
     const latestNews = await News.findAll({
-        raw: true, order: [['id', 'DESC']]
+        raw: true, limit: 4, order: [['id', 'DESC']]
     })
 
     const principalArea = await PrincipalArea.findByPk(1)
