@@ -28,22 +28,24 @@ router.get("/", async (req, res) => {
 
     const principalArea = await PrincipalArea.findByPk(1)
     res.render('index', { principalArea, courses, latestNews, success: req.query.success })
+})
 
-    
+router.get("/news", async (req, res) => {
 
+    const news = await News.findAll({
+        raw: true, order: [['id', 'DESC']]
+    })
+
+    const lastNews = await News.findAll({
+        raw: true, limit: 1, order: [['id', 'DESC']]
+    })
+
+    res.render("./homepage/newsGeneral", { news, lastNews })
 })
 
 //ROTA PARA QUEM SOMOS 
 router.get("/WhoWeAre", (req, res) => {
     res.render("./homepage/quemSomos")
-})
-
-router.get("/news", (req, res) => {
-    News.findAll({
-        raw: true, order: [['id', 'DESC']]
-    }).then(news => {
-        res.render("./homepage/newsGeneral", { news: news })
-    })
 })
 
 //ROTA PARA SEJA MEMBRO
