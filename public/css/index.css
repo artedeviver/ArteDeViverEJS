@@ -363,10 +363,6 @@
     width: 36%;
 }
 
-/* .main-index .page-news .description {
-    width: 60%;
-} */
-
 .main-index .container-inside {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -382,7 +378,7 @@
 
 .main-index .container-news .bt-news {
     margin-top: 5%;
-    width: 0;
+    width: max-content;
 }
 
 .main-index .container-news button {
