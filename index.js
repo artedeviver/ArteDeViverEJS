@@ -78,7 +78,7 @@ app.get("/", (req, res) => {
 
 // rotas de login
 app.get("/login", (req, res) => {
-    res.render("dashboard/login")
+    res.render("dashboard/login", {success: req.query.success})
 })
 
 // validação de usuário
@@ -97,10 +97,10 @@ app.post("/authenticate", (req, res) => {
                 }
                 res.redirect("/dashboard")
             } else {
-                res.redirect("/login")
+                res.redirect("/login?success=false")
             }
         } else {
-            res.redirect("/login")
+            res.redirect("/login?success=false")
         }
     })
 })
