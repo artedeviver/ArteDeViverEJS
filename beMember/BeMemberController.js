@@ -2,11 +2,11 @@ const express = require("express")
 const router = express.Router()
 const BeMember = require("./BeMember")
 
-router.get("/dashboard/home/beMember/edit", (req, res) => {
+router.get("/dashboard/home/beMember/edit", async (req, res) => {
 
     let id = req.params.id
 
-    const showMember = BeMember.findAll({
+    const showMember = await BeMember.findAll({
         raw: true, limit: 5, order: [['id', 'DESC']]
     })
     res.render("./dashboard/home/beMember/edit", {showMember})

@@ -17,6 +17,8 @@
 
 <%- include ../../../partials/dashPage.ejs %>
 
+<h1>editar seja membro | home </h1>
+
 <div class="card-container container-reports">
 
         <form class="form-container" method="POST" action="/dashboard/home/beMember/update">
@@ -29,7 +31,7 @@
                 <div>
                     <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
                     <input type="file" onchange="mudar(this)" class="input-general file reports-border" name="img"
-                        >
+                    value="<%= showMember.img%>"   >
                 </div>
             </div>
     
