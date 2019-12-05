@@ -17,31 +17,31 @@
 
 <%- include ../../../partials/dashPage.ejs %>
 
-<div class="card-container">
+<div class="card-container container-reports">
 
         <form class="form-container" method="POST" action="/dashboard/home/beMember/update">
     
             <label for="">nome do membro</label>
-            <input type="text" class="input-general" name="name" value="<%= showMember.name%>">
+            <input type="text" class="input-general reports-border" name="name" value="<%= showMember.name%>">
     
             <div class="img-container-select">
                 <label for="">imagem membro</label>
                 <div>
-                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="img"
+                    <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file reports-border" name="img"
                         >
                 </div>
             </div>
     
             <label for="">relato do membro</label>
-            <input type="text" class="input-general" name="name" value="<%= showMember.desc%>">
+            <input type="text" class="input-general reports-border" name="name" value="<%= showMember.desc%>">
 
             <input type="hidden" name="id">
             <button class="primary btn-change">editar membro</button>
     
         </form>
     
-        <a href="/dashboard/home" class="tertiary">voltar</a>
+        <a href="/dashboard/home" class="tertiary btn-back-reports">voltar</a>
     
     </div>
 

@@ -359,3 +359,21 @@ border-radius: 8px;
     width: 25%;
     align-self: center;
 }
+
+.container-reports {
+    background-color: #4EB4BF;
+    color: white;
+    border-radius: 8px;
+    padding-top: 2%;
+    height: 600px;
+    margin-bottom: 2%;
+}
+
+.btn-back-reports{
+    margin-top: 2%;
+}
+
+.reports-border{
+    border:  0.5px solid #fff;
+
+}
