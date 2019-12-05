@@ -24,6 +24,8 @@ const PrincipalAreaController = require("./principalArea/PrincipalAreaController
 const Partners = require("./partners/Partners")
 const PartnersController = require("./partners/PartnersController")
 
+const BeMember = require("./beMember/BeMember")
+const BeMemberController = require("./beMember/BeMemberController")
 
 // ejs
 app.set('view engine', 'ejs')
@@ -59,6 +61,7 @@ app.use("/", PrincipalAreaController)
 
 app.use("/", PartnersController)
 
+app.use("/", BeMemberController)
 
 //rota padrão
 app.get("/", (req, res) => {

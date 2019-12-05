@@ -1,0 +1,49 @@
+<%- include ../../../partials/dashHeader.ejs %>
+
+<section class="pop-up delete">
+    <div class="pop-up-body">
+        <p class="title">Deseja mesmo excluir o membro selecionado?</p>
+
+        <div class="btn-container">
+            <a class="primary btn-card" href="/dashboard/Bemembers">cancelar</a>
+
+            <form class="form-delete" method="POST" action="/dashboard/members/delete">
+                <input type="hidden" name="id" class="id">
+                <button class="btn primary btn-card btn-delete">excluir</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include ../../../partials/dashPage.ejs %>
+
+<div class="card-container">
+
+        <form class="form-container" method="POST" action="/dashboard/home/beMember/update">
+    
+            <label for="">nome do membro</label>
+            <input type="text" class="input-general" name="name" value="<%= showMember.name%>">
+    
+            <div class="img-container-select">
+                <label for="">imagem membro</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" onchange="mudar(this)" class="input-general file" name="img"
+                        >
+                </div>
+            </div>
+    
+            <label for="">relato do membro</label>
+            <input type="text" class="input-general" name="name" value="<%= showMember.desc%>">
+
+            <input type="hidden" name="id">
+            <button class="primary btn-change">editar membro</button>
+    
+        </form>
+    
+        <a href="/dashboard/home" class="tertiary">voltar</a>
+    
+    </div>
+
+
+<%- include ../../../partials/dashFooter.ejs %></div>
