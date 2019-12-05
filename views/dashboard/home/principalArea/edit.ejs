@@ -1,6 +1,7 @@
 <%- include ../../../partials/dashHeader.ejs %>
 <%- include ../../../partials/dashPage.ejs %>
 
+
 <h1>editar área principal | home </h1>
 
 <div class="card-container">
@@ -9,6 +10,8 @@
 
         <label for="">título</label>
         <input type="text" class="input-general" name="title" value="<%= principalarea.title%>">
+        <span class="alert-error">Você precisa preencher o título</span>
+
 
         <div class="img-container-select">
             <label for="">imagem de fundo</label>
@@ -16,11 +19,13 @@
                 <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                 <input type="file" onchange="mudar(this)" class="input-general file" name="imgBackground"
                     value="<%= principalarea.imgBackground%>">
+                <span class="alert-error">Você precisa escolher um arquivo</span>
+
             </div>
         </div>
 
         <input type="hidden" name="id" value="<%= principalarea.id %>">
-        <button class="primary btn-change">editar área principal</button>
+        <button class="btn-change btn-disabled" disabled>editar área principal</button>
 
     </form>
 
@@ -28,4 +33,6 @@
 
 </div>
 
+
+<script src="/js/principalAreaValidation.js"></script>
 <%- include ../../../partials/dashFooter.ejs %></div>
