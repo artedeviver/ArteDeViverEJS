@@ -33,7 +33,7 @@ app.set('view engine', 'ejs')
 //sessions
 app.use(session({
     secret: "uhsuahsuashaushausuasuashushau", //pode ser qualquer texto, quanto mais aleatório, melhor
-    cookie: { maxAge: 1800000 }
+    cookie: { maxAge: 18000000 }
 }))
 
 //arquivos staticos - css, javascrip, img
@@ -106,9 +106,9 @@ app.post("/authenticate", (req, res) => {
 })
 
 //logout
-app.get("/logout", (re1, res) => {
+app.get("/logout", (req, res) => {
     req.session.user = undefined
-    req.redirect("/")
+    res.redirect("/")
 })
 
 
