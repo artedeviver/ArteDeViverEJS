@@ -16,7 +16,7 @@ router.get("/dashboard/users", adminAuth, (req, res) => {
 
 //ROTA PARA PÁGINA DE ADD NOVO USUÁRIO
 router.get("/dashboard/users/new", (req, res) => {
-    res.render("./dashboard/user/new", {success: req.query.success})
+    res.render("./dashboard/user/new", { success: req.query.success })
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD USER
@@ -28,14 +28,14 @@ router.post("/dashboard/users/save", adminAuth, (req, res) => {
     let password = req.body.password
     let administrator = req.body.administrator
 
+    if (administrator == undefined) {
+        administrator = false
+    }
+
     User.findOne({ where: { email: email } }).then(user => {
         if (user == undefined) {
             let salt = bcrypt.genSaltSync(10)
             let hash = bcrypt.hashSync(password, salt);
-
-            if (administrator == undefined) {
-                administrator = false
-            }
 
             if (name != undefined && responsibility != undefined && email != undefined && hash != undefined && administrator != undefined) {
                 User.create({
@@ -84,11 +84,20 @@ router.post("/dashboard/users/update", adminAuth, (req, res) => {
     let password = req.body.password
     let administrator = req.body.administrator
 
+    if (administrator == undefined) {
+        administrator = false
+    } else {
+        administrator = true
+    }
+    
+    let salt = bcrypt.genSaltSync(10)
+    let hash = bcrypt.hashSync(password, salt);
+
     User.update({
         name: name,
         responsibility: responsibility,
         email: email,
-        password: password,
+        password: hash,
         administrator: administrator
     }, {
         where: { id: id }
