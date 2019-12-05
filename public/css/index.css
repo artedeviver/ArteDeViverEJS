@@ -507,3 +507,13 @@
 .body-index .pop-up button:hover {
     background-color: rgb(65, 147, 156);
 }
+
+.successRegister{
+    display: none;
+}
+
+.pop-up div{ 
+    width: 35%;
+    background-color: red;
+}
+

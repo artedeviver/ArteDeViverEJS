@@ -238,6 +238,10 @@ border-radius: 8px;
     display: none;
 }
 
+.successRegister{
+    display: none;
+}
+
 .show{
     display: block;
 }

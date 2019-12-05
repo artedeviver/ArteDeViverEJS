@@ -14,7 +14,7 @@ router.get("/dashboard/members", adminAuth, (req, res) => {
 
 
 // SALVAR OS DADOS DO FORMULÁRIO
-router.post("/dashboard/members/save",  adminAuth, (req, res) => {
+router.post("/dashboard/members/save", (req, res) => {
 
     let name = req.body.name
     let interest
@@ -24,11 +24,11 @@ router.post("/dashboard/members/save",  adminAuth, (req, res) => {
     let telephone = req.body.telephone
     let reason = req.body.reason
 
-    if(company != " "){
+    if(company == ""){
+        interest = 'voluntário'
+    }else{
         interest = 'parceiro'
         age = 0
-    }else{
-        interest = 'voluntário'
     }
 
     Members.create({
@@ -40,7 +40,7 @@ router.post("/dashboard/members/save",  adminAuth, (req, res) => {
         telephone:telephone,
         reason:reason
     }).then((members) => {
-    res.redirect("/?success=true")
+    res.redirect("/?successRegister=true")
     }).catch((error) =>{
         res.send(error)
     })
