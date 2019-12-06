@@ -5,7 +5,6 @@ const NewsLetter = require("../homepage/Homepage")
 const News = require("../news/News")
 const PrincipalArea = require("../principalArea/PrincipalArea")
 
-
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
     Courses.findAll({
