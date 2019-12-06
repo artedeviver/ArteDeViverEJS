@@ -40,7 +40,9 @@ router.get("/news", async (req, res) => {
         raw: true, limit: 1, order: [['id', 'DESC']]
     })
 
-    res.render("./homepage/newsGeneral", { news, lastNews })
+    latestNews = lastNews.length > 0 ? lastNews[0] : { title:'Nehuma notícia postada'}
+
+    res.render("./homepage/newsGeneral", { news, lastNews:latestNews })
 })
 
 //ROTA PARA QUEM SOMOS 
@@ -50,7 +52,7 @@ router.get("/WhoWeAre", (req, res) => {
 
 //ROTA PARA SEJA MEMBRO
 router.get("/beaMember", (req, res) => {
-    res.render("./homepage/sejaMembro")
+    res.render("./homepage/sejaMembro") 
 })
 
 //SALVAR DADOS DO FORMULÁRIO - NEWSLETTER
