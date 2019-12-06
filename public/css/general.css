@@ -236,7 +236,11 @@ fieldset h2 {
     display: none;
 }
 
-.show {
+.successRegister{
+    display: none;
+}
+
+.show{
     display: block;
 }
 

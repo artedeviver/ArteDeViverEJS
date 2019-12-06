@@ -1,9 +1,10 @@
 const express = require("express")
 const router = express.Router()
 const Members = require("./Members")
+const adminAuth = require('../middlewares/adminAuth')
 
 //MOSTRAR TODOS OS USUÁRIOS CADASTRADOS
-router.get("/dashboard/members", (req, res) => {
+router.get("/dashboard/members", adminAuth, (req, res) => {
     Members.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(members => {
@@ -23,11 +24,11 @@ router.post("/dashboard/members/save", (req, res) => {
     let telephone = req.body.telephone
     let reason = req.body.reason
 
-    if(company != " "){
+    if(company == ""){
+        interest = 'voluntário'
+    }else{
         interest = 'parceiro'
         age = 0
-    }else{
-        interest = 'voluntário'
     }
 
     Members.create({
@@ -39,7 +40,7 @@ router.post("/dashboard/members/save", (req, res) => {
         telephone:telephone,
         reason:reason
     }).then((members) => {
-    res.redirect("/?success=true")
+    res.redirect("/?successRegister=true")
     }).catch((error) =>{
         res.send(error)
     })
@@ -47,7 +48,7 @@ router.post("/dashboard/members/save", (req, res) => {
 
 
 // DELETAR UM MEMBRO
-router.post("/dashboard/members/delete", (req, res) => {
+router.post("/dashboard/members/delete",  adminAuth, (req, res) => {
     let id = req.body.id
 
     if (id != undefined) {

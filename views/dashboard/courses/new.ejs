@@ -1,6 +1,7 @@
 <%- include ../../partials/dashHeader.ejs %>
 <%- include ../../partials/dashPage.ejs %>
 
+
 <h1>adicionar novo curso</h1>
 
 <div class="card-container">
@@ -20,7 +21,7 @@
                 <label for="">capa do curso</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgCourse">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -36,7 +37,7 @@
                 <label for="">imagem de fundo destaque</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgFeatured">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgFeatured">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -48,32 +49,32 @@
             <input type="text" class="input-general" name="impactDesc">
             <span class="alert-error">Você precisa preencher a descrição</span>
 
-                <div class="img-container-select">
-                    <label for="">imagem 1</label>
-                    <div>
-                        <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                        <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg1">
-                        <span class="alert-error">Você precisa selecionar um arquivo</span>
-                    </div>
+            <div class="img-container-select">
+                <label for="">imagem 1</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg1">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
+            </div>
 
-                <div class="img-container-select">
-                    <label for="">imagem 2</label>
-                    <div>
-                        <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                        <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg2">
-                        <span class="alert-error">Você precisa selecionar um arquivo</span>
-                    </div>
+            <div class="img-container-select">
+                <label for="">imagem 2</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg2">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
+            </div>
 
-                <div class="img-container-select">
-                    <label for="">imagem 3</label>
-                    <div>
-                        <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                        <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg3">
-                        <span class="alert-error">Você precisa selecionar um arquivo</span>
-                    </div>
+            <div class="img-container-select">
+                <label for="">imagem 3</label>
+                <div>
+                    <img src="/img/dashboard/picture.png" alt="" class="img-selected">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg3">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
+            </div>
         </fieldset>
 
         <button class="btn-change btn-disabled" disabled>adicionar curso</button>
@@ -84,8 +85,4 @@
 
 
 <script src="/js/courseValidation.js"></script>
-
-
-
-
 <%- include ../../partials/dashFooter.ejs %>

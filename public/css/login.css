@@ -4,7 +4,6 @@ body{
     justify-content: center;
     font-family: 'Raleway';
     font-size: 14px;
-    margin-top: 5%;
 }
 
 .login-card{
@@ -16,7 +15,8 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-
+    margin-top: 5%;
+    align-items: center;
 }
 
 .login-card img{
@@ -24,3 +24,14 @@ body{
     align-self: center;
     margin-bottom: 10%;
 }
+
+.login-card input{
+    padding: 5%;
+    margin-top: 5%;
+}
+
+.login-card button{
+    padding: 5%;
+    margin-top: 5%;
+}
+
