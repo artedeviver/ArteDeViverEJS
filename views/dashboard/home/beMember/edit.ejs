@@ -21,106 +21,39 @@
 
 <section class="section-reports">
 
-    <div class="container-reports">
-
-        <form class="" method="POST" action="/dashboard/home/beMember/update">
-            <label for="">nome do membro 1</label>
-            <input type="text" class="input-general reports-border" name="title" value="<%= showMember.title%>">
-            <span class="alert-error">Você precisa preencher o nome</span>
-        </form>
-
-        <label for="">relato do membro</label>
-        <input type="text" class="input-general relact-desc reports-border" name="bodyNews"
-            value="<%= showMember.bodyNews%>">
-        <span class="alert-error">Você precisa preencher o relato</span>
-
-        <div class="img-container-select ">
-            <label for="">capa da notícia</label>
-            <div class="preview">
-                <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
-                <input type="file" class="reports-border" onchange="mudar(this)" class="input-general file"
-                    name="titleImage" value="<%= showMember.titleImage%>">
-                <span class="alert-error">Você precisa selecionar um arquivo</span>
-            </div>
-        </div>
-    </div>
+    <% member.forEach((member) => { %>
 
     <div class="container-reports">
-
-        <form class="" method="POST" action="/dashboard/home/beMember/update">
-            <label for="">nome do membro 1</label>
-            <input type="text" class="input-general reports-border" name="title" value="<%= showMember.title%>">
+        <form class="" method="POST" action="/dashboard/home/be-member/update">
+            <label for="">nome</label>
+            <input type="text" class="input-general reports-border" name="name" value="<%= member.name %>">
             <span class="alert-error">Você precisa preencher o nome</span>
-        </form>
 
-        <label for="">relato do membro</label>
-        <input type="text" class="input-general relact-desc reports-border" name="bodyNews"
-            value="<%= showMember.bodyNews%>">
-        <span class="alert-error">Você precisa preencher o relato</span>
+            <label for="">relato</label>
+            <input type="text" class="input-general relact-desc reports-border" name="bodyNews"
+                value="<%= member.desc %>">
+            <span class="alert-error">Você precisa preencher o relato</span>
 
-        <div class="img-container-select ">
-            <label for="">capa da notícia</label>
-            <div class="preview">
-                <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
-                <input type="file" class="reports-border" onchange="mudar(this)" class="input-general file"
-                    name="titleImage" value="<%= showMember.titleImage%>">
-                <span class="alert-error">Você precisa selecionar um arquivo</span>
+            <div class="img-container-select ">
+                <label for="">foto</label>
+                <div class="preview">
+                    <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
+                    <input type="file" class="reports-border" onchange="mudar(this)" class="input-general file"
+                        name="titleImage" value="<%= member.img %>">
+                    <span class="alert-error">Você precisa selecionar um arquivo</span>
+
+                    <input type="hidden" name="id" value="<%= member.id%>" >
+
+                    <button class="primary">editar membro</button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 
-    <div class="container-reports">
-
-        <form class="" method="POST" action="/dashboard/home/beMember/update">
-            <label for="">nome do membro 1</label>
-            <input type="text" class="input-general reports-border" name="title" value="<%= showMember.title%>">
-            <span class="alert-error">Você precisa preencher o nome</span>
-        </form>
-
-        <label for="">relato do membro</label>
-        <input type="text" class="input-general relact-desc reports-border" name="bodyNews"
-            value="<%= showMember.bodyNews%>">
-        <span class="alert-error">Você precisa preencher o relato</span>
-
-        <div class="img-container-select ">
-            <label for="">capa da notícia</label>
-            <div class="preview">
-                <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
-                <input type="file" class="reports-border" onchange="mudar(this)" class="input-general file"
-                    name="titleImage" value="<%= showMember.titleImage%>">
-                <span class="alert-error">Você precisa selecionar um arquivo</span>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-reports">
-
-        <form class="" method="POST" action="/dashboard/home/beMember/update">
-            <label for="">nome do membro 1</label>
-            <input type="text" class="input-general reports-border" name="title" value="<%= showMember.title%>">
-            <span class="alert-error">Você precisa preencher o nome</span>
-        </form>
-
-        <label for="">relato do membro</label>
-        <input type="text" class="input-general relact-desc reports-border" name="bodyNews"
-            value="<%= showMember.bodyNews%>">
-        <span class="alert-error">Você precisa preencher o relato</span>
-
-        <div class="img-container-select ">
-            <label for="">capa da notícia</label>
-            <div class="preview">
-                <img src="/img/dashboard/picture-white.png" alt="" class="img-selected">
-                <input type="file" class="reports-border" onchange="mudar(this)" class="input-general file"
-                    name="titleImage" value="<%= showMember.titleImage%>">
-                <span class="alert-error">Você precisa selecionar um arquivo</span>
-            </div>
-        </div>
-    </div>
+    <%})%>
 </section>
 
-<div class="container-btn-members">
-    <button class="primary btn-change">editar notícia</button>
     <a href="/dashboard/home" class="btn-tertiary-members tertiary ">voltar</a>
-</div>
+
 
 <%- include ../../../partials/dashFooter.ejs %></div>
