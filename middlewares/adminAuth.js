@@ -1,7 +1,7 @@
-function adminAuth(req, res, next){
-    if(req.session.user != undefined){
+function adminAuth(req, res, next) {
+    if (req.session.user != undefined) {
         next()
-    }else{
+    } else {
         res.redirect("/login")
     }
 }
