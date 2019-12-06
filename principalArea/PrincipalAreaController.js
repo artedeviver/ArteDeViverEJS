@@ -1,8 +1,9 @@
 const express = require("express")
 const router = express.Router()
 const PrincipalArea = require("./PrincipalArea")
+const adminAuth = require('../middlewares/adminAuth')
 
-router.get("/dashboard/home/principalArea/edit", (req, res) => {
+router.get("/dashboard/home/principalArea/edit", adminAuth, (req, res) => {
 
     let id = req.params.id
 
@@ -16,7 +17,7 @@ router.get("/dashboard/home/principalArea/edit", (req, res) => {
 })
 
 //SALVAR EDIÇÃO DOS CAMPOS
-router.post("/dashboard/home/principalArea/update", (req, res) => {
+router.post("/dashboard/home/principalArea/update", adminAuth, (req, res) => {
     let id = req.params.id
     let title = req.body.title
     let imgBackground = req.body.imgBackground

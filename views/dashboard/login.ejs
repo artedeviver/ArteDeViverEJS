@@ -11,19 +11,32 @@
     <title>Login</title>
 </head>
 
+
 <body>
+    <p class="success"><%= success %></p>
+
+    <section class="pop-up">
+        <div>
+            <p class="title">Login ou senha inválidos</p>
+            <a href="/login" class="tertiary">voltar</a>
+        </div>
+    </section>
+
     <section class="login-card">
         <img src="/img/logo.png" alt="">
 
-        <form method="POST" action="/login" class="form-container">
-            <label>E-mail</label>
+        <form method="POST" action="/authenticate" class="form-container">
+            <label>e-mail</label>
             <input class="input-general" type="text" name="email">
 
-            <label>Senha</label>
+            <label>senha</label>
             <input class="input-general" type="password" name="password">
 
-            <button class="primary">entrar</button>
+            <button class="primary btn-login">entrar</button>
         </form>
     </section>
+
+
+    <script src="./js/login.js"></script>
 </body>
 </html>

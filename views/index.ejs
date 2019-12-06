@@ -16,6 +16,24 @@
         </div>
     </section>
 
+    <section class="pop-up register">
+        <div>
+            <p>
+                Agora você faz parte da nosso família!
+            </p>
+
+            <p>
+               Seu email foi cadastrado na nossa base de dados e assim que possível entraremos em contato!
+            </p>
+
+            <a href="/" class="btn-back">concluir</a>
+        </div>
+    </section>
+
+
+
+    <p type="hidden" class="successRegister"><%= successRegister %></p>
+
     <!-- nav-bar -->
     <%- include partials/navbar.ejs %>
 
@@ -367,7 +385,8 @@
 
                     <div class="specific-news">
                         <img src="img/page-news-index/news1.jpg" alt="Capa da notícia">
-                        <a href="/news/<%= latestNews.title %>/<%= latestNews.id %>" class="bt-news tertiary"><%= latestNews.title %></a>
+                        <a href="/news/<%= latestNews.title %>/<%= latestNews.id %>"
+                            class="bt-news tertiary"><%= latestNews.title %></a>
                     </div>
                     <%})%>
 
@@ -396,3 +415,21 @@
         </section>
     </main>
     <%- include partials/footer.ejs %>
+
+
+
+
+
+
+
+    <script>
+        let bod = document.querySelector('.body')
+        let registerPopUp = document.querySelector('.register')
+        let successRegister = document.querySelector('.successRegister').innerHTML
+
+        if(successRegister == 'true'){
+            bod.classList.add("hidden")
+            registerPopUp.style.display = "flex"
+        }
+    
+    </script>

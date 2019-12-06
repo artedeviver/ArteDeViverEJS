@@ -1,5 +1,6 @@
 <%- include ../../partials/dashHeader.ejs %>
 
+
 <section class="pop-up">
     <div>
         <p class="title">Notícia editada com sucesso!</p>
@@ -25,7 +26,7 @@
             <label for="">capa da notícia</label>
             <div>
                 <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                <input type="file" onchange="mudar(this)" class="input-general file" name="titleImage" value="<%= news.titleImage%>">
+                <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="titleImage" value="<%= news.titleImage%>">
                 <span class="alert-error">Você precisa selecionar um arquivo</span>
             </div>
         </div>
@@ -38,7 +39,5 @@
 </div>
 
 
-
 <script src="/js/newsValidation.js"></script>
-
 <%- include ../../partials/dashFooter.ejs %>

@@ -1,6 +1,7 @@
 <%- include ../../partials/dashHeader.ejs %>
 <%- include ../../partials/dashPage.ejs %>
 
+
 <h1>editar curso</h1>
 
 <div class="card-container">
@@ -21,7 +22,7 @@
                 <label for="">capa do curso</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgCourse" value="<%= courses.imgCourse%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgCourse" value="<%= courses.imgCourse%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -37,7 +38,7 @@
                 <label for="">imagem de fundo destaque</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="imgFeatured" value="<%= courses.imgFeatured%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgFeatured" value="<%= courses.imgFeatured%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -53,7 +54,7 @@
                 <label for="">imagem 1</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg1" value="<%= courses.impactImg1%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg1" value="<%= courses.impactImg1%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -62,7 +63,7 @@
                 <label for="">imagem 2</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg2" value="<%= courses.impactImg2%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg2" value="<%= courses.impactImg2%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -71,7 +72,7 @@
                 <label for="">imagem 3</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" onchange="mudar(this)" class="input-general file" name="impactImg3" value="<%= courses.impactImg3%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg3" value="<%= courses.impactImg3%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -84,7 +85,6 @@
     <a href="/dashboard/courses" class="tertiary">cancelar</a>
 </div>
 
+
 <script src="/js/courseValidation.js"></script>
-
-
 <%- include ../../partials/dashFooter.ejs %>
