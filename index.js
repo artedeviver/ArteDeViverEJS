@@ -25,7 +25,7 @@ const PrincipalAreaController = require("./principalArea/PrincipalAreaController
 
 const Partners = require("./partners/Partners")
 const PartnersController = require("./partners/PartnersController")
-
+const adminAuth = require("./middlewares/adminAuth")
 
 // ejs
 app.set('view engine', 'ejs')
@@ -74,11 +74,9 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
-
-
 // rotas de login
 app.get("/login", (req, res) => {
-    res.render("dashboard/login", {success: req.query.success})
+    res.render("dashboard/login", { success: req.query.success })
 })
 
 // validação de usuário
@@ -86,16 +84,22 @@ app.post("/authenticate", (req, res) => {
     let email = req.body.email
     let password = req.body.password
 
+
+
     User.findOne({ where: { email: email } }).then(user => {
+
         if (user != undefined) {
             let correct = bcrypt.compareSync(password, user.password)
+
 
             if (correct) {
                 req.session.user = {
                     id: user.id,
                     email: user.email
                 }
-                res.redirect("/dashboard")
+                
+            res.redirect("/dashboard")
+
             } else {
                 res.redirect("/login?success=false")
             }
@@ -111,15 +115,13 @@ app.get("/logout", (req, res) => {
     res.redirect("/")
 })
 
-
-
 //rotas auxiliares
-app.get("/dashboard", (req, res) => {
+app.get("/dashboard", adminAuth, (req, res) => {
     res.render("./dashboard/index")
 })
 
 app.get("/dashboard/home", (req, res) => {
-    res.render("./dashboard/home/index", { successEdit: req.query.successEdit})
+    res.render("./dashboard/home/index", { successEdit: req.query.successEdit })
 })
 
 
