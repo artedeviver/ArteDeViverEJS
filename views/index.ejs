@@ -1,5 +1,7 @@
 <%- include partials/header.ejs %>
 
+
+
 <body class="body body-index">
 
     <section class="pop-up">
@@ -23,7 +25,7 @@
             </p>
 
             <p>
-               Seu email foi cadastrado na nossa base de dados e assim que possível entraremos em contato!
+                Seu email foi cadastrado na nossa base de dados e assim que possível entraremos em contato!
             </p>
 
             <a href="/" class="btn-back">concluir</a>
@@ -267,22 +269,21 @@
 
                     <div class="carousel-container">
 
+
+                        <% beMember.forEach((member) => { %>
                         <div class="member">
                             <div class="carrousel-img-container">
 
                                 <div>
                                     <img class="carrousel-img " src="img/be-a-member/person1.jpg" alt="">
-                                    <h3><i>Rodrigo Alvarez - 32 anos</i></h3>
+                                    <h3><i><%= member.name%></i></h3>
                                 </div>
 
                             </div>
 
                             <div class="carrousel-text-container">
                                 <p>
-                                    <i>“Sou voluntário a mais de 3 anos, me sinto muito bem em fazer o que eu faço
-                                        hoje, que
-                                        é ajudar
-                                        pessoas!”</i>
+                                    <i>"<%= member.desc%>"</i>
                                 </p>
 
                                 <a href="/seja-membro"><button class="primary">saiba mais</button></a>
@@ -290,53 +291,7 @@
 
                         </div>
 
-                        <div class="member">
-                            <div class="carrousel-img-container">
-
-                                <div>
-                                    <img class="carrousel-img " src="img/be-a-member/person1.jpg" alt="">
-                                    <h3><i>2</i></h3>
-                                </div>
-
-                            </div>
-
-                            <div class="carrousel-text-container">
-                                <p>
-                                    <i>“Sou voluntário a mais de 3 anos, me sinto muito bem em fazer o que eu faço
-                                        hoje, que
-                                        é
-                                        ajudar
-                                        pessoas!”</i>
-                                </p>
-
-                                <a href="/seja-membro"><button class="primary">saiba mais</button></a>
-                            </div>
-
-                        </div>
-
-                        <div class="member">
-                            <div class="carrousel-img-container">
-
-                                <div>
-                                    <img class="carrousel-img " src="img/be-a-member/person1.jpg" alt="">
-                                    <h3><i>3</i></h3>
-                                </div>
-
-                            </div>
-
-                            <div class="carrousel-text-container">
-                                <p>
-                                    <i>“Sou voluntário a mais de 3 anos, me sinto muito bem em fazer o que eu faço
-                                        hoje, que
-                                        é
-                                        ajudar
-                                        pessoas!”</i>
-                                </p>
-
-                                <a href="/seja-membro"><button class="primary">saiba mais</button></a>
-                            </div>
-
-                        </div>
+                        <%})%>
                     </div>
 
                 </div>
@@ -427,9 +382,9 @@
         let registerPopUp = document.querySelector('.register')
         let successRegister = document.querySelector('.successRegister').innerHTML
 
-        if(successRegister == 'true'){
+        if (successRegister == 'true') {
             bod.classList.add("hidden")
             registerPopUp.style.display = "flex"
         }
-    
+
     </script>
