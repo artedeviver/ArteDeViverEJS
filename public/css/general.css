@@ -389,3 +389,15 @@ fieldset h2 {
     padding: 2% 0% 0% 0%;
     display: grid;
 }
+
+.container-btn-members{
+   margin-top: 5%;
+}
+
+.container-btn-members .btn-change{
+    padding: 1.5%;
+}
+
+.btn-tertiary-members{
+    margin-top: 5%;
+}
