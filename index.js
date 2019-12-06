@@ -25,6 +25,10 @@ const PrincipalAreaController = require("./principalArea/PrincipalAreaController
 
 const Partners = require("./partners/Partners")
 const PartnersController = require("./partners/PartnersController")
+
+const BeMember = require("./beMember/BeMember")
+const BeMemberController = require("./beMember/BeMemberController")
+
 const adminAuth = require("./middlewares/adminAuth")
 
 // ejs
@@ -67,6 +71,7 @@ app.use("/", PrincipalAreaController)
 
 app.use("/", PartnersController)
 
+app.use("/", BeMemberController)
 
 
 //rota padrão
