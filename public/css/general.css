@@ -224,7 +224,7 @@ fieldset h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    display: none;
+    /* display: none; */
     padding: 17% 0%
 }
 
