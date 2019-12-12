@@ -19,7 +19,7 @@
         <span class="alert-error">Você precisa preencher o título</span>
 
         <label for="">corpo da notícia</label>
-        <input type="text" class="input-general" name="bodyNews" value="<%= news.bodyNews%>">
+        <textarea type="text" class="input-general article" name="bodyNews"  value="<%= news.bodyNews%>"></textarea>
         <span class="alert-error">Você precisa preencher o corpo da notícia</span>
 
         <div class="img-container-select">
@@ -40,4 +40,6 @@
 
 
 <script src="/js/newsValidation.js"></script>
+<script src="/tinymce/tinymce.min.js"></script>
+<script src="/js/tinyMce.js"></script>
 <%- include ../../partials/dashFooter.ejs %>
