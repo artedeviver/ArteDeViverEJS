@@ -6,7 +6,6 @@ const News = require("../news/News")
 const PrincipalArea = require("../principalArea/PrincipalArea")
 const BeMember = require("../beMember/BeMember")
 
-
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
     Courses.findAll({
@@ -46,7 +45,9 @@ router.get("/news", async (req, res) => {
         raw: true, limit: 1, order: [['id', 'DESC']]
     })
 
-    res.render("./homepage/newsGeneral", { news, lastNews })
+    latestNews = lastNews.length > 0 ? lastNews[0] : { title:'Nehuma notícia postada'}
+
+    res.render("./homepage/newsGeneral", { news, lastNews:latestNews })
 })
 
 //ROTA PARA QUEM SOMOS 
@@ -56,7 +57,7 @@ router.get("/WhoWeAre", (req, res) => {
 
 //ROTA PARA SEJA MEMBRO
 router.get("/beaMember", (req, res) => {
-    res.render("./homepage/sejaMembro")
+    res.render("./homepage/sejaMembro") 
 })
 
 //SALVAR DADOS DO FORMULÁRIO - NEWSLETTER

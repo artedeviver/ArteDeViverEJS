@@ -6,6 +6,10 @@ const News = connection.define('news', {
         type: Sequelize.STRING,
         allowNull:false
     },
+    newsDesc:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
     bodyNews:{
         type: Sequelize.TEXT,
         allowNull:false

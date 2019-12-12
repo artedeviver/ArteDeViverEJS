@@ -33,11 +33,13 @@ router.get("/dashboard/news/new", adminAuth, (req, res) => {
 router.post("/dashboard/news/save", adminAuth, (req, res) => {
 
     let title = req.body.title
+    let newsDesc = req.body.newsDesc
     let bodyNews = req.body.bodyNews
     let titleImage = req.body.titleImage
 
     News.create({
         title: title,
+        newsDesc : req.body.newsDesc,
         bodyNews: bodyNews,
         titleImage: titleImage
     }).then(() => {
@@ -106,6 +108,7 @@ router.post("/dashboard/news/update", adminAuth, (req, res) => {
 
     News.update({
         title: title,
+        newsDesc : req.body.newsDesc,
         bodyNews: bodyNews,
         titleImage: titleImage
     }, {
