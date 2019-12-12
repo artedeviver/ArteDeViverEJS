@@ -2,45 +2,49 @@ const Sequelize = require("sequelize")
 const connection = require("../database/database")
 
 const Courses = connection.define('courses', {
-    title:{
+    title: {
         type: Sequelize.STRING,
-        allowNull:false
+        allowNull: false
     },
-    bodyCourse:{
-        type: Sequelize.TEXT,
-        allowNull:false
+    descCourse: {
+        type: Sequelize.STRING,
+        allowNull: false
     },
-    imgCourse:{
+    bodyCourse: {
         type: Sequelize.TEXT,
         allowNull: false
     },
-    featured:{
+    imgCourse: {
         type: Sequelize.TEXT,
-        allowNull:false
+        allowNull: false
     },
-    imgFeatured:{
+    featured: {
         type: Sequelize.TEXT,
-        allowNull:false
+        allowNull: false
     },
-    impactDesc:{
+    imgFeatured: {
         type: Sequelize.TEXT,
-        allowNull:false
+        allowNull: false
     },
-    impactImg1:{
+    impactDesc: {
         type: Sequelize.TEXT,
-        allowNull:false
+        allowNull: false
     },
-    impactImg2:{
+    impactImg1: {
         type: Sequelize.TEXT,
-        allowNull:false
+        allowNull: false
     },
-    impactImg3:{
+    impactImg2: {
         type: Sequelize.TEXT,
-        allowNull:false
+        allowNull: false
+    },
+    impactImg3: {
+        type: Sequelize.TEXT,
+        allowNull: false
     }
 })
 
-Courses.sync({force:false}).then(() =>{
+Courses.sync({ force: false }).then(() => {
     console.log('Tabela de cursos criada')
 })
 

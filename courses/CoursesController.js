@@ -41,6 +41,7 @@ router.get("/dashboard/courses/new", adminAuth, (req, res) => {
 router.post("/dashboard/courses/save", adminAuth, (req, res) => {
 
     let title = req.body.title
+    let descCourse = req.body.descCourse
     let bodyCourse = req.body.bodyCourse
     let imgCourse = req.body.imgCourse
     let featured = req.body.featured
@@ -52,6 +53,7 @@ router.post("/dashboard/courses/save", adminAuth, (req, res) => {
 
     Courses.create({
         title: title,
+        descCourse: descCourse,
         bodyCourse: bodyCourse,
         imgCourse: imgCourse,
         featured: featured,
@@ -110,6 +112,7 @@ router.get("/dashboard/courses/edit/:id", adminAuth, (req, res) => {
 router.post("/dashboard/courses/update", adminAuth, (req, res) => {
     let id = req.body.id
     let title = req.body.title
+    let descCourse = req.body.descCourse
     let bodyCourse = req.body.bodyCourse
     let imgCourse = req.body.imgCourse
     let featured = req.body.featured
@@ -121,6 +124,7 @@ router.post("/dashboard/courses/update", adminAuth, (req, res) => {
 
     Courses.update({
         title: title,
+        descCourse: descCourse,
         bodyCourse: bodyCourse,
         imgCourse: imgCourse,
         featured: featured,
