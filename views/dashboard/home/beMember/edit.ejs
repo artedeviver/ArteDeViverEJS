@@ -26,6 +26,7 @@
     <div class="container-reports">
         <form class="" method="POST" action="/dashboard/home/be-member/update">
             <label for="">nome</label>
+            
             <input type="text" class="input-general reports-border" name="name" value="<%= member.name %>">
             <span class="alert-error">Você precisa preencher o nome</span>
 
@@ -42,7 +43,7 @@
                         name="titleImage" value="<%= member.img %>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
 
-                    <input type="hidden" name="id" value="<%= member.id%>" >
+                    <input type="hidden" name="id" value="<%= member.id%>">
 
                     <button class="primary">editar membro</button>
                 </div>
@@ -53,7 +54,9 @@
     <%})%>
 </section>
 
-    <a href="/dashboard/home" class="btn-tertiary-members tertiary ">voltar</a>
+<a href="/dashboard/home" class="btn-tertiary-members tertiary ">voltar</a>
 
 
+<script src="/tinymce/tinymce.min.js"></script>
+<script src="/js/tinyMce.js"></script>
 <%- include ../../../partials/dashFooter.ejs %></div>
