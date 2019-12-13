@@ -17,15 +17,19 @@
         <input type="text" class="input-general" name="email" value="<%= user.email%>">
         <span class="alert-error">Preencha o campo!</span>
 
-        <label for="">nova senha</label>
-        <input type="password" class="input-general" name="password">
-        <span class="alert-error">Preencha o campo!</span>
+        <div class="container-password">
+            <label for="">nova senha</label>
+            <input type="password" class="input-password input-general" name="password">
+            <img src="/img/dashboard/view.png" alt="">
+            <span class="alert-error">Preencha o campo!</span>
+        </div>
 
         <%  if(user.administrator){ %>
-        <input type="checkbox" value="<%= user.administrator%>" class="input-select" name="administrator" checked> Administrador
+        <input type="checkbox" value="<%= user.administrator%>" class="input-select" name="administrator" checked>
+        Administrador
 
         <%  } else { %>
-            <input type="checkbox" value="<%= user.administrator%>" class="input-select" name="administrator"> Administrador
+        <input type="checkbox" value="<%= user.administrator%>" class="input-select" name="administrator"> Administrador
         <%  } %>
 
         <input type="hidden" name="id" value="<%= user.id %>">

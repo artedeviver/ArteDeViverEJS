@@ -413,3 +413,12 @@ textarea{
 .tox-tinymce{
     margin: 2% 0% 5% 0%;
 }
+
+.input-password{
+    width: 75%;
+}
+
+.container-password{
+    display: block;
+    width: 100%;
+}
