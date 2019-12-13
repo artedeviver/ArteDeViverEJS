@@ -6,7 +6,7 @@ const adminAuth = require('../middlewares/adminAuth')
 
 
 //MOSTRAR TODOS OS USUÁRIOS CADASTRADOS
-router.get("/dashboard/users", adminAuth, (req, res) => {
+router.get("/dashboard/users", (req, res) => {
     User.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(user => {
@@ -20,7 +20,7 @@ router.get("/dashboard/users/new", (req, res) => {
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD USER
-router.post("/dashboard/users/save", adminAuth, (req, res) => {
+router.post("/dashboard/users/save", (req, res) => {
 
     let name = req.body.name
     let responsibility = req.body.responsibility
