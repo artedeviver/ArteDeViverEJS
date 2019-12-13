@@ -20,5 +20,6 @@ function verify() {
         btn.disabled = false
         btn.classList.remove("btn-disabled")
         btn.classList.add("primary")
+ 
     }
 }
