@@ -17,9 +17,15 @@
         <input type="text" class="input-general" name="email">
         <span class="alert-error">Você precisa preencher o e-mail</span>
 
-        <label for="">senha</label>
-        <input type="password" class="input-general" name="password">
-        <span class="alert-error">Você precisa preencher a senha</span>
+        <div class="container-password">
+            <label for="">senha</label>
+            <div class="grid-password">
+                <input type="password" class="input-general input-password" name="password">
+                <button type="button" class="btn-password-view"><img class="img-password" src="/img/dashboard/hide.png"
+                        alt=""></button>
+                <span class="alert-error">Preencha o campo!</span>
+            </div>
+        </div>
 
         <input type="checkbox" value="true" class="input-select" name="administrator"> Administrador
 
@@ -30,5 +36,6 @@
 </div>
 
 <script src="/js/userNew.js"></script>
+<script src="/js/passwordView.js"></script>
 
 <%- include ../../partials/dashFooter.ejs %>

@@ -413,3 +413,26 @@ textarea{
 .tox-tinymce{
     margin: 2% 0% 5% 0%;
 }
+
+.container-password{
+    display: block;
+    width: 100%;
+}
+
+.img-password{
+    width: 80%;
+}
+
+.grid-password{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+
+.btn-password-view{
+    margin: 0%;
+    background: none;
+    box-shadow: none;
+    height: 0;
+    border: none;
+    padding: 15%;
+}
