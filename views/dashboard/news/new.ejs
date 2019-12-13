@@ -7,15 +7,15 @@
 <div class="card-container">
     <form class="form-container" method="POST" action="/dashboard/news/save">
         <label>título</label>
-        <input type="text" class="input-general" name="title">
+        <input type="text" class="input-general hehe" name="title">
         <span class="alert-error">Você precisa preencher o título</span>
 
         <label for="">corpo da notícia</label>
-        <textarea type="text" class="input-general article" name="bodyNews"></textarea>
+        <textarea type="text" class="input-general article" name="bodyNews" id="tinyeditor" ></textarea>
         <span class="alert-error">Você precisa preencher o corpo da notícia</span>
 
         <div class="img-container-select">
-            <label for="" class="label-mt">capa da notícia</label>
+            <label class="label-mt">capa da notícia</label>
             <div>
                 <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                 
@@ -30,9 +30,9 @@
     <a href="" class="tertiary">cancelar</a>
 </div>
 
-
 <script src="/js/newsValidation.js"></script>
 <script src="/tinymce/tinymce.min.js"></script>
 <script src="/js/tinyMce.js"></script>
+
 
 <%- include ../../partials/dashFooter.ejs %>

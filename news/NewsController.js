@@ -25,12 +25,12 @@ router.get("/news/:title/:id", (req, res) => {
 })
 
 //ROTA PARA PÁGINA DE ADD NOVA NOTÍCIA
-router.get("/dashboard/news/new", adminAuth, (req, res) => {
+router.get("/dashboard/news/new", (req, res) => {
     res.render("./dashboard/news/new")
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD NEWS
-router.post("/dashboard/news/save", adminAuth, (req, res) => {
+router.post("/dashboard/news/save", (req, res) => {
 
     let title = req.body.title
     let bodyNews = req.body.bodyNews
@@ -49,7 +49,7 @@ router.post("/dashboard/news/save", adminAuth, (req, res) => {
 
 // MOSTRAR TODAS AS NOTÍCIAS JA CADASTRADAS 
 // EM ORDEM DESCRECENTE
-router.get("/dashboard/news", adminAuth, (req, res) => {
+router.get("/dashboard/news", (req, res) => {
     News.findAll({
         raw: true, order: [
             ['id', 'DESC']
