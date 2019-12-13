@@ -20,7 +20,7 @@
         <div class="container-password">
             <label for="">nova senha</label>
             <div class="grid-password">
-                <input type="password" class="input-general" name="password">
+                <input type="password" class="input-general input-password" name="password">
                 <button type="button" class="btn-password-view"><img class="img-password" src="/img/dashboard/view.png" alt=""></button> 
                 <span class="alert-error">Preencha o campo!</span>
             </div>
@@ -42,5 +42,15 @@
 
 <script src="/js/userEdit.js"></script>
 
+<script>
+document.querySelector(".btn-password-view").addEventListener('mousedown', function(){
+    document.querySelector(".input-password").type = 'text'
+})
+
+document.querySelector(".btn-password-view").addEventListener('mouseup', function(){
+    document.querySelector(".input-password").type = 'password'
+})
+
+</script>
 
 <%- include ../../partials/dashFooter.ejs %>
