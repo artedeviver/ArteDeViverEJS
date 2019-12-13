@@ -19,9 +19,11 @@
 
         <div class="container-password">
             <label for="">nova senha</label>
-            <input type="password" class="input-password input-general" name="password">
-            <img src="/img/dashboard/view.png" alt="">
-            <span class="alert-error">Preencha o campo!</span>
+            <div class="grid-password">
+                <input type="password" class="input-general" name="password">
+                <button type="button" class="btn-password-view"><img class="img-password" src="/img/dashboard/view.png" alt=""></button> 
+                <span class="alert-error">Preencha o campo!</span>
+            </div>
         </div>
 
         <%  if(user.administrator){ %>
