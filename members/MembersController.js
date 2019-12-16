@@ -6,7 +6,7 @@ const adminAuth = require('../middlewares/adminAuth')
 //MOSTRAR TODOS OS USUÁRIOS CADASTRADOS
 router.get("/dashboard/members", adminAuth, (req, res) => {
     Members.findAll({
-        raw: true
+        raw: true 
     }).then(members => {
         res.render("dashboard/members/index", { members:members, success: req.query.success})
     })

@@ -110,7 +110,6 @@ header .nav:hover{
     transition: 0.5s;
 }
 
-
 header .nav-button{
     font-weight: 400;
     border-radius: 10px;
@@ -118,3 +117,25 @@ header .nav-button{
     padding: 10px;
 }
 
+header .dropdown {
+    position: absolute;
+    top: 70px;
+    background-color: white;
+    width: 15%; 
+    display: none;
+}
+
+header li:hover .dropdown{
+    display: block;
+}
+
+header .dropdown li a{
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+header .dropdown li {
+    padding: 2%;
+}
