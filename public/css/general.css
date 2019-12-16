@@ -414,6 +414,10 @@ textarea{
     margin: 2% 0% 5% 0%;
 }
 
+.oi{
+    border: 0.5px solid #F27623;
+}
+
 .container-password{
     display: block;
     width: 100%;
