@@ -129,13 +129,24 @@ header li:hover .dropdown{
     display: block;
 }
 
+header li:hover {
+    background-color: #D74C11;
+}
+
 header .dropdown li a{
-    color: black;
+    color: white;
     list-style: none;
     text-decoration: none;
-    font-weight: normal;
 }
 
 header .dropdown li {
-    padding: 2%;
+    padding: 5%;
+    border-bottom: solid 1px rgb(255, 255, 255);
+    background-color: #D74C11;
+    color: white;
+}
+
+header .dropdown li:hover{
+    background-color: rgb(189, 66, 14);
+    cursor: pointer;
 }
