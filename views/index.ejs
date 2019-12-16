@@ -227,7 +227,7 @@
                                 <dt><%= courses.title %></dt>
                             </div>
                             <dd><%= courses.bodyCourse %></dd>
-                            <a href="/cursos"><button class="primary">saiba mais</button></a>
+                            <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba mais</button></a>
                         </dl>
                         <%})%>
 
@@ -286,7 +286,7 @@
                                     <i>"<%= member.desc%>"</i>
                                 </p>
 
-                                <a href="/seja-membro"><button class="primary">saiba mais</button></a>
+                                <a href="/beaMember"><button class="primary">saiba mais</button></a>
                             </div>
 
                         </div>
@@ -319,7 +319,7 @@
                 augue,
                 ac
                 suscipit ante euismod sit amet. </p>
-            <a href="/quem-somos"><button class="primary">saiba mais</button></a>
+            <a href="/WhoWeAre"><button class="primary">saiba mais</button></a>
         </section>
 
         <!-- fique por dentro -->
@@ -370,12 +370,6 @@
         </section>
     </main>
     <%- include partials/footer.ejs %>
-
-
-
-
-
-
 
     <script>
         let bod = document.querySelector('.body')
