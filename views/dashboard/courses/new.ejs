@@ -18,7 +18,7 @@
             <span class="alert-error">Você precisa preencher a linha fina</span>
 
             <label for="">descrição do curso</label>
-            <input type="text" class="input-general" name="bodyCourse">
+            <textarea type="text" class="input-general article" name="bodyCourse" id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
@@ -34,7 +34,7 @@
         <fieldset>
             <h2>destaque</h2>
             <label for="">descrição do destaque</label>
-            <input type="text" class="input-general" name="featured">
+            <textarea type="text" class="input-general article" name="featured" id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
@@ -50,7 +50,7 @@
         <fieldset>
             <h2>impactos</h2>
             <label for="">descrição dos impactos</label>
-            <input type="text" class="input-general" name="impactDesc">
+            <textarea type="text" class="input-general article" name="impactDesc" id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
@@ -89,4 +89,6 @@
 
 
 <script src="/js/courseValidation.js"></script>
+<script src="/tinymce/tinymce.min.js"></script>
+<script src="/js/tinyMce.js"></script>
 <%- include ../../partials/dashFooter.ejs %>

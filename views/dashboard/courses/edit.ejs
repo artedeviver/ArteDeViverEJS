@@ -5,7 +5,7 @@
 <h1>editar curso</h1>
 
 <div class="card-container">
-    <form class="form-container" method="POST" action="/dashboard/courses/update" >
+    <form class="form-container" method="POST" action="/dashboard/courses/update">
 
         <fieldset>
             <h2>informações gerais</h2>
@@ -18,14 +18,16 @@
             <span class="alert-error">Você precisa preencher a linha fina</span>
 
             <label for="">descrição do curso</label>
-            <input type="text" class="input-general" name="bodyCourse" value="<%= courses.bodyCourse%>">
+            <textarea type="text" class="input-general article" name="bodyCourse" value="<%= courses.bodyCourse%>"
+                id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
                 <label for="">capa do curso</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgCourse" value="<%= courses.imgCourse%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file"
+                        name="imgCourse" value="<%= courses.imgCourse%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -34,14 +36,16 @@
         <fieldset>
             <h2>destaque</h2>
             <label for="">descrição do destaque</label>
-            <input type="text" class="input-general" name="featured" value="<%= courses.featured%>">
+            <textarea type="text" class="input-general article" name="featured" value="<%= courses.featured%>"
+                id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
                 <label for="">imagem de fundo destaque</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgFeatured" value="<%= courses.imgFeatured%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file"
+                        name="imgFeatured" value="<%= courses.imgFeatured%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -50,14 +54,16 @@
         <fieldset>
             <h2>impactos</h2>
             <label for="">descrição dos impactos</label>
-            <input type="text" class="input-general" name="impactDesc" value="<%= courses.impactDesc%>">
+            <textarea type="text" class="input-general article" name="impactDesc" value="<%= courses.impactDesc%>"
+                id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
                 <label for="">imagem 1</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg1" value="<%= courses.impactImg1%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file"
+                        name="impactImg1" value="<%= courses.impactImg1%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -66,7 +72,8 @@
                 <label for="">imagem 2</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg2" value="<%= courses.impactImg2%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file"
+                        name="impactImg2" value="<%= courses.impactImg2%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -75,7 +82,8 @@
                 <label for="">imagem 3</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg3" value="<%= courses.impactImg3%>">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file"
+                        name="impactImg3" value="<%= courses.impactImg3%>">
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
@@ -90,4 +98,6 @@
 
 
 <script src="/js/courseValidation.js"></script>
+<script src="/tinymce/tinymce.min.js"></script>
+<script src="/js/tinyMce.js"></script>
 <%- include ../../partials/dashFooter.ejs %>

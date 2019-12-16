@@ -4,7 +4,6 @@ let title = document.getElementsByName('title')
 let newsDesc = document.getElementsByName('newsDesc')
 let titleImage = document.getElementsByName('titleImage')
 let img = document.querySelector('.img-selected')
-let newText
 
 
 form.addEventListener("blur", function (event) {
