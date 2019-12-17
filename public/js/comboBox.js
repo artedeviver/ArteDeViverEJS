@@ -1,7 +1,7 @@
 let combo = document.querySelector(".section-text")
 combo.addEventListener("click", verification)
 
-let voluntaryProgram = document.querySelector(".checkbox-form")
+let voluntaryProgram = document.querySelector(".voluntary-program")
 
 let donateMaterial = document.querySelector(".donate-materials")
 
