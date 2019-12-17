@@ -17,8 +17,8 @@ function verification() {
         donateMaterial.style.display = 'block'
         donateMoney.style.display = 'none'
     } else if (combo.value == 3) {
+        donateMoney.style.display = 'block'
         voluntaryProgram.style.display = 'none'
         donateMaterial.style.display = 'none'
-        donateMoney.style.style = 'block'
     }
 }
