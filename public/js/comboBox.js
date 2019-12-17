@@ -1,19 +1,24 @@
 let combo = document.querySelector(".section-text")
 combo.addEventListener("click", verification)
 
-let legal = document.querySelector(".legal")
+let voluntaryProgram = document.querySelector(".checkbox-form")
 
-let natural = document.querySelector(".natural")
+let donateMaterial = document.querySelector(".donate-materials")
+
+let donateMoney = document.querySelector(".donate-money")
 
 function verification() {
-    if (combo.value == 0) {
-        natural.style.display = 'none'
-        legal.style.display = 'none'
-    }else if (combo.value == 1) {
-        natural.style.display = 'block'
-        legal.style.display = 'none'    
-    } else {
-        natural.style.display = 'none'
-        legal.style.display = 'block'
+    if (combo.value == 1) {
+        voluntaryProgram.style.display = 'block'
+        donateMaterial.style.display = 'none'
+        donateMoney.style.display = 'none'
+    } else if (combo.value == 2) {
+        voluntaryProgram.style.display = 'none'
+        donateMaterial.style.display = 'block'
+        donateMoney.style.display = 'none'
+    } else if (combo.value == 3) {
+        voluntaryProgram.style.display = 'none'
+        donateMaterial.style.display = 'none'
+        donateMoney.style.style = 'block'
     }
 }
