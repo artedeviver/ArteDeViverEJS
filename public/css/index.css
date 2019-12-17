@@ -189,11 +189,11 @@
 }
 
 .main-index .projects .section-title {
-    width: 22%;
+    width: 25%;
 }
 
 .main-index .container-projects {
-    width: 55%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -201,13 +201,13 @@
 .main-index .btn-container {
     display: flex;
     align-items: center;
-    height: 240px;
+    height: 400px;
     margin-right: 3%;
     margin-left: 3%;
 }
 
 .main-index .course-container-hidden {
-    width: 400px;
+    width: 800px;
     overflow: hidden;
 }
 
@@ -220,7 +220,8 @@
 }
 
 .main-index .course {
-    width: 400px;
+    width: 380px;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,13 +229,13 @@
     float: left;
 }
 
-.main-index .course-container img {
+.main-index .course img {
     width: 100%;
 }
 
-.main-index .course-container dd {
+.main-index .course dd {
     padding: 30px 0px;
-    text-align: center;
+    text-align: justify;
     line-height: 150%;
 }
 
@@ -260,6 +261,10 @@
     font-weight: bold;
 }
 
+.main-index .course a{
+    color: white
+}
+
 /* SEJA MEMBRO */
 
 .main-index .be-a-member {
@@ -281,6 +286,10 @@
     transition: left 0.5s ease-in-out;
     left: 0px;
     position: relative;
+}
+
+.main-index .beamember-container .btn-container{
+    height: 250px;
 }
 
 .main-index .member {

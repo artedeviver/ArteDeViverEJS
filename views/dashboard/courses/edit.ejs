@@ -2,28 +2,28 @@
 <%- include ../../partials/dashPage.ejs %>
 
 
-<h1>editar curso</h1>
+<h1>editar programa</h1>
 
 <div class="card-container">
     <form class="form-container" method="POST" action="/dashboard/courses/update">
 
         <fieldset>
             <h2>informações gerais</h2>
-            <label for="">nome do curso</label>
+            <label for="">nome do programa</label>
             <input type="text" class="input-general" name="title" value="<%= courses.title%>">
             <span class="alert-error">Você precisa preencher o nome</span>
 
-            <label for="">linha fina do curso</label>
+            <label for="">linha fina do programa</label>
             <input type="text" class="input-general" name="descCourse" value="<%= courses.descCourse%>">
             <span class="alert-error">Você precisa preencher a linha fina</span>
 
-            <label for="">descrição do curso</label>
+            <label for="">descrição do programa</label>
             <textarea type="text" class="input-general article" name="bodyCourse"
                 id="tinyeditor"><%= courses.bodyCourse%></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
-                <label for="">capa do curso</label>
+                <label for="">capa do programa</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file"
@@ -89,7 +89,7 @@
         </fieldset>
 
         <input type="hidden" name="id" value="<%= courses.id %>">
-        <button class="primary btn-change">editar curso</button>
+        <button class="primary btn-change">editar programa</button>
     </form>
 
     <a href="/dashboard/courses" class="tertiary">cancelar</a>

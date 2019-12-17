@@ -2,18 +2,18 @@
 <%- include ../../partials/dashPage.ejs %>
 
 
-<h1>adicionar novo curso</h1>
+<h1>adicionar novo programa</h1>
 
 <div class="card-container">
     <form class="form-container" method="POST" action="/dashboard/courses/save">
 
         <fieldset>
             <h2>informações gerais</h2>
-            <label for="">nome do curso</label>
+            <label for="">nome do programa</label>
             <input type="text" class="input-general" name="title">
             <span class="alert-error">Você precisa preencher o nome</span>
 
-            <label for="">linha fina do curso</label>
+            <label for="">linha fina do programa</label>
             <input type="text" class="input-general" name="descCourse">
             <span class="alert-error">Você precisa preencher a linha fina</span>
 
@@ -22,7 +22,7 @@
             <span class="alert-error">Você precisa preencher a descrição</span>
 
             <div class="img-container-select">
-                <label for="">capa do curso</label>
+                <label for="">capa do programa</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
                     <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgCourse">
@@ -81,7 +81,7 @@
             </div>
         </fieldset>
 
-        <button class="btn-change btn-disabled" disabled>adicionar curso</button>
+        <button class="btn-change btn-disabled" disabled>adicionar programa</button>
     </form>
 
     <a href="" class="tertiary">cancelar</a>
