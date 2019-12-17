@@ -110,7 +110,6 @@ header .nav:hover{
     transition: 0.5s;
 }
 
-
 header .nav-button{
     font-weight: 400;
     border-radius: 10px;
@@ -118,3 +117,36 @@ header .nav-button{
     padding: 10px;
 }
 
+header .dropdown {
+    position: absolute;
+    top: 70px;
+    background-color: white;
+    width: 15%; 
+    display: none;
+}
+
+header li:hover .dropdown{
+    display: block;
+}
+
+header li:hover {
+    background-color: #D74C11;
+}
+
+header .dropdown li a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+header .dropdown li {
+    padding: 5%;
+    border-bottom: solid 0.5px rgb(255, 255, 255);
+    background-color: #D74C11;
+    color: white;
+}
+
+header .dropdown li:hover{
+    background-color: rgb(189, 66, 14);
+    cursor: pointer;
+}
