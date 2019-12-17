@@ -3,6 +3,7 @@ let btn = document.querySelector('.btn-change')
 
 let title = document.getElementsByName('title')
 let bodyCourse = document.getElementsByName('bodyCourse')
+let descCourse = document.getElementsByName('descCourse')
 let imgCourse = document.getElementsByName('imgCourse')
 let featured = document.getElementsByName('featured')
 let imgFeatured = document.getElementsByName('imgFeatured')
@@ -22,8 +23,8 @@ form.addEventListener("blur", function (event) {
     }
 }, true);
 
-function verify() {
-if (title[0].value != '' && bodyCourse[0].value != '' && imgCourse[0].value != '' && featured[0].value != ''
+function verify(text) {
+if (title[0].value != '' && text != '' && descCourse[0].value != '' && imgCourse[0].value != '' && featured[0].value != ''
 && imgFeatured[0].value != ''  && impactDesc[0].value != ''  && impactImg1[0].value != ''  && impactImg2[0].value != '' &&
 impactImg3[0].value != '') {
     btn.disabled = false
