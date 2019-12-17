@@ -1,4 +1,4 @@
-header{
+header {
     font-weight: 100;
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@ header{
     box-shadow: black 0px 0px 10px 0px;
 }
 
-header .search-container{
+header .search-container {
     display: flex;
     align-items: center;
     padding: 0.7% 0.7%;
@@ -26,7 +26,7 @@ header .search-container{
     overflow: hidden;
 }
 
-header .search-container input{
+header .search-container input {
     border: none;
     background-color: transparent;
     width: 305px;
@@ -41,30 +41,30 @@ header .search-container input{
     cursor: text;
 }
 
-header .search-container input{
+header .search-container input {
     border: none;
     background-color: transparent;
     width: 250px;
     color: white;
 }
 
-header .search-container input:focus{
+header .search-container input:focus {
     outline: 0;
 }
 
-header .search-container input:hover{
+header .search-container input:hover {
     border: none
 }
 
-header .search-container input:focus{
+header .search-container input:focus {
     outline: 0;
 }
 
-header nav ul{
+header nav ul {
     display: flex;
 }
 
-header .nav-item{
+header .nav-item {
     text-decoration: none;
     color: white;
     height: 70px;
@@ -73,7 +73,11 @@ header .nav-item{
     box-sizing: border-box;
 }
 
-header nav{
+header .nav-item:hover {
+    background-color: #F29f05;
+}
+
+header nav {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -81,36 +85,35 @@ header nav{
     margin-left: 20px;
 }
 
-header .navigation-container{
+header .navigation-container {
     display: flex;
     width: 850px;
     justify-content: flex-end;
     align-items: center;
 }
 
-header .navigation-container{
+header .navigation-container {
     display: flex;
     width: 850px;
     justify-content: flex-end;
     align-items: center;
 }
 
-header .nav-icon{
+header .nav-icon {
     width: 15px;
     height: 15px;
 }
 
-header .nav-brand{
+header .nav-brand {
     width: 120px;
-    
 }
 
-header .nav:hover{
+header .nav:hover {
     background-color: #D74C11;
     transition: 0.5s;
 }
 
-header .nav-button{
+header .nav-button {
     font-weight: 400;
     border-radius: 10px;
     background-color: #480000;
@@ -121,11 +124,11 @@ header .dropdown {
     position: absolute;
     top: 70px;
     background-color: white;
-    width: 15%; 
+    width: 15%;
     display: none;
 }
 
-header li:hover .dropdown{
+header li:hover .dropdown {
     display: block;
 }
 
@@ -133,7 +136,7 @@ header li:hover {
     background-color: #D74C11;
 }
 
-header .dropdown li a{
+header .dropdown li a {
     color: white;
     list-style: none;
     text-decoration: none;
@@ -146,7 +149,7 @@ header .dropdown li {
     color: white;
 }
 
-header .dropdown li:hover{
+header .dropdown li:hover {
     background-color: rgb(189, 66, 14);
     cursor: pointer;
 }

@@ -161,14 +161,7 @@
                                 chuva, aumento da cobertura verde e desassoreamento de poços existentes, entre
                                 outros
                                 métodos ". Os voluntários se juntam aos moradores todos os domingos para participar
-                                dessas atividades sob a orientação de um cientista geológico. Para criar
-                                consciência sobre esse programa, o fundador da Art of Living, Ravi Shankar , junto a
-                                outras ONGs, cidadãos importantes, autoridades cívicas, agricultores e voluntários,
-                                liderou uma caminhada na cidade de Bangalore. Além de reviver alguns corpos de água
-                                usados ​​por pássaros e animais, o projeto reviveu cinco poços de recarga de água,
-                                construiu 74 verificações de rochas, limpou 18 poços de degraus e plantou 2.350
-                                mudas em
-                                sete aldeias até junho de 2014.</dd>
+                                dessas atividades sob a orientação de um cientista geológico. </dd>
                         </dl>
 
                         <dl class="information-container">
@@ -207,41 +200,36 @@
 
         </section>
 
+
         <!-- projetos -->
         <section class="projects padding">
-
-            <h2 class="section-title">projetos</h2>
+            <h2 class="section-title">programas</h2>
 
             <div class="container-projects">
                 <div class="btn-container">
                     <button class="btn-carousel carousel-icon-orientation btn-carousel-left"><img class="carousel-icon"
                             src="img/carousel-icons/left.png"
                             alt="Ícone de uma seta para a esquerda - Passar slide para esquerda"></button></div>
-
                 <div class="course-container-hidden">
                     <div class="course-container clearfix">
-
                         <% courses.forEach((courses) => { %>
                         <dl class="course">
                             <div class="img-course">
                                 <dt><%= courses.title %></dt>
                             </div>
                             <dd><%- courses.bodyCourse %></dd>
-                            <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba mais</button></a>
+                            <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba
+                                    mais</button></a>
                         </dl>
                         <%})%>
-
                     </div>
                 </div>
-
                 <div class="btn-container"> <button
                         class="btn-carousel carousel-icon-orientation btn-carousel-right"><img class="carousel-icon"
                             src="img/carousel-icons/right.png"
                             alt="Ícone de uma seta para a direita - Passar slide para direita"></button></div>
             </div>
-
         </section>
-
 
         <!-- Seja Membro -->
         <section class="be-a-member padding">
@@ -275,7 +263,7 @@
                             <div class="carrousel-img-container">
 
                                 <div>
-                                    <img class="carrousel-img " src="img/be-a-member/person1.jpg" alt="">
+                                    <img class="carrousel-img" src="img/be-a-member/person1.jpg" alt="">
                                     <h3><i><%= member.name%></i></h3>
                                 </div>
 
@@ -283,7 +271,7 @@
 
                             <div class="carrousel-text-container">
                                 <p>
-                                    <i>"<%= member.desc%>"</i>
+                                    <i>"<%= member.desc%></i>
                                 </p>
 
                                 <a href="/beaMember"><button class="primary">saiba mais</button></a>
