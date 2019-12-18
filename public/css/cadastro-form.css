@@ -32,7 +32,7 @@
 
 .main-seja-membro .input-container {
     width: 320px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .main-seja-membro .input-text, .textarea-container .input-text-area, .section-text {
@@ -45,7 +45,6 @@
 
 .textarea-container{
     width: 320px;
-    /* border: 2px solid red */
 }
 
 .textarea-container .input-text-area{
@@ -114,7 +113,7 @@
     color: #D74C11;
 }
 
-.main-seja-membro .legal, .natural {
+.main-seja-membro .legal, .natural, .voluntary-program, .donate-materials, .donate-money {
     display: none;
 }
 
@@ -133,6 +132,14 @@
     margin-top: 2.5%
 }
 
+.container-checkbox{
+    margin-right: 5%;
+}
+
+.checkbox-form .checkbox-input{
+    width: 100%;
+    padding: 3%;
+}
 
 .error + .alert-error{
     display: block

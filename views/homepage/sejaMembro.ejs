@@ -19,7 +19,6 @@
     <!-- nav-bar -->
     <%- include ../partials/navbar.ejs %>
 
-
     <main class="main-seja-membro">
         <div class="title-container">
             <div class="principal-title-container">
@@ -37,40 +36,76 @@
             <div class="container-button"><a href="../index.html">voltar</a></div>
 
             <form class="form-container" method="POST" action="/dashboard/members/save" novalidate>
+                
                 <p class="question">Primeiro me conte um pouco sobre você:</p>
-                <div class="input-container">
 
+                <div class="input-container">
 
                     <p>Nome completo</p><input type="text" class="input-text space" name="name">
                     <span class="alert-error">Você precisa informar seu nome</span>
 
-
-
-                    <p>Você tem interesse em ser:</p>
+                    <p>Você tem interesse em:</p>
                     <select class="section-text space" id="interest" name="interest">
                         <option value="0">Selecione</option>
-                        <option value="1">Voluntário</option>
-                        <option value="2">Parceiro</option>
+                        <option value="1">Ser voluntário em algum programa</option>
+                        <option value="2">Ser um parceiro através de doações de materiais </option>
+                        <option value="3">Ser um parceiro através de doação financeira </option>
+                        <option value="4">Levar a Arte de viver para a minha instituição</option>
                     </select>
                     <span class="alert-error">Você precisa escolher uma opção</span>
 
 
+                    <div class="voluntary-program">
+                        <div>
+                            <p>Por qual tipo de atividade(s) você deseja se voluntariar?</p>
+                            <div class="textarea-container">
+                                <textarea rows="10" class="input-text-area" placeholder="Digite aqui"
+                                    name="doar"></textarea>
+                                <span class="alert-error space">Você precisa informar a atividade</span>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-form">
+                            <p>Qual o projeto mais te inspira?</p>
+                            <div class="container-checkbox">
+                                <div class="checkbox-input "><input class="yesEscolas" type="checkbox" name="yesEscolas"
+                                        value="YesEscolas"> Yes nas Escolas
+                                </div>
+                                <div class="checkbox-input"> <input class="prison" type="checkbox" name="prison"
+                                        value="prison">
+                                    Prison Smart </div>
+                            </div>
+                            <div class="container-checkbox">
+                                <div class="checkbox-input "> <input class="pm" type="checkbox" name="pm" value="pm">
+                                    Programa da PM
+                                </div>
+                                <div class="checkbox-input "> <input class="todos" type="checkbox" name="todos"
+                                        value="todos"> Todos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="donate-materials">
+                        <p>Quais materiais você gostaria de doar?</p>
+                        <div class="textarea-container">
+                            <textarea rows="10" class="input-text-area" placeholder="Digite aqui"
+                                name="doar"></textarea>
+                            <span class="alert-error space">Você precisa informar os materiais</span>
+                        </div>
+                    </div>
+
+                    <div class="donate-money">
+                        <p>Qual é o valor em reais que você pretende doar?</p>
+                        <input type="number" min="0.00" class="input-text" name="money" value=0 step="0.50">
+                    </div>
 
                     <div class="legal">
-                        <p>Sou colaborador na empresa</p><input type="text" class="input-text space"
-                            name="collaborator">
+                        <p>Nome da instituição</p><input type="text" class="input-text space" name="collaborator">
                     </div>
                     <span class="alert-error">Você precisa informar de qual empresa é colaborador</span>
 
-
-
-                    <div class="natural">
-                        <p>Idade</p><input type="number" min="18" class="input-text" name="age" value=0>
-                        <span class="alert-error">Você precisa informar sua idade</span>
-                    </div>
                 </div>
-
-
 
                 <p class="question">Agora precisamos de alguns dados:</p>
                 <div class="input-container">
@@ -78,17 +113,10 @@
                     <input type="email" class="input-text input-text space" name="email">
                     <span class="alert-error">Você precisa informar seu email</span>
 
-
-
-
                     <p>Telefone</p>
                     <input type="tel" class="input-text" name="telephone">
                     <span class="alert-error">Você precisa informar seu telefone</span>
                 </div>
-
-
-
-
 
                 <p class="question">Por qual motivo você deseja se juntar a nós?</p>
                 <div class="textarea-container">
