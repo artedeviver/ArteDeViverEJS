@@ -7,13 +7,13 @@ tinymce.init({
             const tinyText = document.querySelector('.tox-tinymce')
 
             if (text == '') {
-                tinyText.style.border = "1px solid red"
-                tinyText.classList.add('error')
-                verify(text)
+                    tinyText.style.border = "1px solid red"
+                    tinyText.classList.add('error')
+                    verify(text)
             } else {
-                tinyText.style.border = "1px solid #ccc"
-                tinyText.classList.remove('error')
-                verify(text)
+                    tinyText.style.border = "1px solid #ccc"
+                    tinyText.classList.remove('error')
+                    verify(text)
             }
         });
     }

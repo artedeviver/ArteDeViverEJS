@@ -80,6 +80,10 @@ button {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(32, 32, 32, 0.19);
 }
 
+.btn-long{
+    width: 20%;
+}
+
 .btn-change {
     padding: 2%;
     margin: 2% 0% 8% 0%;
@@ -236,11 +240,11 @@ fieldset h2 {
     display: none;
 }
 
-.successRegister{
+.successRegister {
     display: none;
 }
 
-.show{
+.show {
     display: block;
 }
 
@@ -394,45 +398,51 @@ fieldset h2 {
     display: grid;
 }
 
-.container-btn-members{
-   margin-top: 5%;
-}
-
-.container-btn-members .btn-change{
-    padding: 1.5%;
-}
-
-.btn-tertiary-members{
+.container-btn-members {
     margin-top: 5%;
 }
 
-textarea{
+.container-btn-members .btn-change {
+    padding: 1.5%;
+}
+
+.btn-tertiary-members {
+    margin-top: 5%;
+}
+
+textarea {
     height: 400px;
 }
 
-.tox-tinymce{
+.tox-tinymce {
     margin: 2% 0% 5% 0%;
 }
 
-.oi{
+.textarea {
+    margin: 2% 0% 5% 0%;
+    height: 250px;
+    padding: 2%;
+    margin: 2% 0% 5% 0%;
     border: 0.5px solid #F27623;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.container-password{
+.container-password {
     display: block;
     width: 100%;
 }
 
-.img-password{
+.img-password {
     width: 80%;
 }
 
-.grid-password{
+.grid-password {
     display: grid;
     grid-template-columns: 90% 10%;
 }
 
-.btn-password-view{
+.btn-password-view {
     margin: 0%;
     background: none;
     box-shadow: none;
