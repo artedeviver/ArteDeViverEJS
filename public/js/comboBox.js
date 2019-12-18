@@ -7,6 +7,15 @@ let donateMaterial = document.querySelector(".donate-materials")
 
 let donateMoney = document.querySelector(".donate-money")
 
+let selectTodos = document.querySelector("todos")
+selectTodos.addEventListener("click", todos)
+
+let selectYes = document.querySelector("yesEscolas")
+
+let selectPm = document.querySelector("pm")
+
+let selectPrison = document.querySelector("prison")
+
 function verification() {
     if (combo.value == 1) {
         voluntaryProgram.style.display = 'block'
@@ -21,4 +30,8 @@ function verification() {
         voluntaryProgram.style.display = 'none'
         donateMaterial.style.display = 'none'
     }
+}
+
+function todos(){
+    selectYes.setAttribute("checked")
 }
