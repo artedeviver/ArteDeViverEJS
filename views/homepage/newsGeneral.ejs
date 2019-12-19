@@ -38,21 +38,12 @@
                 <div class="news-text-container">
                     <h3> <a href="/news/<%= news.title %>/<%= news.id %>"><%= news.title %></span></a>
                     </h3>
-                    <p><%= news.bodyNews %></p>
+                    <p><%- news.newsDesc %></p>
                     <a class="news-plus" href="/news/<%= news.title %>/<%= news.id %>">saiba mais</a>
                 </div>
             </div>
             <%})%>
 
-            <div class="pagination">
-                <ul>
-                    <li class="active"><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">4</a></li>
-                    <li><a href="">5</a></li>
-                </ul>
-            </div>
         </section>
     </main>
 

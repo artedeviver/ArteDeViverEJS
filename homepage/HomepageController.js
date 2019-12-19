@@ -11,7 +11,7 @@ router.get("/courses", (req, res) => {
     Courses.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(courses => {
-        res.render("./homepage/coursesGeneral", { courses: courses })
+        res.render("./homepage/coursesGeneral", { courses: courses})
     })
 })
 

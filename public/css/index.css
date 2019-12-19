@@ -235,8 +235,9 @@
 
 .main-index .course dd {
     padding: 30px 0px;
-    text-align: justify;
+    text-align: center;
     line-height: 150%;
+    height: 50px;
 }
 
 .main-index .course-container div button {
