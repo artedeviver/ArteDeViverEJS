@@ -40,6 +40,7 @@
     <%- include partials/navbar.ejs %>
 
     <main class="main-index">
+
         <!-- area principal -->
         <section class="principal padding">
             <h1 class="principal-title"><%= principalArea.title %></h1>
@@ -217,7 +218,7 @@
                             <div class="img-course">
                                 <dt><%= courses.title %></dt>
                             </div>
-                            <dd><%- courses.bodyCourse %></dd>
+                            <dd><%- courses.descCourse %></dd>
                             <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba
                                     mais</button></a>
                         </dl>
@@ -271,7 +272,7 @@
 
                             <div class="carrousel-text-container">
                                 <p>
-                                    <i>"<%= member.desc%></i>
+                                    <i>"<%= member.desc%>"</i>
                                 </p>
 
                                 <a href="/beaMember"><button class="primary">saiba mais</button></a>

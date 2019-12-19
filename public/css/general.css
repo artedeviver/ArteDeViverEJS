@@ -10,6 +10,13 @@ input {
     box-sizing: border-box;
 }
 
+textarea{
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
 label {
     font-weight: 400;
 }
@@ -371,6 +378,13 @@ fieldset h2 {
     border-radius: 8px;
     padding-top: 2%;
     padding: 5%;
+    padding-top: 7%;
+}
+
+.section-reports .textarea{
+    width: 100%;
+    height: 90px;
+    border: none
 }
 
 .btn-back-reports {
@@ -383,10 +397,11 @@ fieldset h2 {
 
 .section-reports {
     display: grid;
-    grid-template-rows: 410px 410px;
+    grid-template-rows: 480px 480px;
     grid-template-columns: 48% 48%;
     justify-content: space-around;
     grid-row-gap: 2%;
+    padding-bottom: 5% ;
 }
 
 .relact-desc {
@@ -450,3 +465,4 @@ textarea {
     border: none;
     padding: 15%;
 }
+
