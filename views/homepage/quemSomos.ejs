@@ -45,18 +45,55 @@
 
         <section class="newspaper">
             <h2 class="section-title">imprensa</h2>
-            <div class="img-newspaper">
-                <img src="../img/quem-somos/CNN-logo-4.png" alt="">
-                <img src="../img/quem-somos/o-globo.png" alt="">
-                <img src="../img/quem-somos/the-new-york-times-logo.png" alt="">
-                <img src="../img/quem-somos/stanford-university-logo-png-1200_0.png" alt="">
+
+            <div class="carroussel">
+                <div class="btn-container">
+                    <button class="btn-carousel">
+                        <img src="/img/carousel-icons/back.png" alt="" class="btn prev">
+                    </button>
+                </div>
+
+                <div class="carroussel-container" >
+
+                    <div class="visible">
+
+                        <div class="card">
+                            <img src="/img/quem-somos/CNN-logo-4.png" alt="Logo da empresa CNN">
+                            <p>“respirações profundas e um bom alongamento com Yoga podem ajudar você e o seu negócio”
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/img/quem-somos/o-globo.png" alt="Logo do jornal O Globo" class="logo-2">
+                            <p class="text-2">"especialistas comprovam benefícios das técnicas em bairros que se beneficiam de meditação e yoga constantes"​
+                            </p>
+                        </div>
+
+                        <div class="card">
+                            <img src="/img/quem-somos/large.png" alt="Logo do jornal Yoga Journal" class="logo-3">
+                            <p class="text-3">“Arte de Viver talvez seja a prática mais rápida de crescimento espiritual em todo o planeta”
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn-carousel">
+                        <img src="/img/carousel-icons/next.png" alt="" class="btn next">
+                    </button>
+                </div>
             </div>
 
-            <div class="bubble">"especialistas comprovam benefícios das técnicas em bairros que se beneficiam de
-                meditação e yoga constantes"​</div>
-
+            <div class="pagination">
+                <div class="pagination-item first active-newspaper"></div>
+                <div class="pagination-item second "></div>
+                <div class="pagination-item third "></div>
+            </div>
         </section>
 
     </main>
 
-    <%- include ../partials/footer.ejs %>
+
+    <script src="./js/imprensa-carousel.js"></script>
+<%- include ../partials/footer.ejs %>
