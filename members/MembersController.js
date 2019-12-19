@@ -19,7 +19,10 @@ router.post("/dashboard/members/save", (req, res) => {
     let name = req.body.name
     let interest
     let typeActivityy = req.body.typeActivity
-    let projInsp = req.body.projInsp
+    let yesEscolas = req.body.yesEscolas
+    let prison = req.body.prison
+    let pm = req.body.pm
+    let todos = req.body.todos
     let materialDonate = req.body.materialDonate
     let valueDonate = req.body.valueDonate
     let nameInst = req.body.nameInst
@@ -27,13 +30,13 @@ router.post("/dashboard/members/save", (req, res) => {
     let telephone = req.body.telephone
     let reason = req.body.reason
 
-    if (checkForm.value == 'YesEscolas') {
+    if (yesEscolas == 'YesEscolas') {
         interest = 'Yes nas escolas'
-    } else if (checkForm.value == 'prison') {
+    } else if (prison == 'prison') {
         interest = 'Prison Smart'
-    } else if (checkForm.value == 'pm') {
+    } else if (pm == 'pm') {
         interest = 'Programa da PM'
-    } else {
+    } else if (todos == "todos") {
         interest = 'Todos os programas'
     }
 
@@ -41,7 +44,10 @@ router.post("/dashboard/members/save", (req, res) => {
         name: name,
         interest: interest,
         typeActivityy: typeActivityy,
-        projInsp: projInsp,
+        yesEscolas: yesEscolas,
+        prison: prison,
+        pm: pm,
+        todos: todos,
         materialDonate: materialDonate,
         valueDonate: valueDonate,
         nameInst: nameInst,
