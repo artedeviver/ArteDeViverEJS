@@ -18,11 +18,11 @@ router.post("/dashboard/members/save", (req, res) => {
 
     let name = req.body.name
     let interest
-    let typeActivityy = req.body.typeActivity
+    let comboInterest = req.body.interest
+    let typeActivity = req.body.typeActivity
     let yesEscolas = req.body.yesEscolas
     let prison = req.body.prison
     let pm = req.body.pm
-    let todos = req.body.todos
     let materialDonate = req.body.materialDonate
     let valueDonate = req.body.valueDonate
     let nameInst = req.body.nameInst
@@ -30,24 +30,36 @@ router.post("/dashboard/members/save", (req, res) => {
     let telephone = req.body.telephone
     let reason = req.body.reason
 
-    if (yesEscolas == 'YesEscolas') {
-        interest = 'Yes nas escolas'
-    } else if (prison == 'prison') {
-        interest = 'Prison Smart'
-    } else if (pm == 'pm') {
-        interest = 'Programa da PM'
-    } else if (todos == "todos") {
-        interest = 'Todos os programas'
+    if (comboInterest == 1) {
+        interest = "Ser voluntário em algum programa"
+        if (yesEscolas == 'YesEscolas') {
+            yesEscolas = 'Sim'
+        } if (prison == 'prison') {
+            prison = 'Sim'
+        } if (pm == 'pm') {
+            pm = 'Sim'
+        }
+    }
+
+    if (comboInterest == 2){
+        interest = "Ser um parceiro através de doações de materiais"
+    } 
+
+    if (comboInterest == 3){
+        interest = "Ser um parceiro através de doação financeira"
+    }
+
+    if (comboInterest == 4 ){
+        interest = "Levar a Arte de viver para a minha instituição"
     }
 
     Members.create({
         name: name,
         interest: interest,
-        typeActivityy: typeActivityy,
+        typeActivity: typeActivity,
         yesEscolas: yesEscolas,
         prison: prison,
         pm: pm,
-        todos: todos,
         materialDonate: materialDonate,
         valueDonate: valueDonate,
         nameInst: nameInst,

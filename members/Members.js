@@ -12,23 +12,31 @@ const Members = connection.define('members', {
     },
     typeActivity: {
         type: Sequelize.TEXT,
-        allowNull: false
+
     },
-    projInsp: {
-        type: Sequelize.TEXT,
-        allowNull: true
+    yesEscolas: {
+        type: Sequelize.STRING,
+
+    },
+    prison: {
+        type: Sequelize.STRING,
+
+    },
+    pm: {
+        type: Sequelize.STRING,
+
     },
     materialDonate: {
         type: Sequelize.STRING,
-        allowNull: false
+
     },
     valueDonate: {
         type: Sequelize.INTEGER,
-        allowNull: false
+
     },
     nameInst: {
         type: Sequelize.STRING,
-        allowNull: false
+
     },
     email: {
         type: Sequelize.STRING,
