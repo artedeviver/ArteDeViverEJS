@@ -9,37 +9,6 @@ let donateMoney = document.querySelector(".donate-money")
 
 let legal = document.querySelector(".legal")
 
-let selectTodos = document.querySelector(".todos")
-selectTodos.addEventListener("click", select)
-
-
-
-let counter = 0
-
-function select() {
-    counter++
-    if (counter % 2 === 1) {
-
-        document.querySelector(".yesEscolas").setAttribute('checked', true)
-        document.querySelector(".yesEscolas").setAttribute('disabled', true)
-
-        document.querySelector(".pm").setAttribute('checked', true)
-        document.querySelector(".pm").setAttribute('disabled', true)
-
-        document.querySelector(".prison").setAttribute('checked', true)
-        document.querySelector(".prison").setAttribute('disabled', true)
-    } else {
-        document.querySelector(".yesEscolas").removeAttribute('checked', true)
-        document.querySelector(".yesEscolas").removeAttribute('disabled', true)
-
-        document.querySelector(".pm").removeAttribute('checked', true)
-        document.querySelector(".pm").removeAttribute('disabled', true)
-
-        document.querySelector(".prison").removeAttribute('checked', true)
-        document.querySelector(".prison").removeAttribute('disabled', true)
-    }
-}
-
 function verification() {
 
     if (combo.value == 1) {

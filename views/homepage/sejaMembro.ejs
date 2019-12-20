@@ -60,7 +60,7 @@
                             <p>Por qual tipo de atividade(s) você deseja se voluntariar?</p>
                             <div class="textarea-container">
                                 <textarea rows="10" class="input-text-area" placeholder="Digite aqui"
-                                    name="doar"></textarea>
+                                    name="typeActivity"></textarea>
                                 <span class="alert-error space">Você precisa informar a atividade</span>
                             </div>
                         </div>
@@ -79,31 +79,29 @@
                                 <div class="checkbox-input "> <input class="pm" type="checkbox" name="pm" value="pm">
                                     Programa da PM
                                 </div>
-                                <div class="checkbox-input "> <input class="todos" type="checkbox" name="todos"
-                                        value="todos"> Todos
-                                </div>
                             </div>
                         </div>
+                        
                     </div>
 
                     <div class="donate-materials">
                         <p>Quais materiais você gostaria de doar?</p>
                         <div class="textarea-container">
                             <textarea rows="10" class="input-text-area" placeholder="Digite aqui"
-                                name="doar"></textarea>
+                                name="materialDonate"></textarea>
                             <span class="alert-error space">Você precisa informar os materiais</span>
                         </div>
                     </div>
 
                     <div class="donate-money">
                         <p>Qual é o valor em reais que você pretende doar?</p>
-                        <input type="number" min="0.00" class="input-text" name="money" value=0 step="0.50">
+                        <input type="number" min="0.00" class="input-text" name="valueDonate" value=0 step="5">
                     </div>
 
                     <div class="legal">
-                        <p>Nome da instituição</p><input type="text" class="input-text space" name="collaborator">
+                        <p>Nome da instituição</p><input type="text" class="input-text space" name="nameInst">
                     </div>
-                    <span class="alert-error">Você precisa informar de qual empresa é colaborador</span>
+                    <span class="alert-error">Você precisa informar de qual é a instituição</span>
 
                 </div>
 
@@ -123,7 +121,7 @@
                     <textarea rows="10" class="input-text-area" placeholder="Digite aqui" name="reason"></textarea>
                     <span class="alert-error space">Você precisa informar o motivo</span>
                 </div>
-                <button class=" primary space-button btn-disabled" disabled>concluir cadastro</button>
+                <button class=" primary space-button"  >concluir cadastro</button>
             </form>
         </div>
     </main>

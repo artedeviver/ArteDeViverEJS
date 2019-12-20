@@ -2,39 +2,59 @@ const Sequelize = require("sequelize")
 const connection = require("../database/database")
 
 const Members = connection.define('members', {
-    name:{
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    interest:{
+    interest: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    age:{
+    typeActivity: {
+        type: Sequelize.TEXT,
+
+    },
+    yesEscolas: {
+        type: Sequelize.STRING,
+
+    },
+    prison: {
+        type: Sequelize.STRING,
+
+    },
+    pm: {
+        type: Sequelize.STRING,
+
+    },
+    materialDonate: {
+        type: Sequelize.STRING,
+
+    },
+    valueDonate: {
         type: Sequelize.INTEGER,
-        allowNull: true
+
     },
-    company:{
+    nameInst: {
+        type: Sequelize.STRING,
+
+    },
+    email: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    email:{
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    telephone:{
+    telephone: {
         type: Sequelize.CHAR,
         allowNull: false
     },
-    reason:{
+    reason: {
         type: Sequelize.TEXT,
         allowNull: false
     }
 })
 
-Members.sync({force:false}).then(() =>{
+Members.sync({ force: false }).then(() => {
     console.log('Tabela de membros criada')
-}).catch((error) =>{
+}).catch((error) => {
     console.log(error)
 })
 
