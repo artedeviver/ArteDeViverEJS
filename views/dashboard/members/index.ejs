@@ -19,23 +19,208 @@
 
 <%- include ../../partials/dashPage.ejs %>
 
-<h1>interessados</h1>
+ <h1>interessados</h1>
 
-<div class="card-container">
+<div class="card-container-new">
+
+    <h2 class="subtitle">ser voluntário em algum programa</h2>
+    <div class="new-container">
+
+         <% members.map(member => { %>
+
+         <div class="card-members card-members-1">
+            <h2><%= member.name%></h2>  
+
+            <%  if(member.interest == 'Ser voluntário em algum programa'){ %>
+                <div>
+                    <p>Tipo de atividade: <span><%= member.typeActivity%></span></p>
+                </div>
+
+                <p>programas:</p>
+
+                <ul>
+                    <%  if(member.yesEscolas == 'Sim'){ %>
+                    <li>Yes! nas Escolas: <span><%= member.yesEscolas%></span></li>
+                    <%  } else { %>
+                    <li>Yes! nas Escolas: <span>Não</span></li>
+                    <%  } %>
+    
+    
+                    <%  if(member.prison == 'Sim'){ %>
+                    <li>Prison: <span><%= member.prison%></span></li>
+                    <%  } else { %>
+                    <li>Prison: <span>Não</span></li>
+                    <%  } %>
+    
+    
+                    <%  if(member.pm == 'Sim'){ %>
+                    <li>Yes! nas Escolas: <span><%= member.pm%></span></li>
+                    <%  } else { %>
+                    <li>Programa da Polícia: <span>Não</span></li>
+                    <%  } %>
+                </ul>
+            <% }%>
+
+            <p>Email: <span><%= member.email %></span> </p>
+
+            <p>Telefone: <span><%= member.email %></span> </p>
+
+            <div class="last">
+                <p>Motivo: <span><%= member.reason %></span> </p>
+            </div>
+
+            <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+            <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
+        </div>
+        <% }) %> 
+    </div>
+<!-- ladsfmgkflmkkdskdkdfkdfkkmfklmklmsalkskmlasklmsdasa -->
+
+
+
+    <h2 class="subtitle">ser um parceiro através de doações de materiais</h2>
+    <div class="new-container" style="border: 2px solid black">
+        <% members.map(member => { %>
+            <%  if(member.interest == 'Ser voluntário através de doações de materiais'){ %>
+            <div class="card-members card-members-1">
+                <h2><%= member.name%></h2>
+                    <div>
+                        <p>Materiais: <span><%= member.materialDonate%></span></p>
+                    </div>
+
+                    <p>Email: <span><%= member.email %></span> </p>
+
+                    <p>Telefone: <span><%= member.email %></span> </p>
+        
+                    <div class="last">
+                        <p>Motivo: <span><%= member.reason %></span> </p>
+                    </div>
+        
+                    <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+                    <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
+            </div>
+            <% } %>
+            <% }) %>
+    </div>
+
+
+    <h2 class="subtitle">ser um parceiro através de doação financeira</h2>
+    <div class="new-container" style="border: 2px solid black">
+        <% members.map(member => { %>
+            <%  if(member.interest == 'Ser voluntário através de doação financeira'){ %>
+            <div class="card-members card-members-1">
+                <h2><%= member.name%></h2>
+                    <p>Valor da doação: <span><%= member.valueDonate%></span></p>
+
+                    <p>Email: <span><%= member.email %></span> </p>
+
+                    <p>Telefone: <span><%= member.email %></span> </p>
+        
+                    <div class="last">
+                        <p>Motivo: <span><%= member.reason %></span> </p>
+                    </div>
+        
+                    <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+                    <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
+            </div>
+            <% } %>
+            <% }) %>
+    </div>
+   
+
+
+    <h2 class="subtitle">levar a Arte de viver para a minha instituição</h2>
+    <div class="new-container" style="border: 2px solid black">
+        <% members.map(member => { %>
+            <%  if(member.interest == 'Levar a Arte de viver para a minha instituição'){ %>
+            <div class="card-members card-members-1">
+                <h2><%= member.name%></h2>
+
+                    <p>Nome da instituição: <span><%= member.nameInst %></span></p>
+
+                    <p>Email: <span><%= member.email %></span> </p>
+
+                    <p>Telefone: <span><%= member.email %></span> </p>
+        
+                    <div class="last">
+                        <p>Motivo: <span><%= member.reason %></span> </p>
+                    </div>
+        
+                    <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
+                    <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
+            </div>
+            <% } %>
+            <% }) %>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 
     <% members.map(member => { %>
 
     <div class="card-members">
+
         <div class="card-members-text-container">
             <h2><%= member.name%></h2>
             <i><%= member.interest%></i>
 
-            <%  if(member.interest == 'voluntário'){ %>
-            <p class="margin">idade: <span><%= member.age%></span></p>
 
-            <%  } else { %>
-            <p class="margin">empresa: <span><%= member.company%></span></p>
+            <%  if(member.interest == 'Ser voluntário em algum programa'){ %>
+            <p class="margin">tipo de atividade: <span><%= member.typeActivity%></span></p>
+            <p class="margin">programas:</p>
+
+            <ul>
+                <%  if(member.yesEscolas == 'Sim'){ %>
+                <li>Yes! nas Escolas: <span><%= member.yesEscolas%></span></li>
+                <%  } else { %>
+                <li class="margin">Yes! nas Escolas: <span>Não</span></li>
+                <%  } %>
+
+
+                <%  if(member.prison == 'Sim'){ %>
+                <li>Prison: <span><%= member.prison%></span></li>
+                <%  } else { %>
+                <li>Prison: <span>Não</span></li>
+                <%  } %>
+
+
+                <%  if(member.pm == 'Sim'){ %>
+                <li>Yes! nas Escolas: <span><%= member.pm%></span></li>
+                <%  } else { %>
+                <li>Programa da Polícia: <span>Não</span></li>
+                <%  } %>
+            </ul>
+
+            <% } else { %>
+
+            <%  if(member.interest == 'Ser um parceiro através de doações de materiais'){ %>
+            <p class="margin">materiais: <span><%= member.materialDonate%></span></p>
             <%  } %>
+
+            <%  if(member.interest == 'Ser um parceiro através de doação financeira'){ %>
+            <p class="margin">Valor a ser doado: <span>R$<%= member.valueDonate%></span></p>
+            <%  } %>
+
+            <%  if(member.interest == 'Levar a Arte de viver para a minha instituição'){ %>
+            <p class="margin">valor a ser doado: <span>R$<%= member.nameInst%></span></p>
+            <%  } %>
+            <%  } %>
+
 
             <p>email: <span><%= member.email%></span></p>
             <p>telefone: <span><%= member.telephone%></span></p>
@@ -47,7 +232,7 @@
         <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
         <input type="hidden" name="id" class="idCard" value="<%= member.id %>">
     </div>
-    <% }) %>
+    <% }) %> -->
 </div>
 
 
