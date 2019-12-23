@@ -27,7 +27,7 @@ const Members = connection.define('members', {
 
     },
     materialDonate: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
 
     },
     valueDonate: {
