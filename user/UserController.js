@@ -66,7 +66,7 @@ router.get("/dashboard/users/edit/:id", adminAuth, (req, res) => {
 
     User.findByPk(id).then(user => {
         if (user != undefined) {
-            res.render("./dashboard/user/edit", { user: user })
+            res.render("./dashboard/user/edit", { user: user, admin: req.session.user.administrator })
         } else {
             res.redirect("./dashboard/user")
         }
