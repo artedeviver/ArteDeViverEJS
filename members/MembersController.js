@@ -9,7 +9,7 @@ router.get("/dashboard/members", adminAuth, (req, res) => {
     Members.findAll({
         raw: true
     }).then(members => {
-        res.render("dashboard/members/index", { members: members, success: req.query.success })
+        res.render("dashboard/members/index", { members: members, success: req.query.success , admin: req.session.user.administrator})
     })
 })
 

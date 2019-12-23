@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const Partners = require("./Partners")
+const adminAuth = require('../middlewares/adminAuth')
 
 router.get("/dashboard/home/partners/edit", (req, res) => {
 

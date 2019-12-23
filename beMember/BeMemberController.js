@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const BeMember = require("./BeMember")
-
+const adminAuth = require('../middlewares/adminAuth')
 
 router.get("/dashboard/home/be-member/edit", adminAuth, (req, res) => {
     BeMember.findAll({

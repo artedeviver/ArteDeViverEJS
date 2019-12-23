@@ -15,7 +15,7 @@ router.get("/news/:title/:id", (req, res) => {
 
     News.findByPk(id).then(news => {
         if (news != undefined) {
-            res.render("homepage/newsSpecific", { news: news })
+            res.render("homepage/newsSpecific", { news: news , admin: req.session.user.administrator})
         } else {
             res.redirect("homepage/news")
         }
@@ -26,7 +26,7 @@ router.get("/news/:title/:id", (req, res) => {
 
 //ROTA PARA PÁGINA DE ADD NOVA NOTÍCIA
 router.get("/dashboard/news/new", adminAuth, (req, res) => {
-    res.render("./dashboard/news/new")
+    res.render("./dashboard/news/new" , {admin: req.session.user.administrator})
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD NEWS
@@ -57,7 +57,7 @@ router.get("/dashboard/news", adminAuth, (req, res) => {
             ['id', 'DESC']
         ]
     }).then(news => {
-        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit})
+        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit, admin: req.session.user.administrator})
     })
 })
 
@@ -90,7 +90,7 @@ router.get("/dashboard/news/edit/:id", adminAuth, (req, res) => {
 
     News.findByPk(id).then(news => {
         if (news != undefined) {
-            res.render("./dashboard/news/edit", { news: news })
+            res.render("./dashboard/news/edit", { news: news, admin: req.session.user.administrator })
         } else {
             res.redirect("./dashboard/news")
         }
