@@ -319,6 +319,10 @@ fieldset h2 {
     margin-bottom: 5%;
 }
 
+.card-container-new .subtitle{
+    margin-bottom: 5%;
+}
+
 .card-members {
     display: flex;
     flex-direction: column;

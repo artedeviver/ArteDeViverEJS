@@ -15,6 +15,10 @@
     border-bottom: 1px solid #FFC24F;
 }
 
+.main-seja-membro .cadastro-container textarea{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .cadastro-container form {
     width: 500px;
     display: flex;
