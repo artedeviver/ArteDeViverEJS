@@ -9,12 +9,12 @@ router.get("/dashboard/members", adminAuth, (req, res) => {
     Members.findAll({
         raw: true
     }).then(members => {
-        res.render("dashboard/members/index", { members: members, success: req.query.success })
+        res.render("dashboard/members/index", { members: members, success: req.query.success , admin: req.session.user.administrator})
     })
 })
 
 // SALVAR OS DADOS DO FORMULÁRIO
-router.post("/dashboard/members/save", (req, res) => {
+router.post("/dashboard/members/save", adminAuth,  (req, res) => {
 
     let name = req.body.name
     let interest
@@ -75,7 +75,7 @@ router.post("/dashboard/members/save", (req, res) => {
 
 
 // DELETAR UM MEMBRO
-router.post("/dashboard/members/delete", adminAuth, (req, res) => {
+router.post("/dashboard/members/delete", adminAuth,  (req, res) => {
     let id = req.body.id
 
     if (id != undefined) {

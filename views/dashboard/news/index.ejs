@@ -53,9 +53,15 @@
         <h3><%= news.title %></h3>
 
         <div class="btn-container-long">
+            <%  if(admin == true){ %>
             <a class="primary btn-card" href="/dashboard/news/edit/<%= news.id %>">Editar</a>
             <button onclick="show()" class="primary btn-card btn-confirm-delete" type="button">excluir</button>
             <input type="hidden" name="id" class="idCard" value="<%= news.id %>">
+            <%  } else { %>
+
+            <a class="primary btn-card" href="/dashboard/news/edit/<%= news.id %>">Editar</a>
+            <input type="hidden" name="id" class="idCard" value="<%= news.id %>">
+            <%  } %>
         </div>
     </div>
     <%})%>

@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const Partners = require("./Partners")
+const adminAuth = require('../middlewares/adminAuth')
 
 router.get("/dashboard/home/partners/edit", (req, res) => {
 
@@ -16,7 +17,7 @@ router.get("/dashboard/home/partners/edit", (req, res) => {
 })
 
 //SALVAR EDIÇÃO DOS CAMPOS
-router.post("/dashboard/home/partners/update", (req, res) => {
+router.post("/dashboard/home/partners/update", adminAuth, (req, res) => {
     let id = req.params.id
     let img1 = req.body.img1
     let img2 = req.body.img2

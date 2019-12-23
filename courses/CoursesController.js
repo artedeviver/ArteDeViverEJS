@@ -72,7 +72,7 @@ router.post("/dashboard/courses/save", adminAuth, (req, res) => {
 })
 
 //DELETAR CURSO
-router.post("/dashboard/courses/delete", adminAuth, (req, res) => {
+router.post("/dashboard/courses/delete", adminAuth,  (req, res) => {
     let id = req.body.id
 
     if(id != undefined){
@@ -110,7 +110,7 @@ router.get("/dashboard/courses/edit/:id", adminAuth, (req, res) => {
 })
 
 //SALVAR DADOS DO FORMULÁRIO - UPDATE 
-router.post("/dashboard/courses/update", adminAuth, (req, res) => {
+router.post("/dashboard/courses/update", adminAuth,  (req, res) => {
     let id = req.body.id
     let title = req.body.title
     let descCourse = req.body.descCourse

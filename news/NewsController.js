@@ -15,7 +15,7 @@ router.get("/news/:title/:id", (req, res) => {
 
     News.findByPk(id).then(news => {
         if (news != undefined) {
-            res.render("homepage/newsSpecific", { news: news })
+            res.render("homepage/newsSpecific", { news: news , admin: req.session.user.administrator})
         } else {
             res.redirect("homepage/news")
         }
@@ -25,12 +25,12 @@ router.get("/news/:title/:id", (req, res) => {
 })
 
 //ROTA PARA PÁGINA DE ADD NOVA NOTÍCIA
-router.get("/dashboard/news/new", (req, res) => {
-    res.render("./dashboard/news/new")
+router.get("/dashboard/news/new", adminAuth, (req, res) => {
+    res.render("./dashboard/news/new" , {admin: req.session.user.administrator})
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD NEWS
-router.post("/dashboard/news/save", (req, res) => {
+router.post("/dashboard/news/save", adminAuth,  (req, res) => {
 
     let title = req.body.title
     let newsDesc = req.body.newsDesc
@@ -51,18 +51,18 @@ router.post("/dashboard/news/save", (req, res) => {
 
 // MOSTRAR TODAS AS NOTÍCIAS JA CADASTRADAS 
 // EM ORDEM DESCRECENTE
-router.get("/dashboard/news", (req, res) => {
+router.get("/dashboard/news", adminAuth, (req, res) => {
     News.findAll({
         raw: true, order: [
             ['id', 'DESC']
         ]
     }).then(news => {
-        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit})
+        res.render("dashboard/news/index", { news: news, success: req.query.success, successEdit: req.query.successEdit, admin: req.session.user.administrator})
     })
 })
 
 //DELETAR NOTICIA
-router.post("/dashboard/news/delete", adminAuth, (req, res) => {
+router.post("/dashboard/news/delete", adminAuth,  (req, res) => {
     let id = req.body.id
 
     if(id != undefined){
@@ -90,7 +90,7 @@ router.get("/dashboard/news/edit/:id", adminAuth, (req, res) => {
 
     News.findByPk(id).then(news => {
         if (news != undefined) {
-            res.render("./dashboard/news/edit", { news: news })
+            res.render("./dashboard/news/edit", { news: news, admin: req.session.user.administrator })
         } else {
             res.redirect("./dashboard/news")
         }
