@@ -9,7 +9,7 @@ router.get("/dashboard/home/principalArea/edit", adminAuth, (req, res) => {
 
     PrincipalArea.findByPk(1).then(principalarea => {
         
-            res.render("./dashboard/home/principalArea/edit", { principalarea: principalarea })
+            res.render("./dashboard/home/principalArea/edit", { principalarea: principalarea,  admin: req.session.user.administrator })
 
     }).catch(error => {
         res.redirect("./dashboard/home")

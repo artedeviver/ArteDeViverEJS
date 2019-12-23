@@ -3,13 +3,13 @@ const router = express.Router()
 const Partners = require("./Partners")
 const adminAuth = require('../middlewares/adminAuth')
 
-router.get("/dashboard/home/partners/edit", (req, res) => {
+router.get("/dashboard/home/partners/edit", adminAuth,  (req, res) => {
 
     let id = req.params.id
 
     Partners.findByPk(1).then(partners => {
         
-            res.render("dashboard/home/partners/edit", { partners: partners })
+            res.render("dashboard/home/partners/edit", { partners: partners , admin: req.session.user.administrator})
 
     }).catch(error => {
         res.redirect("./dashboard/home")

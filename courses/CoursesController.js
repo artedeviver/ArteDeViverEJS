@@ -29,13 +29,13 @@ router.get("/dashboard/courses", adminAuth, (req, res) => {
     Courses.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(courses => {
-        res.render("dashboard/courses/index", { courses: courses, success: req.query.success, successEdit: req.query.successEdit })
+        res.render("dashboard/courses/index", { courses: courses, success: req.query.success, successEdit: req.query.successEdit, admin: req.session.user.administrator })
     })
 })
 
 //ROTA PARA PÁGINA DE ADD NOVO CURSO
 router.get("/dashboard/courses/new", adminAuth, (req, res) => {
-    res.render("./dashboard/courses/new")
+    res.render("./dashboard/courses/new", { admin: req.session.user.administrator})
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD CURSOS
@@ -100,7 +100,7 @@ router.get("/dashboard/courses/edit/:id", adminAuth, (req, res) => {
 
     Courses.findByPk(id).then(courses => {
         if (courses != undefined) {
-            res.render("./dashboard/courses/edit", { courses: courses })
+            res.render("./dashboard/courses/edit", { courses: courses,  admin: req.session.user.administrator })
         } else {
             res.redirect("./dashboard/courses")
         }

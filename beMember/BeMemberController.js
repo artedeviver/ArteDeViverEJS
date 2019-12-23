@@ -7,7 +7,7 @@ router.get("/dashboard/home/be-member/edit", adminAuth, (req, res) => {
     BeMember.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(member => {
-        res.render("./dashboard/home/beMember/edit", { member: member, success: req.query.success})
+        res.render("./dashboard/home/beMember/edit", { member: member, success: req.query.success, admin: req.session.user.administrator})
     })
 })
 

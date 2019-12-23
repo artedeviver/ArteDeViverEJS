@@ -127,7 +127,7 @@ app.get("/dashboard", adminAuth, (req, res) => {
 })
 
 app.get("/dashboard/home", adminAuth, (req, res) => {
-    res.render("./dashboard/home/index", { successEdit: req.query.successEdit })
+    res.render("./dashboard/home/index", { successEdit: req.query.successEdit,  admin: req.session.user.administrator})
 })
 
 
