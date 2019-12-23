@@ -6,21 +6,21 @@ const adminAuth = require('../middlewares/adminAuth')
 
 
 //MOSTRAR TODOS OS USUÁRIOS CADASTRADOS
-router.get("/dashboard/users", (req, res) => {
+router.get("/dashboard/users", adminAuth, (req, res) => {
     User.findAll({
         raw: true, order: [['id', 'DESC']]
     }).then(user => {
-        res.render("dashboard/user/index", { user: user, success: req.query.success, successEdit: req.query.successEdit })
+        res.render("dashboard/user/index", { user: user, success: req.query.success, successEdit: req.query.successEdit, admin: req.session.user.administrator})
     })
 })
 
 //ROTA PARA PÁGINA DE ADD NOVO USUÁRIO
-router.get("/dashboard/users/new", (req, res) => {
+router.get("/dashboard/users/new",  adminAuth, (req, res) => {
     res.render("./dashboard/user/new", { success: req.query.success })
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD USER
-router.post("/dashboard/users/save", (req, res) => {
+router.post("/dashboard/users/save", adminAuth, (req, res) => {
 
     let name = req.body.name
     let responsibility = req.body.responsibility

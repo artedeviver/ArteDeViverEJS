@@ -100,7 +100,8 @@ app.post("/authenticate", (req, res) => {
             if (correct) {
                 req.session.user = {
                     id: user.id,
-                    email: user.email
+                    email: user.email,
+                    administrator: user.administrator
                 }
                 
             res.redirect("/dashboard")
@@ -122,10 +123,10 @@ app.get("/logout", (req, res) => {
 
 //rotas auxiliares
 app.get("/dashboard", adminAuth, (req, res) => {
-    res.render("./dashboard/index")
+    res.render("./dashboard/index" , {admin: req.session.user.administrator})
 })
 
-app.get("/dashboard/home", (req, res) => {
+app.get("/dashboard/home", adminAuth, (req, res) => {
     res.render("./dashboard/home/index", { successEdit: req.query.successEdit })
 })
 
