@@ -3,7 +3,6 @@ const router = express.Router()
 const News = require("./News")
 const adminAuth = require('../middlewares/adminAuth')
 
-
 //ROTA NOTÍCIA ESPECIFICA 
 router.get("/news/:title/:id", (req, res) => {
 
@@ -103,6 +102,7 @@ router.get("/dashboard/news/edit/:id", adminAuth, (req, res) => {
 router.post("/dashboard/news/update", adminAuth, (req, res) => {
     let id = req.body.id
     let title = req.body.title
+    let newsDesc = req.body.newsDesc
     let bodyNews = req.body.bodyNews
     let titleImage = req.body.titleImage
 
