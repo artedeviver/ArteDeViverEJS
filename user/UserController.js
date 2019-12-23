@@ -16,7 +16,7 @@ router.get("/dashboard/users", adminAuth, (req, res) => {
 
 //ROTA PARA PÁGINA DE ADD NOVO USUÁRIO
 router.get("/dashboard/users/new",  adminAuth, (req, res) => {
-    res.render("./dashboard/user/new", { success: req.query.success })
+    res.render("./dashboard/user/new", { success: req.query.success, admin: req.session.user.administrator })
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD USER
