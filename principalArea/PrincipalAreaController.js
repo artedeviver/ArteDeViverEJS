@@ -1,8 +1,19 @@
 const express = require("express")
 const router = express.Router()
 const PrincipalArea = require("./PrincipalArea")
+const multer = require('multer')
 const adminAuth = require('../middlewares/adminAuth')
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
 
+const upload = multer({ storage })
+  
 router.get("/dashboard/home/principalArea/edit", adminAuth, (req, res) => {
 
     let id = req.params.id
@@ -17,10 +28,10 @@ router.get("/dashboard/home/principalArea/edit", adminAuth, (req, res) => {
 })
 
 //SALVAR EDIÇÃO DOS CAMPOS
-router.post("/dashboard/home/principalArea/update", adminAuth, (req, res) => {
+router.post("/dashboard/home/principalArea/update", adminAuth, upload.single('imgBackground'), (req, res) => {
     let id = req.params.id
     let title = req.body.title
-    let imgBackground = req.body.imgBackground
+    let imgBackground = req.file.originalname
 
     PrincipalArea.update({
         id: id,
