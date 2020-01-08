@@ -18,7 +18,7 @@
 
 .main-index .principal-title {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
-    font-size: 82px;
+    font-size: 5.125em;
     text-align: center;
 }
 
@@ -34,7 +34,7 @@
 
 .missao .subtitle {
     margin: 0px;
-    font-size: 45px;
+    font-size: 2.8125em;
 }
 
 .main-index .subtitle-container {
@@ -71,7 +71,7 @@
 
 .main-index .metricas-text {
     line-height: 60px;
-    font-size: 45px;
+    font-size: 2.8125em;
     text-align: center;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .main-index .metricas-subtitle {
-    font-size: 25px;
+    font-size: 1.5625em;
     line-height: 0;
     margin-top: 13px;
 }
@@ -166,7 +166,7 @@
 
 .history-date {
     font-weight: 600;
-    font-size: 63px;
+    font-size: 3.9375em;
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Montserrat', sans-serif;
@@ -353,7 +353,7 @@
 .main-index .who-are p {
     margin-top: 50px;
     text-align: initial;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .main-index .who-are .primary {
@@ -435,7 +435,7 @@
 }
 
 .main-index .title-newsLetter {
-    font-size: 25px;
+    font-size: 1.5625em;
     font-weight: 600;
     border-right: white 5px solid;
     width: 45%;
@@ -462,7 +462,7 @@
     width: 200px;
     height: 40px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 0.9375em;
     border-radius: 8px;
 }
 
@@ -492,14 +492,14 @@
 .body-index .pop-up p:nth-child(1) {
     color: #4EB4BF;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.875em;
     line-height: 125%;
     margin-bottom: 5%;
 }
 
 .body-index .pop-up p:nth-child(2) {
     color: #C74C11;
-    font-size: 20px;
+    font-size: 1.25em;
     margin-bottom: 10%;
 }
 
@@ -508,7 +508,7 @@
     padding: 2% 10%;
     height: 50px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 1.5625em;
     border-radius: 8px;
     color: white;
     text-decoration: none;

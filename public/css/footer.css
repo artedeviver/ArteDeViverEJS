@@ -11,7 +11,7 @@ footer {
 }
 
 footer h3 {
-    font-size: 20px;
+    font-size: 1.25em;
     font-weight: normal;
     margin-top: 0;
     margin-bottom: 5%;
@@ -93,7 +93,7 @@ footer .logo-footer {
 }
 
 footer .copyright{
-    font-size: 12px;
+    font-size: 0.75em;
     float: right;
     align-items: flex-end;
     margin-top: 13%
