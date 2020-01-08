@@ -15,7 +15,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
   
 router.get("/dashboard/home/principalArea/edit", adminAuth, (req, res) => {
-
     let id = req.params.id
 
     PrincipalArea.findByPk(1).then(principalarea => {

@@ -1,7 +1,18 @@
 const express = require("express")
 const router = express.Router()
 const Courses = require("./Courses")
+const multer = require('multer')
 const adminAuth = require('../middlewares/adminAuth')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
+const upload = multer({ storage })
 
 
 //MOSTRAR CURSO ESPECIFICO
@@ -39,12 +50,12 @@ router.get("/dashboard/courses/new", adminAuth, (req, res) => {
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD CURSOS
-router.post("/dashboard/courses/save", adminAuth, (req, res) => {
+router.post("/dashboard/courses/save", upload.array('photos', 12), (req, res) => {
 
     let title = req.body.title
     let descCourse = req.body.descCourse
     let bodyCourse = req.body.bodyCourse
-    let imgCourse = req.body.imgCourse
+    let imgCourse = req.files
     let featured = req.body.featured
     let imgFeatured = req.body.imgFeatured
     let impactDesc = req.body.impactDesc

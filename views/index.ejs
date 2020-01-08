@@ -45,6 +45,7 @@
         
         <section class="principal padding">
             <h1 class="principal-title"><%= principalArea.title %></h1>
+            <p class="principal-img-background"><%= principalArea.imgBackground %></p>
         </section>
 
         <!-- missão -->
@@ -370,5 +371,14 @@
             bod.classList.add("hidden")
             registerPopUp.style.display = "flex"
         }
+    </script>
 
+    <script>
+        let backgroundText = document.querySelector('.principal-img-background').innerText
+        let backgroundImg = document.querySelector('.principal')
+
+        window.onload = function(){
+            backgroundImg.style.background = `url(/uploads/${backgroundText})`
+            backgroundImg.style.backgroundSize = 'cover'
+        }
     </script>

@@ -1,11 +1,22 @@
 const express = require("express")
 const router = express.Router()
 const News = require("./News")
+const multer = require('multer')
 const adminAuth = require('../middlewares/adminAuth')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
+const upload = multer({ storage })
+
 
 //ROTA NOTÍCIA ESPECIFICA 
 router.get("/news/:title/:id", (req, res) => {
-
     let id = req.params.id
 
     if (isNaN(id)) {
@@ -29,16 +40,15 @@ router.get("/dashboard/news/new", adminAuth, (req, res) => {
 })
 
 //SALVAR DADOS DO FORMULÁRIO - ADD NEWS
-router.post("/dashboard/news/save", adminAuth,  (req, res) => {
-
+router.post("/dashboard/news/save", adminAuth, upload.single('titleImage'), (req, res) => {
     let title = req.body.title
     let newsDesc = req.body.newsDesc
     let bodyNews = req.body.bodyNews
-    let titleImage = req.body.titleImage
+    let titleImage = req.file.originalname
 
     News.create({
         title: title,
-        newsDesc : req.body.newsDesc,
+        newsDesc : newsDesc,
         bodyNews: bodyNews,
         titleImage: titleImage
     }).then(() => {
@@ -99,12 +109,17 @@ router.get("/dashboard/news/edit/:id", adminAuth, (req, res) => {
 })
 
 //SALVAR DADOS DO FORMULÁRIO - UPDATE 
-router.post("/dashboard/news/update", adminAuth, (req, res) => {
+router.post("/dashboard/news/update", adminAuth, upload.single('titleImage'), (req, res) => {
     let id = req.body.id
     let title = req.body.title
     let newsDesc = req.body.newsDesc
     let bodyNews = req.body.bodyNews
-    let titleImage = req.body.titleImage
+    let titleImage = req.file.originalname
+
+    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+    console.log(upload)
+    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
+
 
     News.update({
         title: title,

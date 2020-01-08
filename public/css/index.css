@@ -22,6 +22,11 @@
     text-align: center;
 }
 
+.main-index .principal-img-background{
+    display: none;
+}
+
+
 /* MISSÃO */
 
 .main-index .missao {
