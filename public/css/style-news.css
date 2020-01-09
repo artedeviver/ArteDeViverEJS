@@ -10,8 +10,9 @@
     box-sizing: border-box;
 }
 
-.main-news-specific .title-container h1 {
-    font-size: 62px;
+
+.main-news-specific .title-container h1{
+    font-size: 3.875em;
     text-align: right;
     color: #D74C11;
 }
@@ -20,7 +21,7 @@
     color: #F27623;
     width: 200px;
     text-align: left;
-    font-size: 20px;
+    font-size: 1.25em;
     line-height: 30px;
 }
 
@@ -35,7 +36,7 @@
 
 .main-news-specific .section-title {
     font-weight: 600;
-    font-size: 45px;
+    font-size: 2.8125em;
     height: 75px;
     display: flex;
     align-items: center;
