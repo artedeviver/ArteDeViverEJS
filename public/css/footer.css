@@ -1,20 +1,42 @@
+.footer-container {
+    border: 1px solid;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 70px 70px 70px;
+}
+
 footer {
     background: #F29F05;
-    display: flex;
-    align-items: flex-start;
     color: #ffffff;
-    padding-left: 82px;
-    padding-right: 82px;
-    justify-content: space-between;
-    height: 221px;
-    padding-top: 52px;
+}
+
+footer h3 {
+    grid-row:3;
+}
+
+.container-social-img {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 15%;
+}
+
+.container-social {
+    text-align: center;
+}
+
+footer .logo-footer {
+    width: 145px;
+    cursor: pointer;
+}
+
+footer img {
+    width: 25px;
+    cursor: pointer;
 }
 
 footer h3 {
     font-size: 1.25em;
     font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 5%;
 }
 
 footer li {
@@ -22,11 +44,12 @@ footer li {
     line-height: 35px;
 }
 
-footer li:hover{
+footer li:hover {
     color: #480000;
     cursor: pointer;
 }
 
+/*
 footer .list {
     text-align: center
 }
@@ -45,10 +68,6 @@ footer .container-list-contact ul li:nth-child(3) {
 footer .container-list-contact ul li:nth-child(2),
 footer .container-list-contact ul li:nth-child(4) {
     float: right;
-}
-
-footer .container-list-contact ul {
-    clear: both;
 }
 
 footer .contact {
@@ -78,10 +97,7 @@ footer .social-media {
     margin-top: 5%
 }
 
-footer .social-media img {
-    width: 25px;
-    cursor: pointer;
-}
+
 
 footer .social-media img:nth-last-child(2){
     margin-right: 5%;
@@ -98,4 +114,4 @@ footer .copyright{
     align-items: flex-end;
     margin-top: 13%
     
-}
+} */
