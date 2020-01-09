@@ -4,43 +4,43 @@ const connection = require("../database/database")
 const Courses = connection.define('courses', {
     title: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     descCourse: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: true
     },
     bodyCourse: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     imgCourse: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     featured: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     imgFeatured: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     impactDesc: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     impactImg1: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     impactImg2: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     },
     impactImg3: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: true
     }
 })
 

@@ -42,7 +42,7 @@
     <main class="main-index">
 
         <!-- area principal -->
-        
+
         <section class="principal padding">
             <h1 class="principal-title"><%= principalArea.title %></h1>
             <p class="principal-img-background"><%= principalArea.imgBackground %></p>
@@ -109,12 +109,12 @@
 
 
             <div class="partners-img-container">
-                <img class="logo-empresa" src="img/logo-empresas/logo2.png" alt="">
-                <img class="logo-empresa" src="img/logo-empresas/logo3.png" alt="">
-                <img class="logo-empresa" src="img/logo-empresas/logo4.png" alt="">
-                <img class="logo-empresa" src="img/logo-empresas/logo2.png" alt="">
-                <img class="logo-empresa" src="img/logo-empresas/logo3.png" alt="">
-                <img class="logo-empresa" src="img/logo-empresas/logo4.png" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img1 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img2 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img3 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img4 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img5 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img6 %>" alt="">
             </div>
         </section>
 
@@ -218,6 +218,7 @@
                         <% courses.forEach((courses) => { %>
                         <dl class="course">
                             <div class="img-course">
+                                <p class="img-course-background"><%= courses.imgCourse %></p>
                                 <dt><%= courses.title %></dt>
                             </div>
                             <dd><%- courses.descCourse %></dd>
@@ -266,7 +267,7 @@
                             <div class="carrousel-img-container">
 
                                 <div>
-                                    <img class="carrousel-img" src="img/be-a-member/person1.jpg" alt="">
+                                    <img class="carrousel-img" src="/uploads/<%= member.img %>" alt="">
                                     <h3><i><%= member.name%></i></h3>
                                 </div>
 
@@ -330,7 +331,7 @@
                     <% latestNews.forEach((latestNews) => { %>
 
                     <div class="specific-news">
-                        <img src="img/page-news-index/news1.jpg" alt="Capa da notícia">
+                        <img src="/uploads/<%= latestNews.titleImage %>" alt="Capa da notícia">
                         <a href="/news/<%= latestNews.title %>/<%= latestNews.id %>"
                             class="bt-news tertiary"><%= latestNews.title %></a>
                     </div>
@@ -376,9 +377,14 @@
     <script>
         let backgroundText = document.querySelector('.principal-img-background').innerText
         let backgroundImg = document.querySelector('.principal')
+        let backgroundCourseText = document.querySelector('.img-course-background').innerText
+        let backgroundImgCourse = document.querySelector('.img-course')
 
-        window.onload = function(){
+
+        window.onload = function () {
             backgroundImg.style.background = `url(/uploads/${backgroundText})`
             backgroundImg.style.backgroundSize = 'cover'
+            backgroundImgCourse.style.background = `url(/uploads/${backgroundText})`
+            backgroundImgCourse.style.backgroundSize = 'cover'
         }
     </script>

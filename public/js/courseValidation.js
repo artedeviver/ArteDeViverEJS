@@ -4,13 +4,13 @@ let btn = document.querySelector('.btn-change')
 let title = document.getElementsByName('title')
 let bodyCourse = document.getElementsByName('bodyCourse')
 let descCourse = document.getElementsByName('descCourse')
-let imgCourse = document.getElementsByName('imgCourse')
+let imgCourse = document.getElementsByName('photos')[0]
 let featured = document.getElementsByName('featured')
 let imgFeatured = document.getElementsByName('imgFeatured')
-let impactDesc = document.getElementsByName('impactDesc')
-let impactImg1 = document.getElementsByName('impactImg1')
-let impactImg2 = document.getElementsByName('impactImg2')
-let impactImg3 = document.getElementsByName('impactImg3')
+let impactDesc = document.getElementsByName('photos')[1]
+let impactImg1 = document.getElementsByName('photos')[2]
+let impactImg2 = document.getElementsByName('photos')[3]
+let impactImg3 = document.getElementsByName('photos')[4]
 
 
 form.addEventListener("blur", function (event) {
@@ -24,9 +24,9 @@ form.addEventListener("blur", function (event) {
 }, true);
 
 function verify(text) {
-if (title[0].value != '' && text != '' && descCourse[0].value != '' && imgCourse[0].value != '' && featured[0].value != ''
-&& imgFeatured[0].value != ''  && impactDesc[0].value != ''  && impactImg1[0].value != ''  && impactImg2[0].value != '' &&
-impactImg3[0].value != '') {
+if (title[0].value != '' && text != '' && descCourse[0].value != '' && imgCourse.value != '' && featured[0].value != ''
+&& imgFeatured.value != ''  && impactDesc.value != ''  && impactImg1.value != ''  && impactImg2.value != '' &&
+impactImg3.value != '') {
     btn.disabled = false
     btn.classList.remove("btn-disabled")
     btn.classList.add("primary")

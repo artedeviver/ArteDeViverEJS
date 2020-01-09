@@ -116,14 +116,9 @@ router.post("/dashboard/news/update", adminAuth, upload.single('titleImage'), (r
     let bodyNews = req.body.bodyNews
     let titleImage = req.file.originalname
 
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    console.log(upload)
-    console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>')
-
-
     News.update({
         title: title,
-        newsDesc : req.body.newsDesc,
+        newsDesc : newsDesc,
         bodyNews: bodyNews,
         titleImage: titleImage
     }, {

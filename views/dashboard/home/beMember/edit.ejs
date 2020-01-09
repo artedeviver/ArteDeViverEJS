@@ -9,7 +9,7 @@
     <% member.forEach((member) => { %>
 
     <div class="container-reports">
-        <form class="" method="POST" action="/dashboard/home/be-member/update">
+        <form class="" method="POST" action="/dashboard/home/be-member/update" enctype="multipart/form-data">
             <label for="">nome</label>
             
             <input type="text" class="input-general reports-border" name="name" value="<%= member.name %>">
@@ -34,7 +34,7 @@
             </div>
         </form>
     </div>
-
+    
     <%})%>
 </section>
 
