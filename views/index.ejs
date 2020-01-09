@@ -44,6 +44,8 @@
         <!-- area principal -->
 
         <section class="principal padding">
+            <h1 class="principal-title"><%= principalArea.title %></h1>
+            <p class="principal-img-background"><%= principalArea.imgBackground %></p>
             <div class="container-width">
                 <h1 class="principal-title"><%= principalArea.title %></h1>
             </div>
@@ -102,27 +104,24 @@
 
         <!-- parcerias -->
         <section class="partners padding">
-            <div class="container-width">
-                <h2 class="section-title">parcerias</h2>
+            <h2 class="section-title">parcerias</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis in erat at vestibulum. Fusce
-                    dapibus
-                    massa a consectetur efficitur. Quisque ultrices feugiat mauris pellentesque condimentum. Nulla
-                    congue
-                    finibus consectetur. Suspendisse potenti. Donec laoreet mi at laoreet eleifend.psum dolor sit amet,
-                    consectetur adipiscing elit. Aenean mattis in erat at vestibulcongue
-                    finibus consectetur. Suspendisse potenti.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis in erat at vestibulum. Fusce
+                dapibus
+                massa a consectetur efficitur. Quisque ultrices feugiat mauris pellentesque condimentum. Nulla
+                congue
+                finibus consectetur. Suspendisse potenti. Donec laoreet mi at laoreet eleifend.psum dolor sit amet,
+                consectetur adipiscing elit. Aenean mattis in erat at vestibulcongue
+                finibus consectetur. Suspendisse potenti.</p>
 
 
-                <div class="partners-img-container">
-                    <img class="logo-empresa" src="img/logo-empresas/logo2.png" alt="">
-                    <img class="logo-empresa" src="img/logo-empresas/logo3.png" alt="">
-                    <img class="logo-empresa" src="img/logo-empresas/logo4.png" alt="">
-                    <img class="logo-empresa" src="img/logo-empresas/logo2.png" alt="">
-                    <img class="logo-empresa" src="img/logo-empresas/logo3.png" alt="">
-                    <img class="logo-empresa" src="img/logo-empresas/logo4.png" alt="">
-                </div>
-            </div>
+            <div class="partners-img-container">
+                <img class="logo-empresa" src="/uploads/<%= partners.img1 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img2 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img3 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img4 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img5 %>" alt="">
+                <img class="logo-empresa" src="/uploads/<%= partners.img6 %>" alt="">
         </section>
 
         <!-- história -->
@@ -214,29 +213,26 @@
 
         <!-- projetos -->
         <section class="projects padding">
+            <h2 class="section-title">programas</h2>
 
-            <div class="container-width">
-
-                <h2 class="section-title">programas</h2>
-
-                <div class="container-projects">
-                    <div class="btn-container">
-                        <button class="btn-carousel carousel-icon-orientation btn-carousel-left"><img
-                                class="carousel-icon" src="img/carousel-icons/left.png"
-                                alt="Ícone de uma seta para a esquerda - Passar slide para esquerda"></button></div>
-                    <div class="course-container-hidden">
-                        <div class="course-container clearfix">
-                            <% courses.forEach((courses) => { %>
-                            <dl class="course">
-                                <div class="img-course">
-                                    <dt><%= courses.title %></dt>
-                                </div>
-                                <dd><%- courses.descCourse %></dd>
-                                <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba
-                                        mais</button></a>
-                            </dl>
-                            <%})%>
-                        </div>
+            <div class="container-projects">
+                <div class="btn-container">
+                    <button class="btn-carousel carousel-icon-orientation btn-carousel-left"><img class="carousel-icon"
+                            src="img/carousel-icons/left.png"
+                            alt="Ícone de uma seta para a esquerda - Passar slide para esquerda"></button></div>
+                <div class="course-container-hidden">
+                    <div class="course-container clearfix">
+                        <% courses.forEach((courses) => { %>
+                        <dl class="course">
+                            <div class="img-course">
+                                <p class="img-course-background"><%= courses.imgCourse %></p>
+                                <dt><%= courses.title %></dt>
+                            </div>
+                            <dd><%- courses.descCourse %></dd>
+                            <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba
+                                    mais</button></a>
+                        </dl>
+                        <%})%>
                     </div>
                     <div class="btn-container"> <button
                             class="btn-carousel carousel-icon-orientation btn-carousel-right"><img class="carousel-icon"
@@ -283,6 +279,9 @@
                                         <h3><i><%= member.name%></i></h3>
                                     </div>
 
+                                <div>
+                                    <img class="carrousel-img" src="/uploads/<%= member.img %>" alt="">
+                                    <h3><i><%= member.name%></i></h3>
                                 </div>
 
                                 <div class="carrousel-text-container">
@@ -346,12 +345,12 @@
 
                         <% latestNews.forEach((latestNews) => { %>
 
-                        <div class="specific-news">
-                            <img src="img/page-news-index/news1.jpg" alt="Capa da notícia">
-                            <a href="/news/<%= latestNews.title %>/<%= latestNews.id %>"
-                                class="bt-news tertiary"><%= latestNews.title %></a>
-                        </div>
-                        <%})%>
+                    <div class="specific-news">
+                        <img src="/uploads/<%= latestNews.titleImage %>" alt="Capa da notícia">
+                        <a href="/news/<%= latestNews.title %>/<%= latestNews.id %>"
+                            class="bt-news tertiary"><%= latestNews.title %></a>
+                    </div>
+                    <%})%>
 
                         <a class="gd-btn-news" href="/news"><button class="primary gd-btn-news">saiba mais</button></a>
                     </div>
@@ -391,5 +390,19 @@
             bod.classList.add("hidden")
             registerPopUp.style.display = "flex"
         }
+    </script>
 
+    <script>
+        let backgroundText = document.querySelector('.principal-img-background').innerText
+        let backgroundImg = document.querySelector('.principal')
+        let backgroundCourseText = document.querySelector('.img-course-background').innerText
+        let backgroundImgCourse = document.querySelector('.img-course')
+
+
+        window.onload = function () {
+            backgroundImg.style.background = `url(/uploads/${backgroundText})`
+            backgroundImg.style.backgroundSize = 'cover'
+            backgroundImgCourse.style.background = `url(/uploads/${backgroundText})`
+            backgroundImgCourse.style.backgroundSize = 'cover'
+        }
     </script>

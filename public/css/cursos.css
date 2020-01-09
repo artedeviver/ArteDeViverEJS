@@ -9,6 +9,10 @@
     margin: 5% 0% 3% 0%
 }
 
+.testimonial-img-background{
+    display: none;
+}
+
 .main-course .report {
     color: white;
     width: 50%;

@@ -1,93 +1,77 @@
 <%- include ../../partials/dashHeader.ejs %>
 <%- include ../../partials/dashPage.ejs %>
-
-
 <h1>adicionar novo programa</h1>
-
 <div class="card-container">
-    <form class="form-container" method="POST" action="/dashboard/courses/save">
-
+    <form class="form-container" method="POST" action="/dashboard/courses/save" enctype="multipart/form-data">
         <fieldset>
             <h2>informações gerais</h2>
             <label for="">nome do programa</label>
             <input type="text" class="input-general" name="title">
             <span class="alert-error">Você precisa preencher o nome</span>
-
             <label for="">linha fina do programa</label>
             <input type="text" class="input-general" name="descCourse">
             <span class="alert-error">Você precisa preencher a linha fina</span>
-
             <label for="">descrição do curso</label>
             <textarea type="text" class="input-general article" name="bodyCourse" id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
-
             <div class="img-container-select">
                 <label for="">capa do programa</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgCourse">
+                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" name="photos" class="input-general file" > <!--name="imgCourse"-->
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
         </fieldset>
-
         <fieldset>
             <h2>destaque</h2>
             <label for="">descrição do destaque</label>
             <textarea type="text" class="input-general textarea" name="featured" id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
-
             <div class="img-container-select">
                 <label for="">imagem de fundo destaque</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="imgFeatured">
+                    <input type="file" name="photos" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" > <!--name="imgFeatured" -->
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
         </fieldset>
-
         <fieldset>
             <h2>impactos</h2>
             <label for="">descrição dos impactos</label>
             <textarea type="text" class="input-general textarea" name="impactDesc" id="tinyeditor"></textarea>
             <span class="alert-error">Você precisa preencher a descrição</span>
-
             <div class="img-container-select">
                 <label for="">imagem 1</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg1">
+                    <input type="file" name="photos" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" > <!--name="impactImg1"-->
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
-
             <div class="img-container-select">
                 <label for="">imagem 2</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg2">
+                    <input type="file" name="photos" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" > <!--name="impactImg2"-->
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
-
             <div class="img-container-select">
                 <label for="">imagem 3</label>
                 <div>
                     <img src="/img/dashboard/picture.png" alt="" class="img-selected">
-                    <input type="file" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" name="impactImg3">
+                    <input type="file" name="photos" accept="image/png, image/jpeg" onchange="mudar(this)" class="input-general file" ><!--name="impactImg3"-->
                     <span class="alert-error">Você precisa selecionar um arquivo</span>
                 </div>
             </div>
         </fieldset>
-
-        <button class="btn-change btn-disabled" disabled>adicionar programa</button>
+        <!-- <button class="btn-change btn-disabled" disabled>adicionar programa</button> -->
+        <button class="btn-change primary">adicionar programa</button>
     </form>
-
     <a href="" class="tertiary">cancelar</a>
 </div>
-
-
 <script src="/js/courseValidation.js"></script>
 <script src="/tinymce/tinymce.min.js"></script>
 <script src="/js/tinyMce.js"></script>

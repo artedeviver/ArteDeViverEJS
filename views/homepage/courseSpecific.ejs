@@ -7,7 +7,7 @@
 
     <main class="main-course">
         <section>
-            <img src="/img/projects/cursos-principal.png" alt="Imagem de crianças desenhando na escola" class="img-top">
+            <img src="/uploads/<%= courses.imgCourse %>" alt="Imagem de crianças desenhando na escola" class="img-top">
 
 
             <div class="title-container">
@@ -29,6 +29,7 @@
             <div class="testimonial">
                 <div class="report">
                     <p><%= courses.featured%></p>
+                    <p class="testimonial-img-background"><%= courses.imgFeatured %></p>
                 </div>
             </div>
 
@@ -43,15 +44,15 @@
 
             <div class="impact-container">
                 <div>
-                    <img src="../img/news/action-daytime-people-1375883.jpg" alt="">
+                    <img src="/uploads/<%= courses.impactImg1 %>" alt="">
                 </div>
 
                 <div>
-                    <img src="../img/news/action-daytime-people-1375883.jpg" alt="">
+                    <img src="/uploads/<%= courses.impactImg1 %>" alt="">
                 </div>
 
                 <div>
-                    <img src="../img/news/action-daytime-people-1375883.jpg" alt="">
+                    <img src="/uploads/<%= courses.impactImg3 %>" alt="">
                 </div>
             </div>
 
@@ -60,3 +61,15 @@
     </main>
 
     <%- include ../partials/footer.ejs %>
+
+
+
+    <script>
+        let backgroundText = document.querySelector('.testimonial-img-background').innerText
+        let backgroundImg = document.querySelector('.testimonial')
+
+        window.onload = function(){
+            backgroundImg.style.background = `url(/uploads/${backgroundText})`
+            backgroundImg.style.backgroundSize = 'cover'
+        }
+    </script>

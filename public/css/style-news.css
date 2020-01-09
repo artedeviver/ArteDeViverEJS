@@ -1,14 +1,15 @@
-.main-news-specific .news-img{
+.main-news-specific .news-img {
     width: 100%;
     height: 500px;
 }
 
-.main-news-specific .title-container{
+.main-news-specific .title-container {
     margin: 50px 82px;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
 }
+
 
 .main-news-specific .title-container h1{
     font-size: 3.875em;
@@ -16,7 +17,7 @@
     color: #D74C11;
 }
 
-.main-news-specific .title-container p{
+.main-news-specific .title-container p {
     color: #F27623;
     width: 200px;
     text-align: left;
@@ -24,7 +25,7 @@
     line-height: 30px;
 }
 
-.main-news-specific .description-title{
+.main-news-specific .description-title {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -45,42 +46,42 @@
     width: 30%;
 }
 
-.main-news-specific article{
+.main-news-specific article {
     padding: 0px 82px 82px;
     line-height: 30px;
 }
 
-.main-news-specific article p{
+.main-news-specific article p {
     margin-bottom: 20px;
     text-align: justify;
 }
 
-.main-news-specific .relacionados{
+.main-news-specific .relacionados {
     padding: 30px 82px;
-    padding-bottom: 70px ;
+    padding-bottom: 70px;
     background-color: #4EB4BF;
     color: white;
 }
 
-
-.main-news-specific .relacionados-container{
+.main-news-specific .relacionados-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.main-news-specific .relacionados-container div{
+.main-news-specific .relacionados-container div {
     width: 300px;
     text-align: center;
 }
 
-.main-news-specific .relacionados img{
+.main-news-specific .relacionados img {
     margin-top: 50px;
     width: 300px;
     margin-bottom: 25px;
 }
 
-.main-news-specific .relacionados-container p{
+.main-news-specific .relacionados-container p {
     line-height: 30px;
-    text-align: left;;
+    text-align: left;
+    ;
 }

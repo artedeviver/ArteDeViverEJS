@@ -1,18 +1,27 @@
 const express = require("express")
 const router = express.Router()
 const Courses = require("./Courses")
+const multer = require('multer')
 const adminAuth = require('../middlewares/adminAuth')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
+
+const upload = multer({ storage })
 
 
 //MOSTRAR CURSO ESPECIFICO
 router.get("/course/:title/:id", (req, res) => {
-
     let id = req.params.id
-
     if (isNaN(id)) {
         res.redirect("./homepage/courses")
     }
-
     Courses.findByPk(id).then(courses => {
         if (courses != undefined) {
             res.render("./homepage/courseSpecific", { courses: courses })
@@ -24,6 +33,7 @@ router.get("/course/:title/:id", (req, res) => {
     })
 })
 
+
 //MOSTRAR TODOS OS CURSOS CADASTRADOS
 router.get("/dashboard/courses", adminAuth, (req, res) => {
     Courses.findAll({
@@ -33,24 +43,26 @@ router.get("/dashboard/courses", adminAuth, (req, res) => {
     })
 })
 
+
 //ROTA PARA PÁGINA DE ADD NOVO CURSO
 router.get("/dashboard/courses/new", adminAuth, (req, res) => {
     res.render("./dashboard/courses/new", { admin: req.session.user.administrator})
 })
 
+
 //SALVAR DADOS DO FORMULÁRIO - ADD CURSOS
-router.post("/dashboard/courses/save", adminAuth, (req, res) => {
+router.post("/dashboard/courses/save", upload.array('photos', 12), (req, res) => {
 
     let title = req.body.title
     let descCourse = req.body.descCourse
     let bodyCourse = req.body.bodyCourse
-    let imgCourse = req.body.imgCourse
+    let imgCourse = req.files[0].originalname
     let featured = req.body.featured
-    let imgFeatured = req.body.imgFeatured
+    let imgFeatured = req.files[1].originalname
     let impactDesc = req.body.impactDesc
-    let impactImg1 = req.body.impactImg1
-    let impactImg2 = req.body.impactImg2
-    let impactImg3 = req.body.impactImg3
+    let impactImg1 = req.files[2].originalname
+    let impactImg2 = req.files[3].originalname
+    let impactImg3 = req.files[4].originalname
 
     Courses.create({
         title: title,
@@ -63,7 +75,6 @@ router.post("/dashboard/courses/save", adminAuth, (req, res) => {
         impactImg1: impactImg1,
         impactImg2: impactImg2,
         impactImg3: impactImg3
-
     }).then(() => {
         res.redirect("/dashboard/courses?success=true")
     }).catch((error) => {
@@ -71,10 +82,10 @@ router.post("/dashboard/courses/save", adminAuth, (req, res) => {
     })
 })
 
+
 //DELETAR CURSO
 router.post("/dashboard/courses/delete", adminAuth,  (req, res) => {
     let id = req.body.id
-
     if(id != undefined){
         if(!isNaN(id)){
             Courses.destroy({
@@ -90,14 +101,13 @@ router.post("/dashboard/courses/delete", adminAuth,  (req, res) => {
     }
 })
 
+
 // ROTA PARA PÁGINA DE EDIÇÃO DE USUÁRIO
 router.get("/dashboard/courses/edit/:id", adminAuth, (req, res) => {
     let id = req.params.id
-
     if (isNaN(id)) {
         res.redirect("./dashboard/courses")
     }
-
     Courses.findByPk(id).then(courses => {
         if (courses != undefined) {
             res.render("./dashboard/courses/edit", { courses: courses,  admin: req.session.user.administrator })
@@ -109,19 +119,20 @@ router.get("/dashboard/courses/edit/:id", adminAuth, (req, res) => {
     })
 })
 
+
 //SALVAR DADOS DO FORMULÁRIO - UPDATE 
-router.post("/dashboard/courses/update", adminAuth,  (req, res) => {
+router.post("/dashboard/courses/update", adminAuth, upload.array('photos', 12),  (req, res) => {
     let id = req.body.id
     let title = req.body.title
     let descCourse = req.body.descCourse
     let bodyCourse = req.body.bodyCourse
-    let imgCourse = req.body.imgCourse
+    let imgCourse = req.files[0].originalname
     let featured = req.body.featured
-    let imgFeatured = req.body.imgFeatured
+    let imgFeatured = req.files[1].originalname
     let impactDesc = req.body.impactDesc
-    let impactImg1 = req.body.impactImg1
-    let impactImg2 = req.body.impactImg2
-    let impactImg3 = req.body.impactImg3
+    let impactImg1 = req.files[2].originalname
+    let impactImg2 = req.files[3].originalname
+    let impactImg3 = req.files[4].originalname
 
     Courses.update({
         title: title,

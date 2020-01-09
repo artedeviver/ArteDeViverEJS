@@ -1,7 +1,19 @@
 const express = require("express")
 const router = express.Router()
 const Partners = require("./Partners")
+const multer = require('multer')
 const adminAuth = require('../middlewares/adminAuth')
+
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'public/uploads/')
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+})
+
+const upload = multer({ storage })
 
 router.get("/dashboard/home/partners/edit", adminAuth,  (req, res) => {
 
@@ -17,14 +29,14 @@ router.get("/dashboard/home/partners/edit", adminAuth,  (req, res) => {
 })
 
 //SALVAR EDIÇÃO DOS CAMPOS
-router.post("/dashboard/home/partners/update", adminAuth, (req, res) => {
+router.post("/dashboard/home/partners/update", adminAuth, upload.array('photos', 12), (req, res) => {
     let id = req.params.id
-    let img1 = req.body.img1
-    let img2 = req.body.img2
-    let img3 = req.body.img3
-    let img4 = req.body.img4
-    let img5 = req.body.img5
-    let img6 = req.body.img6
+    let img1 = req.files[0].originalname
+    let img2 = req.files[1].originalname
+    let img3 = req.files[2].originalname
+    let img4 = req.files[3].originalname
+    let img5 = req.files[4].originalname
+    let img6 = req.files[5].originalname
 
     Partners.update({
         id: id,

@@ -27,6 +27,11 @@
     text-align: center;
 }
 
+.main-index .principal-img-background{
+    display: none;
+}
+
+
 /* MISSÃO */
 
 .main-index .missao {
@@ -545,5 +550,8 @@
 }
 
 .successRegister {
+    display: none;
+}
+.img-course-background{
     display: none;
 }

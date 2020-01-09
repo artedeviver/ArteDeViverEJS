@@ -5,6 +5,7 @@ const NewsLetter = require("../homepage/Homepage")
 const News = require("../news/News")
 const PrincipalArea = require("../principalArea/PrincipalArea")
 const BeMember = require("../beMember/BeMember")
+const Partners = require("../partners/Partners")
 
 //MOSTRAR OS CURSOS PUBLICADOS
 router.get("/courses", (req, res) => {
@@ -30,9 +31,13 @@ router.get("/", async (req, res) => {
         raw: true, order: [['id', 'DESC']]
     })
 
+    const partners = await Partners.findByPk(1)
 
     const principalArea = await PrincipalArea.findByPk(1)
-    res.render('index', {principalArea, courses, latestNews, beMember,  success: req.query.success, successRegister: req.query.successRegister})
+
+
+    res.render('index', {principalArea, courses, latestNews, beMember, partners, success: req.query.success, successRegister: req.query.successRegister})
+
 })
 
 router.get("/news", async (req, res) => {
