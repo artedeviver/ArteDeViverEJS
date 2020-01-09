@@ -13,7 +13,7 @@ body .main-quem-somos {
 .main-quem-somos .institutional h1 {
     margin: 0;
     font-weight: 300;
-    font-size: 45px;
+    font-size: 2.8125em;
     width: 57%;
     text-align: center;
 }
@@ -39,7 +39,7 @@ body .main-quem-somos {
 
 .main-quem-somos .container p {
     text-align: justify;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 45px;
     font-weight: 300;
 }
@@ -49,7 +49,7 @@ body .main-quem-somos {
 }
 
 .main-quem-somos .subtitle {
-    font-size: 30px;
+    font-size: 1.875em;
     padding: 0;
     margin-bottom: 50px;
 }
@@ -86,7 +86,7 @@ body .main-quem-somos {
     margin-left: 20%;
     margin-top: 3%;
     line-height: 25px;
-    font-size: 16px;
+    font-size: 1em;
     color: black;
 }
 .main-quem-somos .bubble:after {

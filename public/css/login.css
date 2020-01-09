@@ -3,7 +3,7 @@ body{
     display: flex;
     justify-content: center;
     font-family: 'Raleway';
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 .login-card{

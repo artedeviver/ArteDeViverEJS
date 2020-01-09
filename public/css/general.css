@@ -13,7 +13,7 @@ input {
 textarea{
     font-family: 'Roboto', sans-serif;
     font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 24px;
 }
 
@@ -32,7 +32,7 @@ a {
 
 .alert-error {
     display: none;
-    font-size: 12px;
+    font-size: 0.75em;
     color: red;
     margin: 2% 0% 5% 0%;
 }
@@ -71,7 +71,7 @@ button {
 
 .btn-card {
     width: 40%;
-    font-size: 14px;
+    font-size: 0.875em;
     padding: 3.1% 0%;
     border-radius: 5px;
     text-align: center;
@@ -153,7 +153,7 @@ h1 {
 }
 
 .subtitle {
-    font-size: 20px;
+    font-size: 1.15em;
     font-weight: 400;
     margin-bottom: 2%;
 }
@@ -175,7 +175,7 @@ h1 {
 .card-link {
     text-decoration: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25em;
     padding: 5%;
 }
 
@@ -220,7 +220,7 @@ fieldset {
 fieldset h2 {
     margin: 0;
     margin-bottom: 2%;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .img-container-select img {
@@ -272,7 +272,7 @@ fieldset h2 {
 }
 
 .pop-up p {
-    font-size: 30px;
+    font-size: 1.875em;
     color: #4EB4BF;
     margin-bottom: 10%;
 }
@@ -285,7 +285,7 @@ fieldset h2 {
 
 .container-cards-dashboard h2 {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .card-container-long {
@@ -304,7 +304,7 @@ fieldset h2 {
 
 .card-container-long h3 {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 0.9375em;
 }
 
 .btn-container-long {
@@ -367,7 +367,7 @@ fieldset h2 {
 .card-members h2 {
     margin-top: 0px;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25em;
     border-bottom: 1px solid white;
     padding-bottom: 15px;
 }
