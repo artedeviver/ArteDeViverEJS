@@ -1,5 +1,4 @@
 .footer-container {
-    border: 1px solid;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 70px 70px 70px;
@@ -55,11 +54,4 @@ footer li:hover {
 footer .copyright {
     grid-row: 4;
     grid-column: 4;
-}
-
-footer .copyright span {
-    float: right;
-    content: ' ';
-    display: table;
-    clear: both;
 }
