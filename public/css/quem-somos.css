@@ -14,7 +14,6 @@ body .main-quem-somos {
     margin: 0;
     font-weight: 300;
     font-size: 2.8125em;
-    width: 57%;
     text-align: center;
 }
 
@@ -92,4 +91,24 @@ body .main-quem-somos {
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     text-align: center;
+}
+
+@media (min-width: 739px) and (max-width: 980px) {
+    .container-newspaper {
+        display: block;
+    }
+
+    .card-newspaper {
+        margin: 30px 0;
+    }
+
+    .container-newspaper p {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 739px){
+
 }
