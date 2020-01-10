@@ -276,21 +276,25 @@
 }
 
 .main-index .img-course {
-    background-image: url(../img/projects/curso-yes-nas-escolas.png);
-    background-size: contain;
+    /* background-image: url(../img/projects/curso-yes-nas-escolas.png); */
+    /* background-size: contain; */
     height: 200px;
     width: 380px;
-    display: flex;
+    flex: 1;
+}
+
+.main-index .img-course img{
+    width: 100%;
+    height: 100%;
 }
 
 .main-index .img-course dt {
     padding: 10px;
-    margin: 0;
     text-align: center;
     background-color: #4EB4BF;
-    align-self: flex-end;
-    width: 100%;
     font-weight: bold;
+    top: -38px;
+    position: relative;
 }
 
 .main-index .course a {
