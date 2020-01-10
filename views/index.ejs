@@ -42,12 +42,10 @@
     <main class="main-index">
 
         <!-- area principal -->
-
         <section class="principal padding">
-            <h1 class="principal-title"><%= principalArea.title %></h1>
-            <p class="principal-img-background"><%= principalArea.imgBackground %></p>
             <div class="container-width">
                 <h1 class="principal-title"><%= principalArea.title %></h1>
+                <p class="principal-img-background"><%= principalArea.imgBackground %></p>
             </div>
         </section>
 
@@ -212,8 +210,8 @@
 
 
         <!-- projetos -->
-        <section class="projects padding">
-            <h2 class="section-title">programas</h2>
+        <!-- <section class="projects padding"> -->
+            <!-- <h2 class="section-title">programas</h2>
 
             <div class="container-projects">
                 <div class="btn-container">
@@ -240,13 +238,48 @@
                                 alt="Ícone de uma seta para a direita - Passar slide para direita"></button></div>
                 </div>
             </div>
+        </section> -->
+
+        <!-- projetos -->
+        <section class="projects padding">
+            <div class="container-width">
+                <h2 class="section-title">programas</h2>
+
+                <div class="container-projects">
+                    <div class="btn-container">
+                        <button class="btn-carousel carousel-icon-orientation btn-carousel-left"><img class="carousel-icon" 
+                            src="img/carousel-icons/left.png"
+                                alt="Ícone de uma seta para a esquerda - Passar slide para esquerda"></button></div>
+
+                    <div class="course-container-hidden">
+                        <div class="course-container clearfix">
+                            <% courses.forEach((courses) => { %>
+
+
+                            <dl class="course">
+                                <div class="img-course">
+                                     <p class="img-course-background"><%= courses.imgCourse %></p>
+                                    <dt><%= courses.title %></dt>
+                                </div>
+                                <dd><%- courses.descCourse %>   <p><%= courses.imgCourse %></p> </dd>
+                                <a href="/course/<%= courses.title %>/<%= courses.id %>"><button class="primary">saiba
+                                        mais</button></a>
+                            </dl>
+                            <%})%>
+                        </div>
+                    </div>
+                    <div class="btn-container"> <button
+                            class="btn-carousel carousel-icon-orientation btn-carousel-right"><img class="carousel-icon"
+                                src="img/carousel-icons/right.png"
+                                alt="Ícone de uma seta para a direita - Passar slide para direita"></button></div>
+                </div>
+            </div>
         </section>
 
         <!-- Seja Membro -->
         <section class="be-a-member padding">
             <div class="container-width">
                 <h2 class="section-title">seja membro</h2>
-
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dignissim augue nec feugiat
                     fringilla. Phasellus commodo vel justo eget bibendum. Mauris posuere ipsum eu diam sollicitudin,
@@ -254,60 +287,43 @@
                     interdum lorem elementum. Morbi pretium libero id sollicitudin cursus. Vestibulum non tortor
                     accumsan,
                     mollis lacus et, pharetra magna.</p>
-
                 <div class="beamember-container">
-
                     <div class="btn-container">
                         <button class="btn-carousel carousel-icon-orientation beamember-button-left">
                             <img class="carousel-icon" src="img/carousel-icons/left.png"
                                 alt="Ícone de uma seta para a esquerda - Passar slide para esquerda">
                         </button>
                     </div>
-
-
                     <div class="hidden">
-
                         <div class="carousel-container">
-
-
                             <% beMember.forEach((member) => { %>
                             <div class="member">
                                 <div class="carrousel-img-container">
-
                                     <div>
-                                        <img class="carrousel-img" src="img/be-a-member/person1.jpg" alt="">
+                                        <img class="carrousel-img" src="/uploads/<%= member.img %>" alt="">
                                         <h3><i><%= member.name%></i></h3>
                                     </div>
-
-                                <div>
-                                    <img class="carrousel-img" src="/uploads/<%= member.img %>" alt="">
-                                    <h3><i><%= member.name%></i></h3>
                                 </div>
-
                                 <div class="carrousel-text-container">
                                     <p>
                                         <i>"<%= member.desc%>"</i>
                                     </p>
-
                                     <a href="/beaMember"><button class="primary">saiba mais</button></a>
                                 </div>
-
                             </div>
-
                             <%})%>
                         </div>
-
                     </div>
-
                     <div class="btn-container">
                         <button class="btn-carousel carousel-icon-orientation beamember-button-right"><img
                                 class="carousel-icon" src="img/carousel-icons/right.png"
                                 alt="Ícone de uma seta para a direita - Passar slide para direita"></button>
                     </div>
-
                 </div>
             </div>
         </section>
+
+
 
         <!-- quem somos -->
         <section class="who-are padding">
@@ -402,7 +418,7 @@
         window.onload = function () {
             backgroundImg.style.background = `url(/uploads/${backgroundText})`
             backgroundImg.style.backgroundSize = 'cover'
-            backgroundImgCourse.style.background = `url(/uploads/${backgroundText})`
+            backgroundImgCourse.style.background = `url(/uploads/${backgroundCourseText})`
             backgroundImgCourse.style.backgroundSize = 'cover'
         }
     </script>
