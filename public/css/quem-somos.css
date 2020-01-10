@@ -1,4 +1,4 @@
-.newspaper{
+.newspaper {
     color: black;
 }
 
@@ -66,112 +66,30 @@ body .main-quem-somos {
     padding: 82px;
 }
 
-.main-quem-somos .newspaper h2{
+.main-quem-somos .newspaper h2 {
     color: #D74C11;
     border-right: #D74C11 solid 5px;
     width: 20%;
 }
 
-.main-quem-somos .bubble {
-    align-items: center;
-    display: flex;
-    position: relative;
-    background: white;
-    border: solid black;
-    color: white;
-    text-align: center;
-    width: 45%;
-    height: 120px;
-    border-radius: 8px;
-    margin-left: 20%;
-    margin-top: 3%;
-    line-height: 25px;
-    font-size: 1em;
-    color: black;
-}
-.main-quem-somos .bubble:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    z-index: 1;
-    border-style: solid;
-    border-width: 24px 0 0 23px;
-    border-color: transparent transparent transparent rgb(0, 0, 0);
-    top: -24px;
-    left: 33%;
-    margin-left: -11.5px;
+.logo-card-one {
+    margin-bottom: 12px;
 }
 
-.newspaper .carroussel{
-    display: flex;
-    justify-content: space-between;
+.logo-card-two, .logo-card-three {
+    margin-bottom: 25px;
 }
 
-.newspaper .carroussel-container {
-    width: 850px;
-    height: 250px;
-}
-
-.newspaper .btn-container{
-    margin: 0px;
-}
-
-.newspaper .visible{
-    position: relative;
-    width: 4000px;
-    transition: margin 0.5s ease-in-out;
-    overflow: auto;
-    display: flex;
-}
-
-.newspaper .btn{
-    width: 30px;
-}
-
-.newspaper .card{
-    width: 850px;
-    height: 250px;
-}
-
-.newspaper img{
+.newspaper img {
     width: 150px;
 }
 
-.newspaper p{
-    margin-top: 5%;
+.newspaper p {
     font-style: italic;
 }
 
-.newspaper .btn-container {
-    display: flex;
-    align-items: center;
-    height: 250px;
-    margin-right: 3%;
-    margin-left: 3%;
+.container-newspaper {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    text-align: center;
 }
-
-.newspaper .pagination-item{
-    border-bottom: 1px solid black
-}
-
-.newspaper .logo-2{
-    width: 220px;
-}
-
-.newspaper .logo-3{
-    width: 400px;
-}
-
-.newspaper .text-2{
-    margin-top: 1%;
-}
-
-.newspaper .text-3{
-    margin-top: 1%;
-}
-
-.newspaper .active-newspaper{
-    border: 2px solid black
-}
-
