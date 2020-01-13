@@ -342,7 +342,7 @@
 
         <!-- news-letter -->
         <section class="news-letter padding">
-            <div class="container-width">
+            <div class="container-width container-newsletter">
                 <img src="img/news-letter/megaphone.png" alt="Icone de um megafone">
 
                 <div class="title-newsLetter">
@@ -350,7 +350,7 @@
                     <h3>Inscreva-se para receber novidades</h3>
                 </div>
 
-                <div>
+                <div class="container-form-newsletter">
                     <p type="hidden" class="success"><%= success %></p>
                     <form method="POST" action="/homepage/newsletter/save" class="form">
                         <input type="text" placeholder="Nome" name="name">

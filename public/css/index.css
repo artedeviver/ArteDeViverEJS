@@ -6,7 +6,7 @@
 
 .container-width {
     max-width: 960px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* PRINCIPAL */
@@ -43,12 +43,28 @@
 
 .main-index .subtitle-container {
     border-right: 5px solid white;
-    height: 200px;
+    width: 210px;
 }
 
 .main-index .missao-text {
     font-weight: 400;
     line-height: 25px;
+}
+
+@media (min-width: 545px) and (max-width: 1100px) {
+    .main-index .subtitle-container {
+        text-align: left;
+        display: block;
+    }
+}
+
+@media (max-width: 544px) {
+    .main-index .subtitle-container {
+        width: 100%;
+        border: none;
+        text-align: center;
+        display: block;
+    }
 }
 
 /* MÉTRICAS */
@@ -89,16 +105,6 @@
     justify-content: space-between;
     max-width: 900px;
     margin: 0 auto;
-}
-
-@media (min-width: 785px) and (max-width: 820px) {
-    .main-index .metricas-icon {
-        width: 100px;
-        height: 100px;
-    }
-    .main-index .item {
-        text-align: center;
-    }
 }
 
 @media (max-width: 784px) {
@@ -230,6 +236,7 @@
     font-size: 3.9375em;
     text-align: center;
     margin-bottom: 50px;
+    width: 850px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -444,10 +451,8 @@
         margin: 0;
         display: block;
     }
-
     .main-index .who-are p {
         margin: 0 0 10px 0;
-        
     }
 }
 
@@ -515,14 +520,13 @@
 
 .main-index .news-letter {
     background: #F27623;
-    display: flex;
-    padding: 60px 82px;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .main-index .news-letter img {
-    width: 150px;
+    width: 140px;
+    padding: 0 5%;
+    height: 140px;
+    margin: auto;
 }
 
 .main-index .title-newsLetter {
@@ -534,14 +538,23 @@
 }
 
 .main-index .news-letter form {
+    text-align: center;
+}
+
+.main-index .news-letter form input:nth-child(2) {
+    margin: 20px 0 20px 0;
+}
+
+.container-form-newsletter {
+    margin: auto;
+}
+
+.container-newsletter {
     display: flex;
-    flex-direction: column;
-    text-align: -webkit-center;
 }
 
 .main-index .news-letter form input {
     border-radius: 8px;
-    margin-bottom: 10%;
     width: 300px;
     height: 25px;
     padding-left: 3%;
