@@ -161,7 +161,6 @@
         width: 100%;
         border: none;
         text-align: center;
-        margin: 0;
         display: block;
     }
 }
@@ -171,7 +170,6 @@
         width: 100%;
         border: none;
         text-align: center;
-        margin: 0;
         display: block;
     }
     .main-index .partners-img-container {
@@ -437,16 +435,13 @@
     }
 }
 
-@media (max-width: 784px) {
+@media (max-width: 739px) {
     .main-index .who-are .section-title {
         width: 100%;
         border: none;
         text-align: center;
         margin: 0;
         display: block;
-    }
-    .main-index .who-are p {
-        margin: 0 0 10px 0;
     }
 }
 

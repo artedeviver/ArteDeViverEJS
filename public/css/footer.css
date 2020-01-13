@@ -55,3 +55,20 @@ footer .copyright {
     grid-row: 4;
     grid-column: 4;
 }
+
+@media (max-width: 739px) {
+    footer .list-item {
+        display: none;
+    }
+    .footer-container {
+        display: block;
+    }
+    .container-social-img {
+        width: 25%;
+        margin: 10px auto;
+    }
+
+    .copyright {
+        display: none;
+    }
+}
