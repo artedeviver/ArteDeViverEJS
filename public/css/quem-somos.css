@@ -4,10 +4,17 @@
 
 body .main-quem-somos {
     color: white;
+    
 }
 
 .main-quem-somos .section-title {
-    width: 30%;
+    width: 40%;
+}
+
+.responsive-container{
+    max-width: 960px;
+    border: 2px solid red;
+    margin: 0 auto
 }
 
 .main-quem-somos .institutional h1 {
@@ -62,13 +69,18 @@ body .main-quem-somos {
 }
 
 .main-quem-somos .newspaper {
-    padding: 82px;
+   padding: 82px 82px 82px 82px;
+   margin-bottom: 0px;
 }
 
 .main-quem-somos .newspaper h2 {
     color: #D74C11;
     border-right: #D74C11 solid 5px;
     width: 20%;
+}
+
+.newspaper .section-title{
+    width: 40%;
 }
 
 .logo-card-one {
@@ -89,9 +101,17 @@ body .main-quem-somos {
 
 .container-newspaper {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
     text-align: center;
 }
+
+
+.width-padding{
+    padding: 82px;
+}
+
+
 
 @media (min-width: 739px) and (max-width: 980px) {
     .container-newspaper {
@@ -106,9 +126,59 @@ body .main-quem-somos {
         width: 50%;
         margin: 0 auto;
     }
-
 }
+
+
 
 @media (max-width: 739px){
+    .main-quem-somos .section-title{
+        border-right: none;
+        width: 90%;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        position: relative;
+        margin-right: 0px;
+    }
 
+    .main-quem-somos .newspaper h2{
+        border-right: none;
+    }
+
+    body .section-title:after{
+        content: '';
+        position: absolute;
+        width: 100px;
+        top: 90%;
+        background-color: white;
+        height: 5px;
+        margin-left: 0px;
+    }
+
+    .newspaper h2:after{
+        background-color: #D74C11;
+    }
+
+    .subtitle{
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    .container-newspaper {
+        display: block;
+    }
+
+    .card-newspaper{
+        margin: 60px 0px;
+    }
+
+    .main-quem-somos .newspaper{
+        padding: 82px 82px 22px 82px;
+    }
+
+    .logo-card-one {
+        margin-bottom: 25px;
+    }
 }
+
+
+

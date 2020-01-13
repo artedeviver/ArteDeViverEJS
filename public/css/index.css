@@ -75,9 +75,9 @@
     background-size: 100% 100%;
 }
 
-.main-index .metricas .section-title {
+/* .main-index .metricas .section-title {
     width: 36%;
-}
+} */
 
 .main-index .metricas-icon {
     width: 160px;
@@ -323,7 +323,7 @@
 
 .main-index .img-course img {
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .main-index .img-course dt {
@@ -345,9 +345,6 @@
     background: #FFC24F;
 }
 
-.main-index .be-a-member .section-title {
-    width: 30%;
-}
 
 .main-index .be-a-member .beamember-container {
     margin-top: 50px;
@@ -419,9 +416,6 @@
     text-align: center;
 }
 
-.main-index .who-are .section-title {
-    width: 30%;
-}
 
 .main-index .who-are p {
     margin-top: 50px;
@@ -463,10 +457,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.main-index .page-news .section-title {
-    width: 36%;
 }
 
 .main-index .container-inside {
