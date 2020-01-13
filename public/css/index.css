@@ -6,7 +6,7 @@
 
 .container-width {
     max-width: 960px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* PRINCIPAL */
@@ -27,39 +27,44 @@
     text-align: center;
 }
 
-.main-index .principal-img-background{
+.main-index .principal-img-background {
     display: none;
 }
-
 
 /* MISSÃO */
 
 .main-index .missao {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 60px 0px;
     background-color: #F27623;
 }
 
 .missao .subtitle {
-    margin: 0px;
     font-size: 2.8125em;
 }
 
 .main-index .subtitle-container {
     border-right: 5px solid white;
-    width: 35%;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 210px;
 }
 
 .main-index .missao-text {
     font-weight: 400;
-    width: 400px;
     line-height: 25px;
+}
+
+@media (min-width: 545px) and (max-width: 1100px) {
+    .main-index .subtitle-container {
+        text-align: left;
+        display: block;
+    }
+}
+
+@media (max-width: 544px) {
+    .main-index .subtitle-container {
+        width: 100%;
+        border: none;
+        text-align: center;
+        display: block;
+    }
 }
 
 /* MÉTRICAS */
@@ -102,22 +107,31 @@
     margin: 0 auto;
 }
 
-@media (min-width: 739px) and (max-width: 980px) {
-    .sobre-container {
-        max-width: 720px;
+@media (max-width: 784px) {
+    .main-index .metricas-container {
+        display: block;
+        text-align: center;
     }
-    .sobre-item {
-        width: 340px;
+    .main-index .metricas-icon {
+        width: 100px;
+        height: 100px;
     }
-}
-
-@media (max-width: 739px) {
-    .sobre-container {
-        max-width: 300px;
+    .main-index .metricas-subtitle {
+        font-size: 0.42em;
+        line-height: 0;
     }
-    .sobre-item {
-        width: 300px;
-        margin: 0 auto;
+    .main-index .metricas-text {
+        line-height: 60px;
+        font-size: 2.8125em;
+        text-align: center;
+    }
+    .main-index .metricas .section-title {
+        margin: 0;
+        border: none;
+        text-align: center;
+        width: 100%;
+        margin: 0 0 30px 0;
+        display: block;
     }
 }
 
@@ -140,6 +154,29 @@
 
 .main-index .logo-empresa {
     width: 150px;
+}
+
+@media (min-width: 740px) and (max-width: 1150px) {
+    .main-index .partners .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 784px) {
+    .main-index .partners .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+    .main-index .partners-img-container {
+        display: none;
+    }
 }
 
 /* HISTÓRIA */
@@ -199,6 +236,7 @@
     font-size: 3.9375em;
     text-align: center;
     margin-bottom: 50px;
+    width: 850px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -209,6 +247,8 @@
     padding: 0% 2px;
     width: 860px;
 }
+
+@media (min-width: 785px) and (max-width: 820px) {}
 
 /* PROJETOS */
 
@@ -276,14 +316,12 @@
 }
 
 .main-index .img-course {
-    /* background-image: url(../img/projects/curso-yes-nas-escolas.png); */
-    /* background-size: contain; */
     height: 200px;
     width: 380px;
     flex: 1;
 }
 
-.main-index .img-course img{
+.main-index .img-course img {
     width: 100%;
     height: 100%;
 }
@@ -395,6 +433,29 @@
     margin-top: 5%;
 }
 
+@media (min-width: 740px) and (max-width: 1150px) {
+    .main-index .who-are .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 784px) {
+    .main-index .who-are .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+    .main-index .who-are p {
+        margin: 0 0 10px 0;
+    }
+}
+
 /* FIQUE POR DENTRO */
 
 .main-index .page-news {
@@ -459,14 +520,13 @@
 
 .main-index .news-letter {
     background: #F27623;
-    display: flex;
-    padding: 60px 82px;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .main-index .news-letter img {
-    width: 150px;
+    width: 140px;
+    padding: 0 5%;
+    height: 140px;
+    margin: auto;
 }
 
 .main-index .title-newsLetter {
@@ -478,14 +538,23 @@
 }
 
 .main-index .news-letter form {
+    text-align: center;
+}
+
+.main-index .news-letter form input:nth-child(2) {
+    margin: 20px 0 20px 0;
+}
+
+.container-form-newsletter {
+    margin: auto;
+}
+
+.container-newsletter {
     display: flex;
-    flex-direction: column;
-    text-align: -webkit-center;
 }
 
 .main-index .news-letter form input {
     border-radius: 8px;
-    margin-bottom: 10%;
     width: 300px;
     height: 25px;
     padding-left: 3%;
@@ -556,6 +625,7 @@
 .successRegister {
     display: none;
 }
-.img-course-background{
+
+.img-course-background {
     display: none;
 }
