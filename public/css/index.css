@@ -160,6 +160,29 @@
     width: 150px;
 }
 
+@media (min-width: 740px) and (max-width: 1150px) {
+    .main-index .partners .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 784px) {
+    .main-index .partners .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        margin: 0;
+        display: block;
+    }
+    .main-index .partners-img-container {
+        display: none;
+    }
+}
+
 /* HISTÓRIA */
 
 .main-index .history {
@@ -227,6 +250,8 @@
     padding: 0% 2px;
     width: 860px;
 }
+
+@media (min-width: 785px) and (max-width: 820px) {}
 
 /* PROJETOS */
 
