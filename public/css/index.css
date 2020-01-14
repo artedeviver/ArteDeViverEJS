@@ -512,11 +512,45 @@
     background-color: rgb(65, 147, 156)
 }
 
-@media (min-width: 740px) and (max-width: 1150px) {
+@media (min-width: 740px) and (max-width: 980px){
+    .main-index .title-newsLetter{
+        padding-right: 40px;
+        margin-right: 40px;
+    }
 
+    .main-index .news-letter img{
+        display: none;
+    }
 }
 
+
 @media (max-width: 739px) {
+    .main-index .news-letter img{
+        display: none;
+    }
+
+    .main-index .container-newsletter{
+        flex-direction: column;
+    }
+
+    .main-index .title-newsLetter{
+        border-right: none;
+        align-self: center;
+        width: 100%;
+    }
+
+    .main-index .title-newsLetter h3{
+        text-align: center;
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .main-index .title-newsLetter h3:nth-child(1){
+        display: none;
+    }
+
+
+    
 
 }
 
