@@ -141,10 +141,6 @@
     background-color: #4EB4BF;
 }
 
-.main-index .partners .section-title {
-    width: 22%;
-}
-
 .main-index .partners-img-container {
     display: flex;
     justify-content: space-between;
@@ -188,10 +184,6 @@
 .carroussel-layout {
     display: flex;
     align-items: center;
-}
-
-.history .section-title {
-    width: 20%;
 }
 
 .carroussel-container {
@@ -257,10 +249,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-.main-index .projects .section-title {
-    width: 25%;
 }
 
 .container-projects {
@@ -618,4 +606,39 @@
 
 .img-course-background {
     display: none;
+}
+
+
+@media (max-width: 739px){
+    .main-index .section-title, .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title {
+        text-align: left;
+        width: 100%;
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        position: relative;
+        margin-right: 0px; 
+    }
+
+    .main-index .metricas .section-title:after{
+        background-color: white;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+    .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title{
+        display: flex
+    } 
+
+    
+
+  
+    /* body .section-title:after{
+        content: '';
+        position: absolute;
+        width: 100px;
+        top: 90%;
+        background-color: white;
+        height: 5px;
+        margin-left: 0px;
+    } */
 }
