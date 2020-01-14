@@ -343,7 +343,6 @@
     background: #FFC24F;
 }
 
-
 .main-index .be-a-member .beamember-container {
     margin-top: 50px;
     display: flex;
@@ -368,7 +367,7 @@
 }
 
 .main-index .carrousel-img-container {
-    width: 48%;
+    width: 39%;
     display: flex;
     justify-content: space-between;
 }
@@ -413,7 +412,6 @@
     background-color: #4EB4BF;
     text-align: center;
 }
-
 
 .main-index .who-are p {
     margin-top: 50px;
@@ -495,6 +493,7 @@
 
 .main-index .specific-news img {
     height: 155px;
+    width: 255px;
 }
 
 .main-index .specific-news a {
@@ -557,6 +556,14 @@
 
 .main-index .news-letter button:hover {
     background-color: rgb(65, 147, 156)
+}
+
+@media (min-width: 740px) and (max-width: 1150px) {
+
+}
+
+@media (max-width: 739px) {
+
 }
 
 /* popUp */
