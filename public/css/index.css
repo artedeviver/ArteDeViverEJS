@@ -449,8 +449,8 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 40% 40% 20%;
-    height: 510px;
     text-align: center;
+    row-gap: 5%;
 }
 
 .main-index .container-news .bt-news {
@@ -486,6 +486,38 @@
 
 .main-index .specific-news a {
     text-decoration: none;
+}
+
+@media (min-width: 740px) and (max-width: 960px) {
+    .main-index .container-inside {
+        display: block;
+    }
+    .main-index .container-inside .description {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media (max-width: 739px) {
+    .main-index .container-inside, .main-index .container-news {
+        display: block;
+    }
+    .main-index .container-inside .description {
+        margin: 0 0 10px 0;
+    }
+
+    .main-index .container-inside .description {
+        margin: 0 0 15px 0;
+    }
+
+    .main-index .specific-news img {
+        height: 100px;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .main-index .container-news .bt-news {
+        margin: 5px auto 20px auto;
+    }
 }
 
 /* NEWS LETTER */
@@ -546,14 +578,6 @@
     background-color: rgb(65, 147, 156)
 }
 
-@media (min-width: 740px) and (max-width: 1150px) {
-
-}
-
-@media (max-width: 739px) {
-
-}
-
 /* popUp */
 
 .body-index .pop-up div {
@@ -610,30 +634,23 @@
     display: none;
 }
 
-
-@media (max-width: 739px){
+@media (max-width: 739px) {
     .main-index .section-title, .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title {
         text-align: left;
         width: 100%;
         margin-bottom: 40px;
         padding-bottom: 30px;
         position: relative;
-        margin-right: 0px; 
+        margin-right: 0px;
     }
-
-    .main-index .metricas .section-title:after{
+    .main-index .metricas .section-title:after {
         background-color: white;
         padding-left: 0px;
         margin-left: 0px;
     }
-
-    .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title{
+    .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title {
         display: flex
-    } 
-
-    
-
-  
+    }
     /* body .section-title:after{
         content: '';
         position: absolute;
