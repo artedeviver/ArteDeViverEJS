@@ -152,26 +152,6 @@
     width: 150px;
 }
 
-@media (min-width: 740px) and (max-width: 1150px) {
-    .main-index .partners .section-title {
-        width: 100%;
-        border: none;
-        text-align: center;
-        display: block;
-    }
-}
-
-@media (max-width: 784px) {
-    .main-index .partners .section-title {
-        width: 100%;
-        border: none;
-        text-align: center;
-        display: block;
-    }
-    .main-index .partners-img-container {
-        display: none;
-    }
-}
 
 /* HISTÓRIA */
 
@@ -402,7 +382,6 @@
 }
 
 .main-index .who-are p {
-    margin-top: 50px;
     text-align: initial;
     font-size: 1em;
 }
@@ -411,23 +390,10 @@
     margin-top: 5%;
 }
 
-@media (min-width: 740px) and (max-width: 1150px) {
-    .main-index .who-are .section-title {
-        width: 100%;
-        border: none;
-        text-align: center;
-        margin: 0;
-        display: block;
-    }
-}
 
 @media (max-width: 739px) {
-    .main-index .who-are .section-title {
-        width: 100%;
-        border: none;
-        text-align: center;
-        margin: 0;
-        display: block;
+    .main-index .who-are .primary{
+        margin-top: 40px
     }
 }
 
@@ -611,7 +577,22 @@
 }
 
 
+
+
+
+/* MEDIA */
+/* titles */
 @media (max-width: 739px){
+    .main-index .partners .section-title {
+        width: 100%;
+        border: none;
+        text-align: center;
+        display: block;
+    }
+    .main-index .partners-img-container {
+        display: none;
+    }
+
     .main-index .section-title, .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title {
         text-align: left;
         width: 100%;
@@ -630,17 +611,4 @@
     .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title{
         display: flex
     } 
-
-    
-
-  
-    /* body .section-title:after{
-        content: '';
-        position: absolute;
-        width: 100px;
-        top: 90%;
-        background-color: white;
-        height: 5px;
-        margin-left: 0px;
-    } */
 }
