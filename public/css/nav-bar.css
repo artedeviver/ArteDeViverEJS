@@ -178,10 +178,6 @@ header .nav-mobile .line-mobile {
 
 @media (max-width: 739px) {
 
-    header .nav-mobile:hover ~ ul {
-        display: flex;
-    }
-
     header .nav-mobile {
         display: block;
         width: 130px;
