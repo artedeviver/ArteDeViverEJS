@@ -133,7 +133,7 @@ header .dropdown {
 }
 
 header li:hover .dropdown {
-    display: block;
+    display: none;
 }
 
 header li:hover {
@@ -176,6 +176,10 @@ header .nav-mobile .line-mobile {
     margin: 9px auto;
 }
 
+.program {
+    cursor: pointer;
+}
+
 @media (max-width: 739px) {
 
     header .nav-mobile {
@@ -191,9 +195,17 @@ header .nav-mobile .line-mobile {
         position: absolute;
     }
     header .dropdown li {
-        padding: 5%;
+        padding: 15%;
+        margin: 0 auto;
         border-bottom: solid 0.5px rgb(255, 255, 255);
         background-color: #F29f05;
         color: white;
+    }
+
+    header .dropdown {
+        top: 70px;
+        background-color: white;
+        width: 100%;
+        left: -100%;
     }
 }
