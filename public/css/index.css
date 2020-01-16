@@ -251,8 +251,6 @@
     width: 860px;
 }
 
-@media (min-width: 785px) and (max-width: 820px) {}
-
 /* PROJETOS */
 
 .main-index .projects {
@@ -338,6 +336,18 @@
     color: white
 }
 
+@media (min-width: 740px) and (max-width: 1143px) {
+    .main-index .course-container-hidden {
+        width: 380px;
+    }
+}
+
+@media (max-width: 739px) {
+    .main-index .container-projects {
+        display: none;
+    }
+}
+
 /* SEJA MEMBRO */
 
 .main-index .be-a-member {
@@ -407,11 +417,11 @@
     padding: 0px;
 }
 
-.btn-mobile{
+.btn-mobile {
     display: none
 }
 
-.be-a-member a{
+.be-a-member a {
     text-decoration: none;
 }
 
@@ -419,27 +429,22 @@
     .main-index .be-a-member .beamember-container {
         display: none;
     }
-
-    .main-index .be-a-member .section-title{
+    .main-index .be-a-member .section-title {
         align-self: flex-start;
     }
-
-    .main-index .be-a-member .container-width{
+    .main-index .be-a-member .container-width {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-    .main-index .be-a-member .container-width .btn-container{
+    .main-index .be-a-member .container-width .btn-container {
         margin: 0 auto
     }
-
-    .btn-mobile{
+    .btn-mobile {
         margin-top: 40px;
         display: block;
     }
 }
-
 
 /* QUEM SOMOS */
 
@@ -726,17 +731,4 @@
     .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title {
         display: flex
     }
-    /* body .section-title:after{
-        content: '';
-        position: absolute;
-        width: 100px;
-        top: 90%;
-        background-color: white;
-        height: 5px;
-        margin-left: 0px;
-    } */
-}
-
-}
-
 }
