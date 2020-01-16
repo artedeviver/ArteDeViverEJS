@@ -1,33 +1,38 @@
 .title-container{
-    margin: 50px 82px;
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-}
-
-.principal-title-container{
-    width: 600px;
-    border-right: 5px solid #D74C11;
     box-sizing: border-box;
     padding-right: 50px;
+    position: relative;
+    max-width: 960px;
 }
 
 .title-container h1{
+    display: flex;
+    align-items: center;
     font-size: 3.875em;
     text-align: right;
     color: #D74C11;
+    width: 500px;
 }
 
-.description-title{
+.title-container h1:after{
+    content: '';
+    width: 5px;
+    background-color: #D74C11;
+    height: 200px;
+    margin-left: 50px;
+}
+
+.title-container p{
     display: flex;
     justify-content: left;
     align-items: center;
     width: 500px;
     box-sizing: border-box;
     padding-left: 50px;
-}
-
-.title-container p{
     color: #F27623;
     width: 200px;
     text-align: left;

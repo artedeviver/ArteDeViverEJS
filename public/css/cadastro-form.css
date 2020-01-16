@@ -161,3 +161,51 @@
 }
 
 
+@media (max-width:740px){
+    .cadastro-container{
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .title-container{
+        margin: 0px 40px 40px 0px;
+        padding: 0px;
+        margin: 0 auto;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .title-container h1::after{
+        display: none;
+    }
+
+    .title-container h1{
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .title-container p{
+        display: none;
+    }
+
+    .main-seja-membro .container-button{
+        margin: 0 auto;
+    }
+
+    .main-seja-membro .container-button a{
+        margin-left: 0px;
+        margin: 0 auto
+    }
+
+    .main-seja-membro form{
+        width: 100%;
+    }
+
+    .main-seja-membro form .primary{
+        margin-bottom: 30px;
+    }
+}
+
