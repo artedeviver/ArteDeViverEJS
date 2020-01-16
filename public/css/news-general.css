@@ -36,7 +36,7 @@ color: #D74C11;
 
 .main-news-general .news-container{
     display: flex;
-    height: 500px;
+    height: 300px;
 }
 
 .main-news-general .news-img-container{
@@ -47,7 +47,7 @@ color: #D74C11;
     width: 50%;
     box-sizing: border-box;
     padding: 0px 82px;
-
+    height: 300px;
 }
 
 .main-news-general .news-text-container p{
@@ -58,7 +58,7 @@ color: #D74C11;
 
 .main-news-general .news-img-container img{
     width: 100%;
-    height: 500px;
+    height: 300px;
 }
 
 .main-news-general .news-container h3{
@@ -97,4 +97,29 @@ color: #D74C11;
     border-bottom: 1px solid #D74C11;
 }
 
+@media (min-width: 740px) and (max-width: 960px) {
+    .main-news-general .news-text-container, .main-news-general .news-img-container img, .main-news-general .news-container {
+        height: 280px;
+    }
 
+}
+
+@media (max-width: 739px) {
+    .main-index .container-inside, .main-index .container-news {
+        display: block;
+    }
+    .main-index .container-inside .description {
+        margin: 0 0 10px 0;
+    }
+    .main-index .container-inside .description {
+        margin: 0 0 15px 0;
+    }
+    .main-index .specific-news img {
+        height: 100px;
+        width: 200px;
+        margin: 0 auto;
+    }
+    .main-index .container-news .bt-news {
+        margin: 5px auto 20px auto;
+    }
+}
