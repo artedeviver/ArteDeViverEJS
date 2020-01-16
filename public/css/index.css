@@ -354,6 +354,11 @@
     position: relative;
 }
 
+.container-mobile-projects {
+    display: none;
+    text-align: center;
+}
+
 .main-index .course a {
     color: white
 }
@@ -368,6 +373,16 @@
     .main-index .container-projects {
         display: none;
     }
+    .container-mobile-projects {
+        display: block;
+        text-align: center;
+    }
+
+    .container-mobile-projects > p {
+        text-align: justify;
+        margin: 0 0 20px 0;
+    }
+    
 }
 
 /* SEJA MEMBRO */
