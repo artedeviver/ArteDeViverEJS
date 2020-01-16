@@ -251,7 +251,27 @@
     width: 860px;
 }
 
-@media (min-width: 785px) and (max-width: 820px) {}
+@media (min-width: 785px) and (max-width: 820px) {
+    .carroussel-container {
+        width: 600px;
+        margin-bottom: 50px;
+    }
+
+    .history-date {
+        width: 600px;
+    }
+    
+    .history-article {
+        width: 550px;
+    }
+}
+
+
+@media (max-width: 784px) {
+    .history{
+        display: none;
+    }
+}
 
 /* PROJETOS */
 
