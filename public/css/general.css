@@ -490,3 +490,8 @@ textarea {
     flex-wrap: wrap;
     /* justify-content: space-between; */
 }
+
+.min-news {
+    margin-bottom: 15px;
+    display: block;
+}
