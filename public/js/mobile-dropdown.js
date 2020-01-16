@@ -18,8 +18,6 @@ function dropdownMenu() {
         itemNavbar.style.display = 'flex'
         navMobile.classList.add("active-menu")
     } else {
-        count=0 
-        count2 =0 
         itemNavbar.style.display = 'none'
         navMobile.classList.remove("active-menu")
 
@@ -31,7 +29,6 @@ function subMenu() {
         count2++
         dropdown.style.display = 'block'
     } else {
-        count2 = 0
         dropdown.style.display = 'none'
     }
 }
