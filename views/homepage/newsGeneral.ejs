@@ -8,42 +8,44 @@
     <main class="main-news-general">
         <section>
             <div class="manchete">
-                <h1> <a href="/news/<%= lastNews.title %>/<%= lastNews.id %>"><%= lastNews.title %></a></h1>
-
+                <div class=" container-width">
+                    <h1> <a href="/news/<%= lastNews.title %>/<%= lastNews.id %>"><%= lastNews.title %></a></h1>
+                </div>
             </div>
         </section>
 
         <!-- noticias -->
         <section>
-            <div class="title-container">
-                <div class="principal-title-container">
-                    <h1>
-                        fique <span>informado!</span>
-                    </h1>
+            <div class="container-width">
+                <div class="title-container">
+                    <div class="principal-title-container">
+                        <h1>
+                            fique <span>informado!</span>
+                        </h1>
+                    </div>
+
+                    <div class="description-title">
+                        <p>Aqui você fica por dentro do que está acontecendo na Arte de Viver!</p>
+                    </div>
                 </div>
 
-                <div class="description-title">
-                    <p>Aqui você fica por dentro do que está acontecendo na Arte de Viver!</p>
+                <!-- container noticias -->
+                <!-- noticia 1 -->
+                <% news.forEach((news) => { %>
+                <div class="news-container">
+                    <div class="news-img-container">
+                        <img src="/uploads/<%= news.titleImage %>" alt="">
+                    </div>
+
+                    <div class="news-text-container">
+                        <h3> <a href="/news/<%= news.title %>/<%= news.id %>"><%= news.title %></span></a>
+                        </h3>
+                        <p><%- news.newsDesc %></p>
+                        <a class="news-plus" href="/news/<%= news.title %>/<%= news.id %>">saiba mais</a>
+                    </div>
                 </div>
+                <%})%>
             </div>
-
-            <!-- container noticias -->
-            <!-- noticia 1 -->
-            <% news.forEach((news) => { %>
-            <div class="news-container">
-                <div class="news-img-container">
-                    <img src="/uploads/<%= news.titleImage %>" alt="">
-                </div>
-
-                <div class="news-text-container">
-                    <h3> <a href="/news/<%= news.title %>/<%= news.id %>"><%= news.title %></span></a>
-                    </h3>
-                    <p><%- news.newsDesc %></p>
-                    <a class="news-plus" href="/news/<%= news.title %>/<%= news.id %>">saiba mais</a>
-                </div>
-            </div>
-            <%})%>
-
         </section>
     </main>
 
