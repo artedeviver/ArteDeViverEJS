@@ -768,4 +768,13 @@
     .main-index .metricas .section-title, .main-index .partners .section-title, .main-index .who-are .section-title {
         display: flex
     }
+
+    .main-index .news-letter form input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .main-index .news-letter button{
+        width: 100%
+    }
 }
