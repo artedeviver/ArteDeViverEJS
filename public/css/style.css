@@ -19,17 +19,12 @@ body {
 article {
     line-height: 1.4em;
     padding: 0px 82px;
+    margin-bottom: 50px
 }
 
-article p {
-    margin-bottom: 1.25em;
-    text-align: justify;
-    color: black;
-}
 
 p {
     line-height: 1.4em;
-    margin: 0;
 }
 
 .background-img-config {

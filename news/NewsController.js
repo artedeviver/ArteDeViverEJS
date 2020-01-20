@@ -25,7 +25,7 @@ router.get("/news/:title/:id", (req, res) => {
 
     News.findByPk(id).then(news => {
         if (news != undefined) {
-            res.render("homepage/newsSpecific", { news: news , admin: req.session.user.administrator})
+            res.render("homepage/newsSpecific", { news: news })
         } else {
             res.redirect("homepage/news")
         }
