@@ -8,24 +8,15 @@
     <main class="main-news-specific">
         <section>
             <img src="/uploads/<%= news.titleImage %>" alt="" class="img-top">
-
-
-            <div class="title-container">
-                <div class="principal-title-container">
-                    <h1>
-                        <%= news.title %>
-                    </h1>
+            <div class="container-width">
+                <div class="title-container">
+                        <h1><%= news.title %></h1>
+                        <p> <%= news.newsDesc %></p>
                 </div>
-
-                <div class="description-title">
-                    <p> <%= news.newsDesc %></p>
-                </div>
-
+            
+    
+                <article><%- news.bodyNews %></article>
             </div>
-
-            <article>
-                <p><%- news.bodyNews %></p>
-            </article>
         </section>
     </main>
 
