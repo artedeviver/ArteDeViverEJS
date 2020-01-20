@@ -133,7 +133,7 @@ header .dropdown {
 }
 
 header li:hover .dropdown {
-    display: none;
+    display: block;
 }
 
 header li:hover {

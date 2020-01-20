@@ -18,15 +18,10 @@
         <section>
             <div class="container-width">
                 <div class="title-container">
-                    <div class="principal-title-container">
-                        <h1>
-                            fique <span>informado!</span>
-                        </h1>
-                    </div>
-
-                    <div class="description-title">
-                        <p>Aqui você fica por dentro do que está acontecendo na Arte de Viver!</p>
-                    </div>
+                    <h1>
+                        fique informado!
+                    </h1>
+                    <p>Aqui você fica por dentro do que está acontecendo na Arte de Viver!</p>
                 </div>
 
                 <!-- container noticias -->
@@ -38,7 +33,8 @@
                     </div>
 
                     <div class="news-text-container">
-                        <h3> <a class="title-news-mobile" href="/news/<%= news.title %>/<%= news.id %>"><%= news.title %></span></a>
+                        <h3> <a class="title-news-mobile"
+                                href="/news/<%= news.title %>/<%= news.id %>"><%= news.title %></span></a>
                         </h3>
                         <p><%- news.newsDesc %></p>
                         <a class="news-plus" href="/news/<%= news.title %>/<%= news.id %>">saiba mais</a>
