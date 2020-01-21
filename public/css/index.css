@@ -743,6 +743,10 @@
 /* titles */
 
 @media (max-width: 739px) {
+    .padding{
+        padding: 0px 50px;
+    }
+
     .main-index .partners .section-title {
         width: 100%;
         border: none;
@@ -776,5 +780,9 @@
 
     .main-index .news-letter button{
         width: 100%
+    }
+
+    .img-top{
+        height: auto;
     }
 }

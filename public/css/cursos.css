@@ -111,14 +111,15 @@
 @media (max-width: 740px){
     .container-width article{
         padding: 0px 50px;
-        margin-bottom: 0px;
+        margin-bottom: 50px;
     }
 
     .container-width .title-container h1{
         width: auto;
         font-size: 45px;
-        margin: 50px auto;
-        padding: 0px 50px;
+        text-align: center;
+        font-size: 45px;
+        padding: auto;
     }
 
     .main-course .testimonial{
