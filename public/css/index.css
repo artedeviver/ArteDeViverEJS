@@ -753,6 +753,10 @@
 /* titles */
 
 @media (max-width: 739px) {
+    .padding{
+        padding: 0px 50px;
+    }
+
     .main-index .partners .section-title {
         width: 100%;
         border: none;
@@ -789,5 +793,8 @@
     }
     .main-index .padding {
         padding: 50px 15px;
+
+    .img-top{
+        height: auto;
     }
 }

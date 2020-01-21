@@ -137,4 +137,11 @@
         padding: 0;
         font-size: 12px;
     }
+    .title-container h1 {
+        text-align: center;
+    }
+
+    .main-news-specific .img-top{
+        height: auto;
+    }
 }
