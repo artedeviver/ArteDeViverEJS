@@ -5,8 +5,25 @@
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    padding-right: 82px;
     margin: 5% 0% 3% 0%
+}
+
+
+.testimonial .container-width{
+    display: flex;
+    justify-content: flex-end;
+    max-width: 960px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    line-height: 1.4em;
+    padding: 0;
+}
+
+.testimonial .container-width p{
+    width: 60%;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px 8px #000000;
 }
 
 .testimonial-img-background{
@@ -25,9 +42,6 @@
     flex-direction: row-reverse;
 }
 
-.main-course .testimonial div {
-    padding: 5%;
-}
 
 .main-course .section-title {
     font-weight: 600;
@@ -52,7 +66,7 @@
 }
 
 .main-course .impact p {
-    color: #d74c11;
+    text-align: justify;
 }
 
 .main-course .impact-container {
@@ -63,17 +77,82 @@
 
 .main-course .impact-container div {
     width: 300px;
-    text-align: center;
+    height: 200px;
+    margin-top: 50px;
 }
 
 .main-course .impact img {
-    margin-top: 50px;
     width: 300px;
-    margin-bottom: 25px;
+    height: 200px;
 }
 
-.main-course .impact-container p {
-    line-height: 30px;
-    text-align: left;
-    ;
+
+@media (min-width: 740px) and (max-width: 980px) {
+    .container-width article{
+        padding: 0px 82px;
+    }
+
+    .testimonial .container-width p {
+        width: 100%;
+        padding: 82px;
+    }
+
+    .main-course .impact-container div {
+        width: 200px;
+        height: 130px;
+    }
+
+    .main-course .impact-container img {
+        width: 200px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 740px){
+    .container-width article{
+        padding: 0px 50px;
+        margin-bottom: 0px;
+    }
+
+    .container-width .title-container h1{
+        width: auto;
+        font-size: 45px;
+        margin: 50px auto;
+        padding: 0px 50px;
+    }
+
+    .main-course .testimonial{
+        display: none;
+    }
+
+    .main-course .section-title{
+        display: none;
+    }
+
+    .main-course .impact{
+        padding: 0px 82px 50px 82px;
+    }
+
+    .main-course .impact p {
+        display: none;
+    }
+
+    .main-course .impact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-course .impact-container div {
+        width: 200px;
+        height: 130px;
+    }
+
+    .main-course .impact-container img {
+        width: 200px;
+        height: 130px;
+    }
+
+    .main-course .img-top{
+        height: auto;
+    }
 }
