@@ -1,21 +1,18 @@
 .title-container{
-    margin: 50px auto;
+    margin: 0px auto;
     display: flex;
     justify-content: center;
     box-sizing: border-box;
-    box-sizing: border-box;
-    padding-right: 50px;
-    position: relative;
     max-width: 960px;
 }
 
 .title-container h1{
     display: flex;
     align-items: center;
-    font-size: 3.875em;
     text-align: right;
+    font-size: 3.875em;
     color: #D74C11;
-    width: 500px;
+    width: 50%;
 }
 
 .title-container h1:after{
@@ -23,19 +20,16 @@
     width: 5px;
     background-color: #D74C11;
     height: 200px;
-    margin-left: 50px;
+    margin: 0px 50px;
 }
 
 .title-container p{
     display: flex;
     justify-content: left;
     align-items: center;
-    width: 500px;
+    width: 40%;
     box-sizing: border-box;
-    padding-left: 50px;
     color: #F27623;
-    width: 200px;
     text-align: left;
     font-size: 1.25em;
-    line-height: 30px;
 }

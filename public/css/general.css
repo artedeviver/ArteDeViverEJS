@@ -141,6 +141,7 @@ input, button:focus {
 .title-container h1 {
     margin-bottom: 0px;
     padding-bottom: 0px;
+    width: 50%
 }
 
 .title-container button {

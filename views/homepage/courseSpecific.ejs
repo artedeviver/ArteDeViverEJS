@@ -9,35 +9,26 @@
         <section>
             <img src="/uploads/<%= courses.imgCourse %>" alt="Imagem de crianças desenhando na escola" class="img-top">
 
-
-            <div class="title-container">
-                <div class="principal-title-container">
-                    <h1>
-                        <%= courses.title%>
-                    </h1>
-                </div>
-
-                <div class="description-title">
+            <div class="container-width">
+                <div class="title-container">
+                    <h1><%= courses.title%></h1>
                     <p><%- courses.descCourse%></p>
                 </div>
+
+                <article><%- courses.bodyCourse%></article>
             </div>
 
-            <article>
-                <p><%- courses.bodyCourse%></p>
-            </article>
-
             <div class="testimonial">
-                <div class="report">
+                <div class="container-width">
                     <p><%= courses.featured%></p>
                     <p class="testimonial-img-background"><%= courses.imgFeatured %></p>
                 </div>
             </div>
-
         </section>
 
 
         <!-- relacionados -->
-        <section class="impact">
+        <section class="impact container-width">
             <h2 class="section-title">impactos</h2>
 
             <p><%= courses.impactDesc%></p>
@@ -55,8 +46,9 @@
                     <img src="/uploads/<%= courses.impactImg3 %>" alt="">
                 </div>
             </div>
-
+           <!-- </div> -->
         </section>
+
 
     </main>
 
@@ -68,7 +60,7 @@
         let backgroundText = document.querySelector('.testimonial-img-background').innerText
         let backgroundImg = document.querySelector('.testimonial')
 
-        window.onload = function(){
+        window.onload = function () {
             backgroundImg.style.background = `url(/uploads/${backgroundText})`
             backgroundImg.style.backgroundSize = 'cover'
         }
