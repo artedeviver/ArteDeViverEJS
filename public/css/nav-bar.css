@@ -9,6 +9,7 @@ header {
     top: 0;
     z-index: 10;
     box-shadow: black 0px 0px 10px 0px;
+    padding: 0 15px;
 }
 
 header .container-width-nav {
@@ -184,7 +185,6 @@ header .nav-mobile .line-mobile {
 
     header .nav-mobile {
         display: block;
-        width: 130px;
     }
     header .navigation-container nav>ul {
         display: none;
@@ -207,5 +207,14 @@ header .nav-mobile .line-mobile {
         background-color: white;
         width: 100%;
         left: -100%;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        padding: 0 15px;
     }
 }
