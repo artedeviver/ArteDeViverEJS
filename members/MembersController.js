@@ -14,7 +14,7 @@ router.get("/dashboard/members", adminAuth, (req, res) => {
 })
 
 // SALVAR OS DADOS DO FORMULÁRIO
-router.post("/dashboard/members/save", adminAuth,  (req, res) => {
+router.post("/dashboard/members/save",  (req, res) => {
 
     let name = req.body.name
     let interest
