@@ -115,6 +115,18 @@
         height: 100%;
     }
 
+    .main-news-general .manchete {
+        height: 300px;
+    }
+
+    .main-news-general .manchete h1 {
+        margin: 0;
+    }
+
+    .main-news-general .manchete h1 a {
+        font-size: 2.0625em;
+    }
+
     .main-news-general .news-img-container  {
         width: 100%;
     }
