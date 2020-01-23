@@ -8,9 +8,9 @@ let btnews = document.querySelector('.btn-news')
 let form = document.querySelector('.form')
 btnews.addEventListener('click', close)
 
-form.addEventListener("blur", function (event) {
-    verify()
-}, true);
+// form.addEventListener("blur", function (event) {
+//     verify()
+// }, true);
 
 function verify() {
     if (name[0].value != '' && email[0].value != '') {
