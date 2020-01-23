@@ -365,16 +365,22 @@
 
                 <div class="container-form-newsletter">
                     <p type="hidden" class="success"><%= success %></p>
-                    <form method="POST" action="/homepage/newsletter/save" class="form">
+                    <form action="https://gmail.us4.list-manage.com/subscribe/post?u=7148be5354f760c25a44e7f5c&amp;id=adb17e8f16"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form validate" target="_blank"
+                    novalidate>
                         <input type="text" placeholder="Nome" name="name">
-                        <input type="text" placeholder="E-mail" name="email">
-                        <button class="btn-news action-cadastro-news-letter" disabled>quero ficar informado</button>
+                        <input placeholder="E-mail" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_7148be5354f760c25a44e7f5c_adb17e8f16" tabindex="-1" value=""></div>
+                        <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-news action-cadastro-news-letter" >quero ficar informado</button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
     <%- include partials/footer.ejs %>
+
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
 
     <script>
         let bod = document.querySelector('.body')
