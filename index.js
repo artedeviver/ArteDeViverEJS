@@ -132,6 +132,6 @@ app.get("/dashboard/home", adminAuth, (req, res) => {
 
 
 // server
-app.listen(4000, () => {
+app.listen(3000, () => {
     console.log("Servidor rodando")
 })
